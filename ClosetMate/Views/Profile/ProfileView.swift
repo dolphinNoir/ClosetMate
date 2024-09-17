@@ -9,7 +9,11 @@ import SwiftUI
 
 struct ProfileView: View {
     var body: some View {
-        Text("Profile View")
+        NavigationStack{
+            VStack{
+                Text("Welcome to your profile")
+            }.navigationTitle(Text("Your Profile"))
+        }
     }
 }
 

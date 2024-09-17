@@ -17,7 +17,7 @@
 		CA3369432C913AFF003752F1 /* ClosetMateUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3369422C913AFF003752F1 /* ClosetMateUITestsLaunchTests.swift */; };
 		CA3369502C913E00003752F1 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA33694F2C913E00003752F1 /* SplashScreenView.swift */; };
 		CA3369542C92C471003752F1 /* MyWardrobeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3369532C92C471003752F1 /* MyWardrobeView.swift */; };
-		CA3369562C92C4C8003752F1 /* DiscoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3369552C92C4C8003752F1 /* DiscoverView.swift */; };
+		CA3369562C92C4C8003752F1 /* PlannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3369552C92C4C8003752F1 /* PlannerView.swift */; };
 		CA3369582C92C4FB003752F1 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3369572C92C4FB003752F1 /* ProfileView.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,7 +53,7 @@
 		CA3369422C913AFF003752F1 /* ClosetMateUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosetMateUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CA33694F2C913E00003752F1 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		CA3369532C92C471003752F1 /* MyWardrobeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWardrobeView.swift; sourceTree = "<group>"; };
-		CA3369552C92C4C8003752F1 /* DiscoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverView.swift; sourceTree = "<group>"; };
+		CA3369552C92C4C8003752F1 /* PlannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannerView.swift; sourceTree = "<group>"; };
 		CA3369572C92C4FB003752F1 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -143,7 +143,9 @@
 		CA3369512C92C2DE003752F1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				CA3369592C92C500003752F1 /* Tabview */,
+				CA33695C2C99DB7D003752F1 /* Profile */,
+				CA33695B2C99DB6F003752F1 /* Planner */,
+				CA33695A2C99DB50003752F1 /* MyWardrobe */,
 				CA3369522C92C402003752F1 /* Cells */,
 				CA33694F2C913E00003752F1 /* SplashScreenView.swift */,
 				CA3369262C913AFE003752F1 /* ContentView.swift */,
@@ -158,14 +160,28 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		CA3369592C92C500003752F1 /* Tabview */ = {
+		CA33695A2C99DB50003752F1 /* MyWardrobe */ = {
 			isa = PBXGroup;
 			children = (
 				CA3369532C92C471003752F1 /* MyWardrobeView.swift */,
-				CA3369552C92C4C8003752F1 /* DiscoverView.swift */,
+			);
+			path = MyWardrobe;
+			sourceTree = "<group>";
+		};
+		CA33695B2C99DB6F003752F1 /* Planner */ = {
+			isa = PBXGroup;
+			children = (
+				CA3369552C92C4C8003752F1 /* PlannerView.swift */,
+			);
+			path = Planner;
+			sourceTree = "<group>";
+		};
+		CA33695C2C99DB7D003752F1 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
 				CA3369572C92C4FB003752F1 /* ProfileView.swift */,
 			);
-			path = Tabview;
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,7 +320,7 @@
 				CA3369542C92C471003752F1 /* MyWardrobeView.swift in Sources */,
 				CA3369502C913E00003752F1 /* SplashScreenView.swift in Sources */,
 				CA3369582C92C4FB003752F1 /* ProfileView.swift in Sources */,
-				CA3369562C92C4C8003752F1 /* DiscoverView.swift in Sources */,
+				CA3369562C92C4C8003752F1 /* PlannerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -21,9 +21,9 @@ struct ContentView: View {
     
     var body: some View{
         TabView{
-            DiscoverView()
+            PlannerView()
                 .tabItem {
-                    Label("Discover", systemImage: "safari")
+                    Label("Planner", systemImage: "square.stack.3d.up")
                 }
             
             MyWardrobeView()
