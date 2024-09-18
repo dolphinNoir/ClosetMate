@@ -22,6 +22,25 @@ struct MyWardrobeView: View {
                 
                 Spacer()
                 
+                HStack{
+                    
+                 Spacer()
+                    
+                    Button(action: {
+                        
+                    }, label: {
+                        Image(systemName: "plus")
+                            .foregroundStyle(.brandPrimary)
+                            .font(.system(size: 18))
+                            .frame(width: 50, height: 50) // Size of the button
+                            .background(Color.white) // Button background color
+                            .clipShape(Circle()) // Make the button circular
+                            .shadow(color: Color.black.opacity(0.08), radius: 2, x: 0, y: 4)
+                        
+                    }).offset(x:-5, y: -50)
+                    
+                }
+                
             }.padding(.horizontal, 20)
         }
 }
@@ -29,3 +48,4 @@ struct MyWardrobeView: View {
 #Preview {
     MyWardrobeView()
 }
+ 
