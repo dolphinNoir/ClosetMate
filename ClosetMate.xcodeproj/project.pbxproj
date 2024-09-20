@@ -45,6 +45,15 @@
 		CA3369912C9B16DD003752F1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA3369902C9B16DD003752F1 /* GoogleService-Info.plist */; };
 		CA3369922C9B16DD003752F1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA3369902C9B16DD003752F1 /* GoogleService-Info.plist */; };
 		CA3369932C9B16DD003752F1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA3369902C9B16DD003752F1 /* GoogleService-Info.plist */; };
+		CA3369962C9C7B3E003752F1 /* SheetViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3369952C9C7B3E003752F1 /* SheetViewCell.swift */; };
+		CA3369972C9C7B3F003752F1 /* SheetViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3369952C9C7B3E003752F1 /* SheetViewCell.swift */; };
+		CA3369982C9C7B3F003752F1 /* SheetViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3369952C9C7B3E003752F1 /* SheetViewCell.swift */; };
+		CA33699A2C9C7BCC003752F1 /* AddItemButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3369992C9C7BCC003752F1 /* AddItemButton.swift */; };
+		CA33699B2C9C7BCC003752F1 /* AddItemButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3369992C9C7BCC003752F1 /* AddItemButton.swift */; };
+		CA33699C2C9C7BCC003752F1 /* AddItemButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3369992C9C7BCC003752F1 /* AddItemButton.swift */; };
+		CA33699E2C9DCBAF003752F1 /* SheetCancelAndNextButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA33699D2C9DCBAF003752F1 /* SheetCancelAndNextButtons.swift */; };
+		CA33699F2C9DCBAF003752F1 /* SheetCancelAndNextButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA33699D2C9DCBAF003752F1 /* SheetCancelAndNextButtons.swift */; };
+		CA3369A02C9DCBAF003752F1 /* SheetCancelAndNextButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA33699D2C9DCBAF003752F1 /* SheetCancelAndNextButtons.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +91,9 @@
 		CA3369552C92C4C8003752F1 /* PlannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannerView.swift; sourceTree = "<group>"; };
 		CA3369572C92C4FB003752F1 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		CA3369902C9B16DD003752F1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CA3369952C9C7B3E003752F1 /* SheetViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetViewCell.swift; sourceTree = "<group>"; };
+		CA3369992C9C7BCC003752F1 /* AddItemButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemButton.swift; sourceTree = "<group>"; };
+		CA33699D2C9DCBAF003752F1 /* SheetCancelAndNextButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetCancelAndNextButtons.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +226,7 @@
 		CA33695A2C99DB50003752F1 /* MyWardrobe */ = {
 			isa = PBXGroup;
 			children = (
+				CA3369942C9C7B31003752F1 /* Cells */,
 				CA3369532C92C471003752F1 /* MyWardrobeView.swift */,
 			);
 			path = MyWardrobe;
@@ -233,6 +246,16 @@
 				CA3369572C92C4FB003752F1 /* ProfileView.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		CA3369942C9C7B31003752F1 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CA3369952C9C7B3E003752F1 /* SheetViewCell.swift */,
+				CA3369992C9C7BCC003752F1 /* AddItemButton.swift */,
+				CA33699D2C9DCBAF003752F1 /* SheetCancelAndNextButtons.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -398,8 +421,11 @@
 			files = (
 				CA3369202C913AFE003752F1 /* ClosetMateApp.swift in Sources */,
 				CA3369272C913AFE003752F1 /* ContentView.swift in Sources */,
+				CA33699E2C9DCBAF003752F1 /* SheetCancelAndNextButtons.swift in Sources */,
+				CA3369962C9C7B3E003752F1 /* SheetViewCell.swift in Sources */,
 				CA3369252C913AFE003752F1 /* ClosetMate.xcdatamodeld in Sources */,
 				CA3369542C92C471003752F1 /* MyWardrobeView.swift in Sources */,
+				CA33699A2C9C7BCC003752F1 /* AddItemButton.swift in Sources */,
 				CA3369502C913E00003752F1 /* SplashScreenView.swift in Sources */,
 				CA3369582C92C4FB003752F1 /* ProfileView.swift in Sources */,
 				CA3369562C92C4C8003752F1 /* PlannerView.swift in Sources */,
@@ -410,7 +436,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA3369972C9C7B3F003752F1 /* SheetViewCell.swift in Sources */,
 				CA3369372C913AFF003752F1 /* ClosetMateTests.swift in Sources */,
+				CA33699F2C9DCBAF003752F1 /* SheetCancelAndNextButtons.swift in Sources */,
+				CA33699B2C9C7BCC003752F1 /* AddItemButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,6 +449,9 @@
 			files = (
 				CA3369412C913AFF003752F1 /* ClosetMateUITests.swift in Sources */,
 				CA3369432C913AFF003752F1 /* ClosetMateUITestsLaunchTests.swift in Sources */,
+				CA3369A02C9DCBAF003752F1 /* SheetCancelAndNextButtons.swift in Sources */,
+				CA33699C2C9C7BCC003752F1 /* AddItemButton.swift in Sources */,
+				CA3369982C9C7B3F003752F1 /* SheetViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

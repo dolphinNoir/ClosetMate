@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct MyWardrobeView: View {
+    @State private var SheetIsPresented : Bool = false
     var body: some View {
             VStack {
                 HStack{
@@ -26,20 +27,12 @@ struct MyWardrobeView: View {
                     
                  Spacer()
                     
-                    Button(action: {
-                        
-                    }, label: {
-                        Image(systemName: "plus")
-                            .foregroundStyle(.brandPrimary)
-                            .font(.system(size: 18))
-                            .frame(width: 50, height: 50) // Size of the button
-                            .background(Color.white) // Button background color
-                            .clipShape(Circle()) // Make the button circular
-                            .shadow(color: Color.black.opacity(0.08), radius: 2, x: 0, y: 4)
-                        
-                    }).offset(x:-5, y: -50)
+               AddItemButton(SheetIsPresented: $SheetIsPresented)
                     
                 }
+                .sheet(isPresented: $SheetIsPresented, content: {
+                    SheetViewCell()
+                })
                 
             }.padding(.horizontal, 20)
         }
