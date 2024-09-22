@@ -11,10 +11,6 @@
 		CA3369252C913AFE003752F1 /* ClosetMate.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CA3369232C913AFE003752F1 /* ClosetMate.xcdatamodeld */; };
 		CA3369272C913AFE003752F1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3369262C913AFE003752F1 /* ContentView.swift */; };
 		CA3369292C913AFF003752F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA3369282C913AFF003752F1 /* Assets.xcassets */; };
-		CA33692D2C913AFF003752F1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA33692C2C913AFF003752F1 /* Preview Assets.xcassets */; };
-		CA3369372C913AFF003752F1 /* ClosetMateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3369362C913AFF003752F1 /* ClosetMateTests.swift */; };
-		CA3369412C913AFF003752F1 /* ClosetMateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3369402C913AFF003752F1 /* ClosetMateUITests.swift */; };
-		CA3369432C913AFF003752F1 /* ClosetMateUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3369422C913AFF003752F1 /* ClosetMateUITestsLaunchTests.swift */; };
 		CA3369502C913E00003752F1 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA33694F2C913E00003752F1 /* SplashScreenView.swift */; };
 		CA3369542C92C471003752F1 /* MyWardrobeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3369532C92C471003752F1 /* MyWardrobeView.swift */; };
 		CA3369562C92C4C8003752F1 /* PlannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3369552C92C4C8003752F1 /* PlannerView.swift */; };
@@ -54,6 +50,12 @@
 		CA33699E2C9DCBAF003752F1 /* SheetCancelAndNextButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA33699D2C9DCBAF003752F1 /* SheetCancelAndNextButtons.swift */; };
 		CA33699F2C9DCBAF003752F1 /* SheetCancelAndNextButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA33699D2C9DCBAF003752F1 /* SheetCancelAndNextButtons.swift */; };
 		CA3369A02C9DCBAF003752F1 /* SheetCancelAndNextButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA33699D2C9DCBAF003752F1 /* SheetCancelAndNextButtons.swift */; };
+		CA3369A22CA0A152003752F1 /* ScanBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3369A12CA0A152003752F1 /* ScanBox.swift */; };
+		CA3369A32CA0A152003752F1 /* ScanBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3369A12CA0A152003752F1 /* ScanBox.swift */; };
+		CA3369A42CA0A152003752F1 /* ScanBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3369A12CA0A152003752F1 /* ScanBox.swift */; };
+		CA3369A62CA0A66A003752F1 /* MyWardrobeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3369A52CA0A66A003752F1 /* MyWardrobeViewModel.swift */; };
+		CA3369A72CA0A66A003752F1 /* MyWardrobeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3369A52CA0A66A003752F1 /* MyWardrobeViewModel.swift */; };
+		CA3369A82CA0A66A003752F1 /* MyWardrobeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3369A52CA0A66A003752F1 /* MyWardrobeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,12 +82,8 @@
 		CA3369262C913AFE003752F1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CA3369282C913AFF003752F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA33692A2C913AFF003752F1 /* ClosetMate.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ClosetMate.entitlements; sourceTree = "<group>"; };
-		CA33692C2C913AFF003752F1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CA3369322C913AFF003752F1 /* ClosetMateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClosetMateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CA3369362C913AFF003752F1 /* ClosetMateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosetMateTests.swift; sourceTree = "<group>"; };
 		CA33693C2C913AFF003752F1 /* ClosetMateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClosetMateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CA3369402C913AFF003752F1 /* ClosetMateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosetMateUITests.swift; sourceTree = "<group>"; };
-		CA3369422C913AFF003752F1 /* ClosetMateUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosetMateUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CA33694F2C913E00003752F1 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		CA3369532C92C471003752F1 /* MyWardrobeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWardrobeView.swift; sourceTree = "<group>"; };
 		CA3369552C92C4C8003752F1 /* PlannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannerView.swift; sourceTree = "<group>"; };
@@ -94,6 +92,8 @@
 		CA3369952C9C7B3E003752F1 /* SheetViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetViewCell.swift; sourceTree = "<group>"; };
 		CA3369992C9C7BCC003752F1 /* AddItemButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemButton.swift; sourceTree = "<group>"; };
 		CA33699D2C9DCBAF003752F1 /* SheetCancelAndNextButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetCancelAndNextButtons.swift; sourceTree = "<group>"; };
+		CA3369A12CA0A152003752F1 /* ScanBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanBox.swift; sourceTree = "<group>"; };
+		CA3369A52CA0A66A003752F1 /* MyWardrobeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWardrobeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,8 +148,6 @@
 			isa = PBXGroup;
 			children = (
 				CA33691E2C913AFE003752F1 /* ClosetMate */,
-				CA3369352C913AFF003752F1 /* ClosetMateTests */,
-				CA33693F2C913AFF003752F1 /* ClosetMateUITests */,
 				CA33691D2C913AFE003752F1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -173,34 +171,9 @@
 				CA3369282C913AFF003752F1 /* Assets.xcassets */,
 				CA33692A2C913AFF003752F1 /* ClosetMate.entitlements */,
 				CA3369232C913AFE003752F1 /* ClosetMate.xcdatamodeld */,
-				CA33692B2C913AFF003752F1 /* Preview Content */,
+				CA49B0592CA0ACF20079378A /* Preview Content */,
 			);
 			path = ClosetMate;
-			sourceTree = "<group>";
-		};
-		CA33692B2C913AFF003752F1 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				CA33692C2C913AFF003752F1 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		CA3369352C913AFF003752F1 /* ClosetMateTests */ = {
-			isa = PBXGroup;
-			children = (
-				CA3369362C913AFF003752F1 /* ClosetMateTests.swift */,
-			);
-			path = ClosetMateTests;
-			sourceTree = "<group>";
-		};
-		CA33693F2C913AFF003752F1 /* ClosetMateUITests */ = {
-			isa = PBXGroup;
-			children = (
-				CA3369402C913AFF003752F1 /* ClosetMateUITests.swift */,
-				CA3369422C913AFF003752F1 /* ClosetMateUITestsLaunchTests.swift */,
-			);
-			path = ClosetMateUITests;
 			sourceTree = "<group>";
 		};
 		CA3369512C92C2DE003752F1 /* Views */ = {
@@ -228,6 +201,7 @@
 			children = (
 				CA3369942C9C7B31003752F1 /* Cells */,
 				CA3369532C92C471003752F1 /* MyWardrobeView.swift */,
+				CA3369A52CA0A66A003752F1 /* MyWardrobeViewModel.swift */,
 			);
 			path = MyWardrobe;
 			sourceTree = "<group>";
@@ -254,8 +228,16 @@
 				CA3369952C9C7B3E003752F1 /* SheetViewCell.swift */,
 				CA3369992C9C7BCC003752F1 /* AddItemButton.swift */,
 				CA33699D2C9DCBAF003752F1 /* SheetCancelAndNextButtons.swift */,
+				CA3369A12CA0A152003752F1 /* ScanBox.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		CA49B0592CA0ACF20079378A /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -391,7 +373,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA3369912C9B16DD003752F1 /* GoogleService-Info.plist in Resources */,
-				CA33692D2C913AFF003752F1 /* Preview Assets.xcassets in Resources */,
 				CA3369292C913AFF003752F1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,11 +400,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA3369A62CA0A66A003752F1 /* MyWardrobeViewModel.swift in Sources */,
 				CA3369202C913AFE003752F1 /* ClosetMateApp.swift in Sources */,
 				CA3369272C913AFE003752F1 /* ContentView.swift in Sources */,
 				CA33699E2C9DCBAF003752F1 /* SheetCancelAndNextButtons.swift in Sources */,
 				CA3369962C9C7B3E003752F1 /* SheetViewCell.swift in Sources */,
 				CA3369252C913AFE003752F1 /* ClosetMate.xcdatamodeld in Sources */,
+				CA3369A22CA0A152003752F1 /* ScanBox.swift in Sources */,
 				CA3369542C92C471003752F1 /* MyWardrobeView.swift in Sources */,
 				CA33699A2C9C7BCC003752F1 /* AddItemButton.swift in Sources */,
 				CA3369502C913E00003752F1 /* SplashScreenView.swift in Sources */,
@@ -436,9 +419,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA3369A72CA0A66A003752F1 /* MyWardrobeViewModel.swift in Sources */,
 				CA3369972C9C7B3F003752F1 /* SheetViewCell.swift in Sources */,
-				CA3369372C913AFF003752F1 /* ClosetMateTests.swift in Sources */,
 				CA33699F2C9DCBAF003752F1 /* SheetCancelAndNextButtons.swift in Sources */,
+				CA3369A32CA0A152003752F1 /* ScanBox.swift in Sources */,
 				CA33699B2C9C7BCC003752F1 /* AddItemButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -447,8 +431,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA3369412C913AFF003752F1 /* ClosetMateUITests.swift in Sources */,
-				CA3369432C913AFF003752F1 /* ClosetMateUITestsLaunchTests.swift in Sources */,
+				CA3369A42CA0A152003752F1 /* ScanBox.swift in Sources */,
+				CA3369A82CA0A66A003752F1 /* MyWardrobeViewModel.swift in Sources */,
 				CA3369A02C9DCBAF003752F1 /* SheetCancelAndNextButtons.swift in Sources */,
 				CA33699C2C9C7BCC003752F1 /* AddItemButton.swift in Sources */,
 				CA3369982C9C7B3F003752F1 /* SheetViewCell.swift in Sources */,
@@ -598,6 +582,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This App needs access to capture images of your clothes you want to upload";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -636,6 +621,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This App needs access to capture images of your clothes you want to upload";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;

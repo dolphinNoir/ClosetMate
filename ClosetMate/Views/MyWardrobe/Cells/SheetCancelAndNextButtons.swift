@@ -6,8 +6,10 @@
 //
 
 import SwiftUI
+import PhotosUI
 
 struct SheetCancelAndNextButtons : View {
+    @Environment(\.dismiss) var dismiss
     
     var isReadyForNext : Bool
     var leftTitle : String
@@ -18,7 +20,7 @@ struct SheetCancelAndNextButtons : View {
     var body: some View {
         HStack(spacing: 10){
             Button(action: {
-                onClickLeft()
+                dismiss()
             }, label: {
                 ZStack{
                     Rectangle()
@@ -39,10 +41,9 @@ struct SheetCancelAndNextButtons : View {
                 ZStack{
                     Rectangle()
                         .frame(width: (screenWidth - 75) * 0.65, height: 50)
-                        .foregroundStyle(.brandAccent)
+                        .foregroundStyle(isReadyForNext ? .brandPrimary : .brandAccent)
                         .clipShape(RoundedRectangle(cornerRadius: 5))
                         
-                    
                     Text("\(rightTitle)")
                         .font(.caption)
                         .foregroundStyle(.white)
@@ -53,6 +54,8 @@ struct SheetCancelAndNextButtons : View {
     }
 }
 
+
+
 #Preview {
-    SheetCancelAndNextButtons(isReadyForNext: false, leftTitle: "Cancel", rightTitle: "Next Step", onClickLeft: {}, onClickRight: {})
+    SheetCancelAndNextButtons(isReadyForNext: true, leftTitle: "Cancel", rightTitle: "Next Step", onClickLeft: {}, onClickRight: {})
 }

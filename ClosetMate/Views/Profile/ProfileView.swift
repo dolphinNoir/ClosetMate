@@ -11,8 +11,8 @@ struct ProfileView: View {
     var body: some View {
         NavigationStack{
             VStack{
-                Text("Welcome to your profile")
-            }.navigationTitle(Text("Your Profile"))
+                Text("Welcome to your Profile")
+            }.navigationTitle(Text("Profile"))
         }
     }
 }

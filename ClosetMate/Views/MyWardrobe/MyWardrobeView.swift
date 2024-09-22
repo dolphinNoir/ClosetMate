@@ -12,10 +12,10 @@ struct MyWardrobeView: View {
     var body: some View {
             VStack {
                 HStack{
-                    Text("Your Wardrobe").font(.system(size: 30, weight: .semibold))
+                    Text("Your Wardrobe").font(.system(size: 36, weight: .bold))
                     Spacer()
-                    Image(systemName: "magnifyingglass").font(.system(size: 20))
-                }
+                    Image(systemName: "magnifyingglass").font(.system(size: 24))
+                }.padding(.top, 43)
                 
                 Spacer()
                 

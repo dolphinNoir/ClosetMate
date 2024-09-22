@@ -20,8 +20,8 @@ struct YourApp: App {
   var body: some Scene {
     WindowGroup {
       NavigationView {
-        SplashScreenView()
-      }
+          SplashScreenView()
+      }.preferredColorScheme(.light)
     }
   }
 }

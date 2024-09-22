@@ -11,13 +11,7 @@ let screenWidth = UIScreen.main.bounds.width
 let screenHeight = UIScreen.main.bounds.height
 
 struct ContentView: View {
-    init() {
-        let appearance = UITabBarAppearance()
-        
-        appearance.stackedLayoutAppearance.normal.iconColor = UIColor.lightGray
 
-        appearance.stackedLayoutAppearance.normal.titleTextAttributes = [.foregroundColor: UIColor.lightGray]
-    }
     
     var body: some View{
         TabView{

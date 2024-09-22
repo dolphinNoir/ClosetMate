@@ -6,12 +6,13 @@
 //
 
 import SwiftUI
+import PhotosUI
 
 struct PlannerView: View {
     var body: some View {
         NavigationStack{
             VStack{
-                Text("welcome to the outfit planner")
+                Text("hello")
             }.navigationTitle(Text("Outfit Planner"))
         }
     }

@@ -21,8 +21,8 @@ struct SheetViewCell: View {
                 Text("First we need to scan your item so we can display it visually in the wardrobe, and you can plan outfits with it")
                     .foregroundStyle(.brandAccent)
                     .font(.callout)
+                    .fixedSize(horizontal: false, vertical: true)
             }
-            
             
             
             HStack(spacing:10){
@@ -47,47 +47,17 @@ struct SheetViewCell: View {
 }
 
 
-struct ScanBox : View {
-    var title: String
-    var onClick: () -> Void
-    var body: some View {
-        VStack(alignment: .leading){
-            Text("\(title)").font(.callout)
-            
-            Button(action: {
-                onClick()
-            }, label: {
-                ZStack{
-                    Rectangle()
-                        .cornerRadius(10)
-                        .shadow(color: Color.black.opacity(0.1), radius: 5, x: 0, y: 4)
-                        .foregroundStyle(.white)
-                    
-                    VStack(spacing: 20){
-                        Image(systemName: "doc.viewfinder")
-                            .font(.system(size: 50))
-                            .foregroundStyle(.brandPrimary)
-                        
-                        Text("Click here to Scan the \(title.lowercased()) of your clothing item.")
-                            .font(.system(size: 13))
-                            .foregroundStyle(.brandAccent)
-                            .padding(.horizontal, 10)
-                    }
-                }.frame(width: (screenWidth - 65) / 2, height: 215)
-            })
-        }
-    }
-}
-
 
 struct Guidlines : View {
     var body: some View {
-        VStack(alignment: .leading, spacing: 10){
-            BulletedText(text: "Try to ensure item is laying flat, and avoid wrinkles")
+        VStack(alignment: .leading, spacing: 25){
+            BulletedText(text: "Try to ensure item is laying flat and fully in frame, and avoid wrinkles")
             BulletedText(text: "Make sure the background of the photo is a different colour to the clothes")
             BulletedText(text: "Make sure the Front and Back scan of the item look around the same size")
             BulletedText(text: "Try to take the front and back photo from the same distance with similar lighting")
-        }.padding(.horizontal, 10)
+        }
+        .padding(.horizontal, 10)
+        .padding(.top, 10)
     }
 }
 
@@ -99,7 +69,7 @@ struct BulletedText: View {
                     .font(.body)
                 
                 Text(text)
-                    .font(.callout)
+                    .font(.system(size: 14, weight: .regular))
                     .fixedSize(horizontal: false, vertical: true)  // Allow wrapping for long text
             }
         }
