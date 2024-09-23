@@ -19,6 +19,15 @@
       }
     },
     {
+      "identity" : "backgroundremoval",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Ezaldeen99/BackgroundRemoval.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "3f3da746509cdfeefb837d35ba5ba620cd53bcfe"
+      }
+    },
+    {
       "identity" : "firebase-ios-sdk",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/firebase/firebase-ios-sdk",

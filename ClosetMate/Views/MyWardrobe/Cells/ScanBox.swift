@@ -14,6 +14,7 @@ struct ScanBox : View {
     
     @State private var showCamera = false
     @State var selectedImage : UIImage?
+    @EnvironmentObject var viewModel : MyWardrobeViewModel
     
     var body: some View {
         VStack(alignment: .leading){
@@ -28,11 +29,12 @@ struct ScanBox : View {
                         .shadow(color: Color.black.opacity(0.075), radius: 3, x: 0, y: 2)
                         .foregroundStyle(.white)
                     
-                    if let selectedImage{
+                    if let image = selectedImage{
                         ZStack{
                             Button(action: {
                                 self.selectedImage = nil
-                                
+                                viewModel.BackImage = nil
+                                viewModel.FrontImage = nil
                                 
                             }, label: {
                                 Image(systemName: "x.circle.fill")
@@ -41,7 +43,7 @@ struct ScanBox : View {
                             }).zIndex(10)
                         
                             
-                            Image(uiImage: selectedImage)
+                            Image(uiImage: image)
                                 .resizable()
                                 .scaledToFit()
                         }
@@ -57,19 +59,26 @@ struct ScanBox : View {
                                 .font(.system(size: 11, weight: .light))
                                 .foregroundStyle(.brandAccent)
                                 .padding(.horizontal, 13)
+                            
+                        }.onChange(of: selectedImage){oldValue ,newValue in
+                            print("set the front image")
+                            guard let value = newValue else {return}
+                            viewModel.setFrontImage(Image: value)
                         }
                     }
                 }.frame(width: (screenWidth - 65) / 2, height: 215)
             })
-        }.fullScreenCover(isPresented: self.$showCamera) {
-            accessCameraView(selectedImage: $selectedImage, isFront: title == "Front" ? true : false)
+        }
+        .fullScreenCover(isPresented: self.$showCamera) {
+            accessCameraView(selectedImage: $selectedImage, isFront: title == "Front" ? true : false).environmentObject(viewModel)
+              
         }
     }
 }
 
 struct accessCameraView: UIViewControllerRepresentable {
     @Binding var selectedImage : UIImage?
-    @ObservedObject var viewModel = MyWardrobeViewModel()
+    @EnvironmentObject var viewModel : MyWardrobeViewModel
     var isFront : Bool
     
     @Environment(\.presentationMode) var isPresented

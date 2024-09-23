@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct MyWardrobeView: View {
+    @StateObject var viewModel = MyWardrobeViewModel()
     @State private var SheetIsPresented : Bool = false
     var body: some View {
             VStack {
@@ -31,7 +32,7 @@ struct MyWardrobeView: View {
                     
                 }
                 .sheet(isPresented: $SheetIsPresented, content: {
-                    SheetViewCell()
+                    SheetViewCell().environmentObject(viewModel)
                 })
                 
             }.padding(.horizontal, 20)

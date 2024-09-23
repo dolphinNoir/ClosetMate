@@ -7,16 +7,32 @@
 
 import Foundation
 import SwiftUI
+import BackgroundRemoval
 
 class MyWardrobeViewModel: ObservableObject {    
     @Published var FrontImage : UIImage?
     @Published var BackImage : UIImage?
+    @Published var isLoading : Bool = false
     
+   
     func setFrontImage(Image:UIImage){
-        FrontImage = Image
+        self.FrontImage = Image
     }
 
     func setBackImage(Image:UIImage){
-        BackImage = Image
+        self.BackImage = Image
+    }
+    
+    func ConvertImages(){
+        let backgroundRemoval = BackgroundRemoval()
+        do {
+            print("converting images")
+            guard let front = FrontImage else {return}
+            self.isLoading = true
+            self.FrontImage = try backgroundRemoval.removeBackground(image: front)
+            self.isLoading = false
+        } catch {
+            print(error)
+        }
     }
 }
