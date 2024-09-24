@@ -12,7 +12,7 @@ import BackgroundRemoval
 class MyWardrobeViewModel: ObservableObject {    
     @Published var FrontImage : UIImage?
     @Published var BackImage : UIImage?
-    @Published var isLoading : Bool = false
+    @Published var isLoading : Bool = true
     
    
     func setFrontImage(Image:UIImage){
@@ -21,6 +21,11 @@ class MyWardrobeViewModel: ObservableObject {
 
     func setBackImage(Image:UIImage){
         self.BackImage = Image
+    }
+    
+    func clearImages(){
+        self.BackImage = nil
+        self.FrontImage = nil
     }
     
     func ConvertImages(){

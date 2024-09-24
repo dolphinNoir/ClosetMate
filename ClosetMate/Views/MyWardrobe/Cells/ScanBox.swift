@@ -33,8 +33,7 @@ struct ScanBox : View {
                         ZStack{
                             Button(action: {
                                 self.selectedImage = nil
-                                viewModel.BackImage = nil
-                                viewModel.FrontImage = nil
+                                viewModel.clearImages()
                                 
                             }, label: {
                                 Image(systemName: "x.circle.fill")

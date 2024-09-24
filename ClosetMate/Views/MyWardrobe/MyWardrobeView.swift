@@ -25,11 +25,8 @@ struct MyWardrobeView: View {
                 Spacer()
                 
                 HStack{
-                    
-                 Spacer()
-                    
-               AddItemButton(SheetIsPresented: $SheetIsPresented)
-                    
+                    Spacer()
+                    AddItemButton(SheetIsPresented: $SheetIsPresented)
                 }
                 .sheet(isPresented: $SheetIsPresented, content: {
                     SheetViewCell().environmentObject(viewModel)

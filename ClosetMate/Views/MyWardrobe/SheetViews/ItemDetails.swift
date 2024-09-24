@@ -13,8 +13,9 @@ struct ItemDetails: View {
         VStack{
             if viewModel.isLoading{
                 Text("Removing background")
+                ProgressView()
             }
-            
+
             else{
                 if let front = viewModel.FrontImage {
                     Image(uiImage: front)
@@ -23,10 +24,13 @@ struct ItemDetails: View {
                 }
             }
         }.onAppear{
-            print("is there a front: \(viewModel.FrontImage != nil)")
-            print("is there a back: \(viewModel.BackImage != nil)")
-            print("the loading state is: \(viewModel.isLoading)")
-            viewModel.ConvertImages()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0){
+                print("is there a front: \(viewModel.FrontImage != nil)")
+                print("is there a back: \(viewModel.BackImage != nil)")
+                print("the loading state is: \(viewModel.isLoading)")
+                viewModel.ConvertImages()
+            }
+            
         }
     
     }
