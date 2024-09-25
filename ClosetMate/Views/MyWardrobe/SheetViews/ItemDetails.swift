@@ -17,22 +17,25 @@ struct ItemDetails: View {
             }
 
             else{
-                if let front = viewModel.FrontImage {
-                    Image(uiImage: front)
-                        .resizable()
-                        .scaledToFit()
-                }
+                ItemDetailsView().environmentObject(viewModel)
             }
         }.onAppear{
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0){
-                print("is there a front: \(viewModel.FrontImage != nil)")
-                print("is there a back: \(viewModel.BackImage != nil)")
-                print("the loading state is: \(viewModel.isLoading)")
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){
                 viewModel.ConvertImages()
             }
             
         }
     
+    }
+}
+
+struct ItemDetailsView : View {
+    @EnvironmentObject var viewModel : MyWardrobeViewModel
+    var body: some View {
+        VStack(spacing: 0){
+            ImageCarousel().environmentObject(viewModel)
+            Spacer()
+        }
     }
 }
 

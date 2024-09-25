@@ -56,6 +56,8 @@
 		CA49B05B2CA17FC40079378A /* ItemDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA49B05A2CA17FC40079378A /* ItemDetails.swift */; };
 		CA49B05E2CA187920079378A /* BackgroundRemoval in Frameworks */ = {isa = PBXBuildFile; productRef = CA49B05D2CA187920079378A /* BackgroundRemoval */; };
 		CA49B0602CA31FD00079378A /* AddItemGuidlines.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA49B05F2CA31FD00079378A /* AddItemGuidlines.swift */; };
+		CA49B0632CA423BA0079378A /* AddItemBottomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA49B0622CA423BA0079378A /* AddItemBottomButtons.swift */; };
+		CA49B0652CA4C2F10079378A /* ImageCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA49B0642CA4C2F10079378A /* ImageCarousel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +97,8 @@
 		CA3369A52CA0A66A003752F1 /* MyWardrobeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWardrobeViewModel.swift; sourceTree = "<group>"; };
 		CA49B05A2CA17FC40079378A /* ItemDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetails.swift; sourceTree = "<group>"; };
 		CA49B05F2CA31FD00079378A /* AddItemGuidlines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemGuidlines.swift; sourceTree = "<group>"; };
+		CA49B0622CA423BA0079378A /* AddItemBottomButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemBottomButtons.swift; sourceTree = "<group>"; };
+		CA49B0642CA4C2F10079378A /* ImageCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCarousel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,6 +235,8 @@
 				CA3369992C9C7BCC003752F1 /* AddItemButton.swift */,
 				CA3369A12CA0A152003752F1 /* ScanBox.swift */,
 				CA49B05F2CA31FD00079378A /* AddItemGuidlines.swift */,
+				CA49B0622CA423BA0079378A /* AddItemBottomButtons.swift */,
+				CA49B0642CA4C2F10079378A /* ImageCarousel.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -420,10 +426,12 @@
 				CA3369962C9C7B3E003752F1 /* SheetViewCell.swift in Sources */,
 				CA49B0602CA31FD00079378A /* AddItemGuidlines.swift in Sources */,
 				CA3369252C913AFE003752F1 /* ClosetMate.xcdatamodeld in Sources */,
+				CA49B0632CA423BA0079378A /* AddItemBottomButtons.swift in Sources */,
 				CA3369A22CA0A152003752F1 /* ScanBox.swift in Sources */,
 				CA3369542C92C471003752F1 /* MyWardrobeView.swift in Sources */,
 				CA33699A2C9C7BCC003752F1 /* AddItemButton.swift in Sources */,
 				CA3369502C913E00003752F1 /* SplashScreenView.swift in Sources */,
+				CA49B0652CA4C2F10079378A /* ImageCarousel.swift in Sources */,
 				CA3369582C92C4FB003752F1 /* ProfileView.swift in Sources */,
 				CA3369562C92C4C8003752F1 /* PlannerView.swift in Sources */,
 			);
