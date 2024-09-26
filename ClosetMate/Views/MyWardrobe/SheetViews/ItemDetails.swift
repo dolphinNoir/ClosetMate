@@ -20,10 +20,7 @@ struct ItemDetails: View {
                 ItemDetailsView().environmentObject(viewModel)
             }
         }.onAppear{
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){
                 viewModel.ConvertImages()
-            }
-            
         }
     
     }

@@ -58,6 +58,9 @@
 		CA49B0602CA31FD00079378A /* AddItemGuidlines.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA49B05F2CA31FD00079378A /* AddItemGuidlines.swift */; };
 		CA49B0632CA423BA0079378A /* AddItemBottomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA49B0622CA423BA0079378A /* AddItemBottomButtons.swift */; };
 		CA49B0652CA4C2F10079378A /* ImageCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA49B0642CA4C2F10079378A /* ImageCarousel.swift */; };
+		CA49B0672CA5C2230079378A /* DeepLabV3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = CA49B0662CA5C2230079378A /* DeepLabV3.mlmodel */; };
+		CA49B06A2CA5CC7E0079378A /* UIImageOrientationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA49B0692CA5CC7E0079378A /* UIImageOrientationExtension.swift */; };
+		CA49B06C2CA5CCD80079378A /* RemoveBackgroundExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA49B06B2CA5CCD80079378A /* RemoveBackgroundExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +102,9 @@
 		CA49B05F2CA31FD00079378A /* AddItemGuidlines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemGuidlines.swift; sourceTree = "<group>"; };
 		CA49B0622CA423BA0079378A /* AddItemBottomButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemBottomButtons.swift; sourceTree = "<group>"; };
 		CA49B0642CA4C2F10079378A /* ImageCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCarousel.swift; sourceTree = "<group>"; };
+		CA49B0662CA5C2230079378A /* DeepLabV3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = DeepLabV3.mlmodel; path = ../../../DeepLabV3.mlmodel; sourceTree = "<group>"; };
+		CA49B0692CA5CC7E0079378A /* UIImageOrientationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageOrientationExtension.swift; sourceTree = "<group>"; };
+		CA49B06B2CA5CCD80079378A /* RemoveBackgroundExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveBackgroundExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +177,7 @@
 		CA33691E2C913AFE003752F1 /* ClosetMate */ = {
 			isa = PBXGroup;
 			children = (
+				CA49B0662CA5C2230079378A /* DeepLabV3.mlmodel */,
 				CA3369902C9B16DD003752F1 /* GoogleService-Info.plist */,
 				CA33691F2C913AFE003752F1 /* ClosetMateApp.swift */,
 				CA3369512C92C2DE003752F1 /* Views */,
@@ -205,6 +212,7 @@
 		CA33695A2C99DB50003752F1 /* MyWardrobe */ = {
 			isa = PBXGroup;
 			children = (
+				CA49B0682CA5CC6B0079378A /* Extensions */,
 				CA49B0612CA320160079378A /* SheetViews */,
 				CA3369942C9C7B31003752F1 /* Cells */,
 				CA3369532C92C471003752F1 /* MyWardrobeView.swift */,
@@ -255,6 +263,15 @@
 				CA49B05A2CA17FC40079378A /* ItemDetails.swift */,
 			);
 			path = SheetViews;
+			sourceTree = "<group>";
+		};
+		CA49B0682CA5CC6B0079378A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CA49B0692CA5CC7E0079378A /* UIImageOrientationExtension.swift */,
+				CA49B06B2CA5CCD80079378A /* RemoveBackgroundExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -430,10 +447,13 @@
 				CA3369A22CA0A152003752F1 /* ScanBox.swift in Sources */,
 				CA3369542C92C471003752F1 /* MyWardrobeView.swift in Sources */,
 				CA33699A2C9C7BCC003752F1 /* AddItemButton.swift in Sources */,
+				CA49B06A2CA5CC7E0079378A /* UIImageOrientationExtension.swift in Sources */,
 				CA3369502C913E00003752F1 /* SplashScreenView.swift in Sources */,
 				CA49B0652CA4C2F10079378A /* ImageCarousel.swift in Sources */,
 				CA3369582C92C4FB003752F1 /* ProfileView.swift in Sources */,
+				CA49B06C2CA5CCD80079378A /* RemoveBackgroundExtension.swift in Sources */,
 				CA3369562C92C4C8003752F1 /* PlannerView.swift in Sources */,
+				CA49B0672CA5C2230079378A /* DeepLabV3.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

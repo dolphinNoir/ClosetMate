@@ -7,53 +7,59 @@
 
 import Foundation
 import SwiftUI
-import BackgroundRemoval
+import Vision
+import CoreImage
+import CoreImage.CIFilterBuiltins
 
-class MyWardrobeViewModel: ObservableObject {    
-    @Published var FrontImage : UIImage?
-    @Published var BackImage : UIImage?
-    @Published var isLoading : Bool = true
+class MyWardrobeViewModel: ObservableObject {
+    @Published var FrontImage: UIImage?
+    @Published var BackImage: UIImage?
+    @Published var isLoading: Bool = false
     
-   
-    func setFrontImage(Image:UIImage){
+    private var processingQueue = DispatchQueue(label: "ProcessingQueue")
+    let context = CIContext()
+
+    func setFrontImage(Image: UIImage) {
         self.FrontImage = Image
     }
 
-    func setBackImage(Image:UIImage){
+    func setBackImage(Image: UIImage) {
         self.BackImage = Image
     }
     
-    func clearImages(){
+    func clearImages() {
         self.BackImage = nil
         self.FrontImage = nil
     }
     
-    func areBothImagesFilled() -> Bool{
-        var isTrue = false
-        
-        if self.BackImage != nil && self.FrontImage != nil{
-            isTrue = true
-        }
-        
-        else{
-            isTrue = false
-        }
-        
-        return isTrue
+    func areBothImagesFilled() -> Bool {
+        return self.BackImage != nil && self.FrontImage != nil
     }
     
-    func ConvertImages(){
-        let backgroundRemoval = BackgroundRemoval()
-        do {
-            print("converting images")
-            guard let front = FrontImage else {return}
-            guard let back = BackImage else {return}
-            self.isLoading = true
-            self.FrontImage = try backgroundRemoval.removeBackground(image: front)
-            self.BackImage = try backgroundRemoval.removeBackground(image: back)
-            self.isLoading = false
-        } catch {
-            print(error)
+    // Function to convert both images to stickers
+    func ConvertImages() {
+        guard let frontImage = self.FrontImage, let backImage = self.BackImage else { return }
+        
+        self.isLoading = true
+
+        // Convert both images asynchronously to stickers, using the functionality in the RemoveBackgroundExtension
+        processingQueue.async {
+            self.createSticker(from: frontImage) { [weak self] sticker in
+                DispatchQueue.main.async {
+                    self?.FrontImage = sticker
+                    self?.checkLoadingStatus()
+                }
+            }
+            
+            self.createSticker(from: backImage) { [weak self] sticker in
+                DispatchQueue.main.async {
+                    self?.BackImage = sticker
+                    self?.checkLoadingStatus()
+                }
+            }
         }
     }
+
+   
 }
+
