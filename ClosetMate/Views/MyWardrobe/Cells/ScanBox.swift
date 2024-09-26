@@ -1,126 +1,88 @@
-//
-//  ScanBox.swift
-//  ClosetMate
-//
-//  Created by johnny basgallop on 22/09/2024.
-//
-
 import SwiftUI
+import TipKit
 
-
-struct ScanBox : View {
+struct ScanBox: View {
     var title: String
     var onClick: () -> Void
     
+    @State private var showImagePicker = false
+    @State private var isCameraSelected = false
     @State private var showCamera = false
-    @State var selectedImage : UIImage?
-    @EnvironmentObject var viewModel : MyWardrobeViewModel
-    
+    @State var selectedImage: UIImage?
+    @EnvironmentObject var viewModel: MyWardrobeViewModel
+    let ScanTip = ScanClothingTip()
     var body: some View {
-        VStack(alignment: .leading){
+        VStack(alignment: .leading) {
             Text("\(title)").font(.callout)
             
             Button(action: {
-                self.showCamera.toggle()
+                self.showImagePicker.toggle()
+                ScanTip.invalidate(reason: .actionPerformed)
+                
             }, label: {
-                ZStack{
+                ZStack {
                     Rectangle()
                         .cornerRadius(10)
                         .shadow(color: Color.black.opacity(0.075), radius: 3, x: 0, y: 2)
                         .foregroundStyle(.white)
                     
-                    if let image = selectedImage{
-                        ZStack{
+                    if let image = selectedImage {
+                        ZStack {
                             Button(action: {
                                 self.selectedImage = nil
                                 viewModel.clearImages()
-                                
                             }, label: {
                                 Image(systemName: "x.circle.fill")
                                     .resizable()
                                     .frame(width: 30, height: 30)
                             }).zIndex(10)
-                        
                             
                             Image(uiImage: image)
                                 .resizable()
                                 .scaledToFit()
                         }
-                    }
-                    
-                    else{
-                        VStack(spacing: 30){
+                    } else {
+                        VStack(spacing: 30) {
                             Image(systemName: "viewfinder")
-                                .font(.system(size: 45))
+                                .font(.system(size: 55))
                                 .foregroundStyle(.brandPrimary)
                             
                             Text("Click here to Scan the \(title.lowercased()) of your clothing item.")
                                 .font(.system(size: 11, weight: .light))
                                 .foregroundStyle(.brandAccent)
                                 .padding(.horizontal, 13)
-                            
-                        }.onChange(of: selectedImage){oldValue ,newValue in
-                            print("set the front image")
-                            guard let value = newValue else {return}
-                            viewModel.setFrontImage(Image: value)
+                        }.onChange(of: selectedImage) { oldValue, newValue in
+                            guard let value = newValue else { return }
+                            if title == "Front" {
+                                viewModel.setFrontImage(Image: value)
+                            } else {
+                                viewModel.setBackImage(Image: value)
+                            }
                         }
                     }
-                }.frame(width: (screenWidth - 65) / 2, height: 215)
+                }.frame(width: (screenWidth - 65), height: 185)
             })
         }
-        .fullScreenCover(isPresented: self.$showCamera) {
-            accessCameraView(selectedImage: $selectedImage, isFront: title == "Front" ? true : false).environmentObject(viewModel)
-              
+        .actionSheet(isPresented: $showImagePicker) {
+            ActionSheet(title: Text("Select Image Source"), buttons: [
+                .default(Text("Camera")) {
+                    isCameraSelected = true
+                    showCamera.toggle()
+                },
+                .default(Text("Photo Library")) {
+                    isCameraSelected = false
+                    showCamera.toggle()
+                },
+                .cancel()
+            ])
+        }
+        .fullScreenCover(isPresented: $showCamera) {
+            accessCameraView(selectedImage: $selectedImage, isFront: title == "Front", useCamera: isCameraSelected).environmentObject(viewModel)
         }
     }
 }
 
-struct accessCameraView: UIViewControllerRepresentable {
-    @Binding var selectedImage : UIImage?
-    @EnvironmentObject var viewModel : MyWardrobeViewModel
-    var isFront : Bool
-    
-    @Environment(\.presentationMode) var isPresented
-    
-    func makeUIViewController(context: Context) -> UIImagePickerController {
-        let imagePicker = UIImagePickerController()
-        imagePicker.sourceType = .camera
-        imagePicker.allowsEditing = false
-        imagePicker.delegate = context.coordinator
-        return imagePicker
-    }
-    
-    func updateUIViewController(_ uiViewController: UIImagePickerController, context: Context) {
-        
-    }
 
-    func makeCoordinator() -> Coordinator {
-        return Coordinator(picker: self)
-    }
-}
-
-class Coordinator: NSObject, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
-    var picker: accessCameraView
-    
-    init(picker: accessCameraView) {
-        self.picker = picker
-    }
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        guard let selectedImage = info[.originalImage] as? UIImage else { return }
-        if self.picker.isFront {
-            self.picker.viewModel.setFrontImage(Image: selectedImage)
-        }
-        
-        else{
-            self.picker.viewModel.setBackImage(Image: selectedImage)
-        }
-        
-        self.picker.selectedImage = selectedImage
-        
-        self.picker.isPresented.wrappedValue.dismiss()
-    }
-}
 
 #Preview {
     ScanBox(title: "Front", onClick: {})

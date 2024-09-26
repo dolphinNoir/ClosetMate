@@ -6,9 +6,13 @@
 //
 
 import SwiftUI
+import TipKit
 
 struct SheetViewCell: View {
     @EnvironmentObject var viewModel : MyWardrobeViewModel
+    let ScanTip = ScanningAdviceTip()
+    
+    
     var body: some View {
         NavigationStack{
             VStack (spacing: 25){
@@ -18,55 +22,48 @@ struct SheetViewCell: View {
                     Text("Scan Item")
                         .font(.title)
                         .fontWeight(.semibold)
-                        .padding(.bottom, 5)
+                        .padding(.bottom, 6)
                     
-                    Text("First we need to scan your item so we can display it visually in the wardrobe, and you can plan outfits with it")
+                    Text("First we need to scan your item so we can display it.")
                         .foregroundStyle(.brandAccent)
                         .font(.callout)
                         .fixedSize(horizontal: false, vertical: true)
                 }
                 
                 
-                HStack(spacing:10){
+                VStack(spacing:20){
                     ScanBox(title: "Front", onClick: {
                         print("clicked front")
                     } ).environmentObject(viewModel)
+                        .popoverTip(ScanTip)
                     
                     ScanBox(title: "Back", onClick: {
                         print("clicked Back")
                     } ).environmentObject(viewModel)
                 }
                 
-                Guidlines()
                 
                 Spacer()
+                
+
                 
                 AddItemBottomButtons(isReadyForNext: false, leftTitle: "Cancel", rightTitle: "Next Step").environmentObject(viewModel)
                 
                 
             }.padding(.horizontal, 20)
+                
         }
     }
 }
 
 
-//
-//  SheetCancelAndNextButtons.swift
-//  ClosetMate
-//
-//  Created by johnny basgallop on 20/09/2024.
-//
-
-
-
-
-
-
-
-
-
-
-
 #Preview {
     SheetViewCell()
+        .task {
+            try? Tips.resetDatastore()
+            try? Tips.configure([
+                .displayFrequency(.immediate),
+                .datastoreLocation(.applicationDefault)
+            ])
+        }
 }

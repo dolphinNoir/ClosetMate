@@ -1,5 +1,6 @@
 import SwiftUI
 import FirebaseCore
+import TipKit
 
 
 class AppDelegate: NSObject, UIApplicationDelegate {
@@ -21,6 +22,13 @@ struct YourApp: App {
     WindowGroup {
       NavigationView {
           SplashScreenView()
+              .task {
+                  try? Tips.resetDatastore()
+                  try? Tips.configure([
+                    .displayFrequency(.immediate),
+                    .datastoreLocation(.applicationDefault)
+                  ])
+              }
       }.preferredColorScheme(.light)
     }
   }
