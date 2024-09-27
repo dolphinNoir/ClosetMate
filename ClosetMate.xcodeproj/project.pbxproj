@@ -62,6 +62,8 @@
 		CA49B06C2CA5CCD80079378A /* RemoveBackgroundExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA49B06B2CA5CCD80079378A /* RemoveBackgroundExtension.swift */; };
 		CA49B06E2CA5CFF30079378A /* AccessCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA49B06D2CA5CFF30079378A /* AccessCameraView.swift */; };
 		CA49B0702CA5D1FC0079378A /* Tips.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA49B06F2CA5D1FC0079378A /* Tips.swift */; };
+		CAD05E382CA6D2C6004AABE8 /* DetailsInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD05E372CA6D2C6004AABE8 /* DetailsInput.swift */; };
+		CAD05E3B2CA6D324004AABE8 /* ClothingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD05E3A2CA6D324004AABE8 /* ClothingItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +109,8 @@
 		CA49B06B2CA5CCD80079378A /* RemoveBackgroundExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveBackgroundExtension.swift; sourceTree = "<group>"; };
 		CA49B06D2CA5CFF30079378A /* AccessCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessCameraView.swift; sourceTree = "<group>"; };
 		CA49B06F2CA5D1FC0079378A /* Tips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tips.swift; sourceTree = "<group>"; };
+		CAD05E372CA6D2C6004AABE8 /* DetailsInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsInput.swift; sourceTree = "<group>"; };
+		CAD05E3A2CA6D324004AABE8 /* ClothingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothingItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +187,7 @@
 				CA3369902C9B16DD003752F1 /* GoogleService-Info.plist */,
 				CA33691F2C913AFE003752F1 /* ClosetMateApp.swift */,
 				CA3369512C92C2DE003752F1 /* Views */,
+				CAD05E392CA6D304004AABE8 /* Models */,
 				CA3369282C913AFF003752F1 /* Assets.xcassets */,
 				CA33692A2C913AFF003752F1 /* ClosetMate.entitlements */,
 				CA3369232C913AFE003752F1 /* ClosetMate.xcdatamodeld */,
@@ -248,6 +253,7 @@
 				CA49B0622CA423BA0079378A /* AddItemBottomButtons.swift */,
 				CA49B0642CA4C2F10079378A /* ImageCarousel.swift */,
 				CA49B06D2CA5CFF30079378A /* AccessCameraView.swift */,
+				CAD05E372CA6D2C6004AABE8 /* DetailsInput.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -275,6 +281,14 @@
 				CA49B06B2CA5CCD80079378A /* RemoveBackgroundExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CAD05E392CA6D304004AABE8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CAD05E3A2CA6D324004AABE8 /* ClothingItem.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -443,7 +457,9 @@
 				CA49B0702CA5D1FC0079378A /* Tips.swift in Sources */,
 				CA3369202C913AFE003752F1 /* ClosetMateApp.swift in Sources */,
 				CA49B05B2CA17FC40079378A /* ItemDetails.swift in Sources */,
+				CAD05E382CA6D2C6004AABE8 /* DetailsInput.swift in Sources */,
 				CA3369272C913AFE003752F1 /* ContentView.swift in Sources */,
+				CAD05E3B2CA6D324004AABE8 /* ClothingItem.swift in Sources */,
 				CA3369962C9C7B3E003752F1 /* SheetViewCell.swift in Sources */,
 				CA3369252C913AFE003752F1 /* ClosetMate.xcdatamodeld in Sources */,
 				CA49B0632CA423BA0079378A /* AddItemBottomButtons.swift in Sources */,
@@ -698,7 +714,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = DB62R67D27;
+				DEVELOPMENT_TEAM = 3HRQXW5DML;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				MACOSX_DEPLOYMENT_TARGET = 14.2;
@@ -721,7 +737,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = DB62R67D27;
+				DEVELOPMENT_TEAM = 3HRQXW5DML;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				MACOSX_DEPLOYMENT_TARGET = 14.2;
@@ -743,7 +759,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = DB62R67D27;
+				DEVELOPMENT_TEAM = 3HRQXW5DML;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				MACOSX_DEPLOYMENT_TARGET = 14.2;
@@ -765,7 +781,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = DB62R67D27;
+				DEVELOPMENT_TEAM = 3HRQXW5DML;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				MACOSX_DEPLOYMENT_TARGET = 14.2;

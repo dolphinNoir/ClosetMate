@@ -13,7 +13,7 @@ struct ImageCarousel: View {
                     Image(uiImage: frontImage)
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 300, height: 300) // Adjust the size to make it a square
+                        .frame(width: screenWidth - 45, height: 350) // Adjust the size to make it a square
                         .padding()
                         .tag(0)
                 }
@@ -23,7 +23,7 @@ struct ImageCarousel: View {
                     Image(uiImage: backImage)
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 300, height: 300) // Adjust the size to make it a square
+                        .frame(width: screenWidth - 45, height: 350) // Adjust the size to make it a square
                     // Add shadow
                         .padding()
                         .tag(1)
@@ -31,7 +31,7 @@ struct ImageCarousel: View {
             }
             .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always)) // Show dots below
             .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
-            .frame(width: 300, height: 300)
+            .frame(width: screenWidth - 45, height: 350)
             .background(Color.gray.opacity(0.1)) // Light gray background
             .cornerRadius(15)
             .shadow(color: Color.black.opacity(0.1), radius: 7, x: 0, y: 4)// Adjust frame to contain the carousel and shadow
@@ -45,5 +45,5 @@ struct ImageCarousel: View {
 }
 
 #Preview {
-    ImageCarousel()
+    ImageCarousel().environmentObject(MyWardrobeViewModel())
 }

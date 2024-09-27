@@ -12,9 +12,14 @@ import CoreImage
 import CoreImage.CIFilterBuiltins
 
 class MyWardrobeViewModel: ObservableObject {
+    @Published var isLoading: Bool = false
     @Published var FrontImage: UIImage?
     @Published var BackImage: UIImage?
-    @Published var isLoading: Bool = false
+    @Published var ItemName: String?
+    @Published var ItemCategory: ItemCategory?
+    @Published var ItemColor: ItemColor?
+    @Published var ItemBoughtFor: Int?
+    @Published var ItemCurrentValue: Int?
     
     private var processingQueue = DispatchQueue(label: "ProcessingQueue")
     let context = CIContext()

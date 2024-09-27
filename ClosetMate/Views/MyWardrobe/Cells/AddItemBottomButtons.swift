@@ -33,24 +33,31 @@ struct AddItemBottomButtons : View {
                 }
             })
             
-           
-                Button(action: {
-//                    viewModel.ConvertImages()
-                }, label: {
-                    NavigationLink(destination:ItemDetails().environmentObject(viewModel)){
-                        ZStack{
-                            Rectangle()
-                                .frame(width: (screenWidth - 75) * 0.65, height: 50)
-                                .foregroundStyle(viewModel.FrontImage == nil || viewModel.BackImage == nil ? .brandAccent : .brandPrimary)
-                                .clipShape(RoundedRectangle(cornerRadius: 5))
-                            
-                            Text("\(rightTitle)")
-                                .font(.caption)
-                                .foregroundStyle(.white)
-                                .fontWeight(.semibold)
-                        }
-                    }
-                }).disabled(viewModel.FrontImage == nil || viewModel.BackImage == nil)
+            Button(action: {
+                // Run the image conversion asynchronously and then navigate
+                viewModel.ConvertImages()
+                viewModel.isLoading = true // Optional: Set loading state if needed
+            }, label: {
+                ZStack {
+                    Rectangle()
+                        .frame(width: (screenWidth - 75) * 0.65, height: 50)
+                        .foregroundStyle(viewModel.FrontImage == nil || viewModel.BackImage == nil ? .brandAccent : .brandPrimary)
+                        .clipShape(RoundedRectangle(cornerRadius: 5))
+                    
+                    Text("\(rightTitle)")
+                        .font(.caption)
+                        .foregroundStyle(.white)
+                        .fontWeight(.semibold)
+                }
+            })
+            .disabled(viewModel.FrontImage == nil || viewModel.BackImage == nil)
+            .background(
+                // Use the background to handle navigation after the button is pressed
+                NavigationLink(destination: ItemDetails().environmentObject(viewModel),
+                               isActive: $viewModel.isLoading) {
+                    EmptyView()
+                }
+            )
             
             
             

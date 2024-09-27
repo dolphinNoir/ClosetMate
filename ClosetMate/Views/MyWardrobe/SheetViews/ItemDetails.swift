@@ -15,27 +15,45 @@ struct ItemDetails: View {
                 Text("Removing background")
                 ProgressView()
             }
-
+            
             else{
-                ItemDetailsView().environmentObject(viewModel)
+                ItemDetailsView().environmentObject(viewModel).padding(.horizontal, 10)
             }
-        }.onAppear{
-                viewModel.ConvertImages()
         }
-    
     }
 }
 
 struct ItemDetailsView : View {
     @EnvironmentObject var viewModel : MyWardrobeViewModel
     var body: some View {
-        VStack(spacing: 0){
-            ImageCarousel().environmentObject(viewModel)
-            Spacer()
+        ScrollView(.vertical, showsIndicators: false){
+            VStack(spacing: 10){
+                VStack(alignment: .leading){
+                    Text("Item Details")
+                        .font(.title)
+                        .fontWeight(.semibold)
+                        .padding(.bottom, 6)
+                    
+                    Text("Brilliant, Next we need some information about the item.")
+                        .foregroundStyle(.brandAccent)
+                        .font(.callout)
+                        .fixedSize(horizontal: false, vertical: true)
+                }.padding(.bottom, 15)
+                
+                ImageCarousel().environmentObject(viewModel)
+                Spacer()
+                
+                VStack(alignment: .leading){
+                    Section() {
+                        DetailsInput()
+                    }.headerProminence(.increased)
+                }
+            
+            }
         }
     }
 }
 
 #Preview {
-    ItemDetails()
+    ItemDetails().environmentObject(MyWardrobeViewModel())
 }

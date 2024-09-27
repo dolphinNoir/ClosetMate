@@ -27,9 +27,10 @@ struct SheetViewCell: View {
                     Text("First we need to scan your item so we can display it.")
                         .foregroundStyle(.brandAccent)
                         .font(.callout)
-                        .fixedSize(horizontal: false, vertical: true)
+//                        .fixedSize(horizontal: false, vertical: true)
                 }
                 
+                Spacer()
                 
                 VStack(spacing:20){
                     ScanBox(title: "Front", onClick: {
@@ -50,7 +51,7 @@ struct SheetViewCell: View {
                 AddItemBottomButtons(isReadyForNext: false, leftTitle: "Cancel", rightTitle: "Next Step").environmentObject(viewModel)
                 
                 
-            }.padding(.horizontal, 20)
+            }.padding(.horizontal, 10)
                 
         }
     }
@@ -58,7 +59,7 @@ struct SheetViewCell: View {
 
 
 #Preview {
-    SheetViewCell()
+    SheetViewCell().environmentObject(MyWardrobeViewModel())
         .task {
             try? Tips.resetDatastore()
             try? Tips.configure([
