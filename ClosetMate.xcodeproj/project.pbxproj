@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		CA3369202C913AFE003752F1 /* ClosetMateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA33691F2C913AFE003752F1 /* ClosetMateApp.swift */; };
-		CA3369252C913AFE003752F1 /* ClosetMate.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CA3369232C913AFE003752F1 /* ClosetMate.xcdatamodeld */; };
 		CA3369272C913AFE003752F1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3369262C913AFE003752F1 /* ContentView.swift */; };
 		CA3369292C913AFF003752F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA3369282C913AFF003752F1 /* Assets.xcassets */; };
 		CA3369502C913E00003752F1 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA33694F2C913E00003752F1 /* SplashScreenView.swift */; };
@@ -64,6 +63,14 @@
 		CA49B0702CA5D1FC0079378A /* Tips.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA49B06F2CA5D1FC0079378A /* Tips.swift */; };
 		CAD05E382CA6D2C6004AABE8 /* DetailsInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD05E372CA6D2C6004AABE8 /* DetailsInput.swift */; };
 		CAD05E3B2CA6D324004AABE8 /* ClothingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD05E3A2CA6D324004AABE8 /* ClothingItem.swift */; };
+		CAD05E412CA74389004AABE8 /* ItemCategoryPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD05E402CA74389004AABE8 /* ItemCategoryPicker.swift */; };
+		CAD05E432CA743EB004AABE8 /* ItemColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD05E422CA743EB004AABE8 /* ItemColorPicker.swift */; };
+		CAD05E452CA74442004AABE8 /* ItemNameField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD05E442CA74442004AABE8 /* ItemNameField.swift */; };
+		CAD05E472CA74477004AABE8 /* ItemCategoryPickerField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD05E462CA74477004AABE8 /* ItemCategoryPickerField.swift */; };
+		CAD05E492CA74491004AABE8 /* ItemColorPickerField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD05E482CA74491004AABE8 /* ItemColorPickerField.swift */; };
+		CAD05E4B2CA744A3004AABE8 /* ItemPriceInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD05E4A2CA744A3004AABE8 /* ItemPriceInput.swift */; };
+		CAD05E4D2CA744B7004AABE8 /* AddClothingItemButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD05E4C2CA744B7004AABE8 /* AddClothingItemButton.swift */; };
+		CAD05E4F2CA74552004AABE8 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD05E4E2CA74552004AABE8 /* ColorExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,7 +93,6 @@
 /* Begin PBXFileReference section */
 		CA33691C2C913AFE003752F1 /* ClosetMate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClosetMate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA33691F2C913AFE003752F1 /* ClosetMateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosetMateApp.swift; sourceTree = "<group>"; };
-		CA3369242C913AFE003752F1 /* ClosetMate.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ClosetMate.xcdatamodel; sourceTree = "<group>"; };
 		CA3369262C913AFE003752F1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CA3369282C913AFF003752F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA33692A2C913AFF003752F1 /* ClosetMate.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ClosetMate.entitlements; sourceTree = "<group>"; };
@@ -111,6 +117,14 @@
 		CA49B06F2CA5D1FC0079378A /* Tips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tips.swift; sourceTree = "<group>"; };
 		CAD05E372CA6D2C6004AABE8 /* DetailsInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsInput.swift; sourceTree = "<group>"; };
 		CAD05E3A2CA6D324004AABE8 /* ClothingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothingItem.swift; sourceTree = "<group>"; };
+		CAD05E402CA74389004AABE8 /* ItemCategoryPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCategoryPicker.swift; sourceTree = "<group>"; };
+		CAD05E422CA743EB004AABE8 /* ItemColorPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemColorPicker.swift; sourceTree = "<group>"; };
+		CAD05E442CA74442004AABE8 /* ItemNameField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemNameField.swift; sourceTree = "<group>"; };
+		CAD05E462CA74477004AABE8 /* ItemCategoryPickerField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCategoryPickerField.swift; sourceTree = "<group>"; };
+		CAD05E482CA74491004AABE8 /* ItemColorPickerField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemColorPickerField.swift; sourceTree = "<group>"; };
+		CAD05E4A2CA744A3004AABE8 /* ItemPriceInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemPriceInput.swift; sourceTree = "<group>"; };
+		CAD05E4C2CA744B7004AABE8 /* AddClothingItemButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddClothingItemButton.swift; sourceTree = "<group>"; };
+		CAD05E4E2CA74552004AABE8 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,7 +204,6 @@
 				CAD05E392CA6D304004AABE8 /* Models */,
 				CA3369282C913AFF003752F1 /* Assets.xcassets */,
 				CA33692A2C913AFF003752F1 /* ClosetMate.entitlements */,
-				CA3369232C913AFE003752F1 /* ClosetMate.xcdatamodeld */,
 				CA49B0592CA0ACF20079378A /* Preview Content */,
 			);
 			path = ClosetMate;
@@ -248,12 +261,9 @@
 		CA3369942C9C7B31003752F1 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				CA3369992C9C7BCC003752F1 /* AddItemButton.swift */,
-				CA3369A12CA0A152003752F1 /* ScanBox.swift */,
-				CA49B0622CA423BA0079378A /* AddItemBottomButtons.swift */,
-				CA49B0642CA4C2F10079378A /* ImageCarousel.swift */,
+				CAD05E3F2CA7435B004AABE8 /* ItemDetails */,
+				CAD05E3E2CA7434B004AABE8 /* SheetView */,
 				CA49B06D2CA5CFF30079378A /* AccessCameraView.swift */,
-				CAD05E372CA6D2C6004AABE8 /* DetailsInput.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -279,6 +289,7 @@
 			children = (
 				CA49B0692CA5CC7E0079378A /* UIImageOrientationExtension.swift */,
 				CA49B06B2CA5CCD80079378A /* RemoveBackgroundExtension.swift */,
+				CAD05E4E2CA74552004AABE8 /* ColorExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -289,6 +300,32 @@
 				CAD05E3A2CA6D324004AABE8 /* ClothingItem.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		CAD05E3E2CA7434B004AABE8 /* SheetView */ = {
+			isa = PBXGroup;
+			children = (
+				CA3369992C9C7BCC003752F1 /* AddItemButton.swift */,
+				CA3369A12CA0A152003752F1 /* ScanBox.swift */,
+				CA49B0622CA423BA0079378A /* AddItemBottomButtons.swift */,
+			);
+			path = SheetView;
+			sourceTree = "<group>";
+		};
+		CAD05E3F2CA7435B004AABE8 /* ItemDetails */ = {
+			isa = PBXGroup;
+			children = (
+				CAD05E372CA6D2C6004AABE8 /* DetailsInput.swift */,
+				CAD05E442CA74442004AABE8 /* ItemNameField.swift */,
+				CAD05E402CA74389004AABE8 /* ItemCategoryPicker.swift */,
+				CAD05E422CA743EB004AABE8 /* ItemColorPicker.swift */,
+				CAD05E462CA74477004AABE8 /* ItemCategoryPickerField.swift */,
+				CAD05E482CA74491004AABE8 /* ItemColorPickerField.swift */,
+				CAD05E4A2CA744A3004AABE8 /* ItemPriceInput.swift */,
+				CAD05E4C2CA744B7004AABE8 /* AddClothingItemButton.swift */,
+				CA49B0642CA4C2F10079378A /* ImageCarousel.swift */,
+			);
+			path = ItemDetails;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -455,24 +492,31 @@
 			files = (
 				CA3369A62CA0A66A003752F1 /* MyWardrobeViewModel.swift in Sources */,
 				CA49B0702CA5D1FC0079378A /* Tips.swift in Sources */,
+				CAD05E412CA74389004AABE8 /* ItemCategoryPicker.swift in Sources */,
 				CA3369202C913AFE003752F1 /* ClosetMateApp.swift in Sources */,
 				CA49B05B2CA17FC40079378A /* ItemDetails.swift in Sources */,
 				CAD05E382CA6D2C6004AABE8 /* DetailsInput.swift in Sources */,
 				CA3369272C913AFE003752F1 /* ContentView.swift in Sources */,
+				CAD05E472CA74477004AABE8 /* ItemCategoryPickerField.swift in Sources */,
 				CAD05E3B2CA6D324004AABE8 /* ClothingItem.swift in Sources */,
+				CAD05E4B2CA744A3004AABE8 /* ItemPriceInput.swift in Sources */,
 				CA3369962C9C7B3E003752F1 /* SheetViewCell.swift in Sources */,
-				CA3369252C913AFE003752F1 /* ClosetMate.xcdatamodeld in Sources */,
 				CA49B0632CA423BA0079378A /* AddItemBottomButtons.swift in Sources */,
 				CA3369A22CA0A152003752F1 /* ScanBox.swift in Sources */,
 				CA3369542C92C471003752F1 /* MyWardrobeView.swift in Sources */,
+				CAD05E492CA74491004AABE8 /* ItemColorPickerField.swift in Sources */,
 				CA49B06E2CA5CFF30079378A /* AccessCameraView.swift in Sources */,
 				CA33699A2C9C7BCC003752F1 /* AddItemButton.swift in Sources */,
 				CA49B06A2CA5CC7E0079378A /* UIImageOrientationExtension.swift in Sources */,
 				CA3369502C913E00003752F1 /* SplashScreenView.swift in Sources */,
+				CAD05E4F2CA74552004AABE8 /* ColorExtension.swift in Sources */,
+				CAD05E452CA74442004AABE8 /* ItemNameField.swift in Sources */,
 				CA49B0652CA4C2F10079378A /* ImageCarousel.swift in Sources */,
 				CA3369582C92C4FB003752F1 /* ProfileView.swift in Sources */,
 				CA49B06C2CA5CCD80079378A /* RemoveBackgroundExtension.swift in Sources */,
+				CAD05E4D2CA744B7004AABE8 /* AddClothingItemButton.swift in Sources */,
 				CA3369562C92C4C8003752F1 /* PlannerView.swift in Sources */,
+				CAD05E432CA743EB004AABE8 /* ItemColorPicker.swift in Sources */,
 				CA49B0672CA5C2230079378A /* DeepLabV3.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -979,19 +1023,6 @@
 			productName = BackgroundRemoval;
 		};
 /* End XCSwiftPackageProductDependency section */
-
-/* Begin XCVersionGroup section */
-		CA3369232C913AFE003752F1 /* ClosetMate.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				CA3369242C913AFE003752F1 /* ClosetMate.xcdatamodel */,
-			);
-			currentVersion = CA3369242C913AFE003752F1 /* ClosetMate.xcdatamodel */;
-			path = ClosetMate.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = CA3369142C913AFE003752F1 /* Project object */;
 }

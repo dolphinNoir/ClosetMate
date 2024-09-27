@@ -1,7 +1,7 @@
 import SwiftUI
 import FirebaseCore
 import TipKit
-
+import SwiftData
 
 class AppDelegate: NSObject, UIApplicationDelegate {
   func application(_ application: UIApplication,
@@ -17,7 +17,6 @@ struct YourApp: App {
   // register app delegate for Firebase setup
   @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
 
-
   var body: some Scene {
     WindowGroup {
       NavigationView {
@@ -30,6 +29,6 @@ struct YourApp: App {
                   ])
               }
       }.preferredColorScheme(.light)
-    }
+    }.modelContainer(for: [ClothingItem.self])
   }
 }

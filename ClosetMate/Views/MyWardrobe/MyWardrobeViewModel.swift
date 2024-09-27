@@ -10,8 +10,11 @@ import SwiftUI
 import Vision
 import CoreImage
 import CoreImage.CIFilterBuiltins
+import SwiftData
 
 class MyWardrobeViewModel: ObservableObject {
+    @Query var clothingItems: [ClothingItem]
+    
     @Published var isLoading: Bool = false
     @Published var FrontImage: UIImage?
     @Published var BackImage: UIImage?
@@ -63,6 +66,31 @@ class MyWardrobeViewModel: ObservableObject {
                 }
             }
         }
+    }
+    
+    func addClothingItem(itemName: String, itemCategory: ItemCategory, itemColor: ItemColor, itemBoughtFor: Int, itemCurrentValue: Int, context: ModelContext) {
+         // Convert the images to Data
+        let frontImageData = self.FrontImage?.jpegData(compressionQuality: 0.8)
+        let backImageData = self.BackImage?.jpegData(compressionQuality: 0.8)
+
+         // Create a new ClothingItem instance with the provided data
+         let newItem = ClothingItem(
+             frontImageData: frontImageData,
+             backImageData: backImageData,
+             itemName: itemName,
+             itemCategory: itemCategory,
+             itemColor: itemColor,
+             itemBoughtFor: itemBoughtFor,
+             itemCurrentValue: itemCurrentValue
+         )
+
+         // Insert the new item into the ModelContext for SwiftData to manage
+         context.insert(newItem)
+     }
+
+    func deleteItem(item: ClothingItem, modelContext: ModelContext) {
+        // Use modelContext to delete the specified item
+        modelContext.delete(item)
     }
 
    

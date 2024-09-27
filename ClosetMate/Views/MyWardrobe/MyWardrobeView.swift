@@ -6,10 +6,13 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct MyWardrobeView: View {
     @StateObject var viewModel = MyWardrobeViewModel()
     @State private var SheetIsPresented : Bool = false
+    @Query var clothingItems: [ClothingItem]
+    
     var body: some View {
             VStack {
                 HStack{
@@ -20,7 +23,16 @@ struct MyWardrobeView: View {
                 
                 Spacer()
                 
-                Text("It Appears You Dont Have Any Items To Show, Click the Add Button to begin your collection.").font(.system(size: 15)).multilineTextAlignment(.center).frame(width: screenWidth / 1.5)
+                
+                if clothingItems.isEmpty{
+                    Text("It Appears You Dont Have Any Items To Show, Click the Add Button to begin your collection.").font(.system(size: 15)).multilineTextAlignment(.center).frame(width: screenWidth / 1.5)
+                }
+                
+                else{
+                    List(clothingItems, id:  \.self){ item in
+                        Text(item.itemName)
+                    }
+                }
                 
                 Spacer()
                 

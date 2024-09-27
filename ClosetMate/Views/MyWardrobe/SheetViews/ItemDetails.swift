@@ -45,9 +45,11 @@ struct ItemDetailsView : View {
                 
                 VStack(alignment: .leading){
                     Section() {
-                        DetailsInput()
+                        DetailsInput().environmentObject(viewModel)
                     }.headerProminence(.increased)
                 }
+           
+
             
             }
         }

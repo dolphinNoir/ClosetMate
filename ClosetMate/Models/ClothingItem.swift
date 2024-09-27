@@ -1,28 +1,7 @@
-//
-//  ClothingItem.swift
-//  ClosetMate
-//
-//  Created by johnny basgallop on 27/09/2024.
-//
-
+import SwiftData
 import Foundation
-import SwiftUI
 import UIKit
-
-
-
-
-struct ClothingItem {
-    let FrontImage: UIImage
-    let BackImage: UIImage
-    let ItemName : String
-    let ItemCategory : ItemCategory
-    let ItemColor : ItemColor
-    let ItemBoughtFor : Int?
-    let ItemCurrentValue: Int?
-}
-
-enum ItemCategory: String, CaseIterable{
+enum ItemCategory: String, Codable,Hashable, CaseIterable{
     case blazer = "Blazer"
     case boots = "Boots"
     case coat = "Coat"
@@ -44,7 +23,7 @@ enum ItemCategory: String, CaseIterable{
     case trousers = "Trousers"
 }
 
-enum ItemColor : String, CaseIterable{
+enum ItemColor : String, Codable, Hashable, CaseIterable{
     case lightestRed = "#FFCCCC"
        case lighterRed = "#FF9999"
        case lightRed = "#FF6666"
@@ -117,4 +96,51 @@ enum ItemColor : String, CaseIterable{
        case pitchBlack = "#050505"
 }
 
-var ExampleClothingItem = ClothingItem(FrontImage: UIImage(imageLiteralResourceName: "BackOfBrownHoodie"), BackImage: UIImage(imageLiteralResourceName: "FrontOfBrownHoodie"), ItemName: "Carhart Hoodie", ItemCategory: .hoodie, ItemColor: .brown, ItemBoughtFor: 30, ItemCurrentValue: 20)
+@Model
+class ClothingItem {
+    @Attribute(.unique) var id: UUID
+    var frontImageData: Data?
+    var backImageData: Data?
+    var itemName: String
+    var itemCategory: ItemCategory
+    var itemColor: ItemColor
+    var itemBoughtFor: Int?
+    var itemCurrentValue: Int?
+
+    // Computed properties to access UIImage from stored Data
+    var frontImage: UIImage? {
+        get {
+            guard let data = frontImageData else { return nil }
+            return UIImage(data: data)
+        }
+        set {
+            frontImageData = newValue?.jpegData(compressionQuality: 0.8)
+        }
+    }
+
+    var backImage: UIImage? {
+        get {
+            guard let data = backImageData else { return nil }
+            return UIImage(data: data)
+        }
+        set {
+            backImageData = newValue?.jpegData(compressionQuality: 0.8)
+        }
+    }
+
+    // Initializer
+    init(frontImageData: Data?, backImageData: Data?, itemName: String, itemCategory: ItemCategory, itemColor: ItemColor, itemBoughtFor: Int? = nil, itemCurrentValue: Int? = nil) {
+        self.id = UUID()
+        self.frontImageData = frontImageData
+        self.backImageData = backImageData
+        self.itemName = itemName
+        self.itemCategory = itemCategory
+        self.itemColor = itemColor
+        self.itemBoughtFor = itemBoughtFor
+        self.itemCurrentValue = itemCurrentValue
+    }
+}
+
+
+
+
