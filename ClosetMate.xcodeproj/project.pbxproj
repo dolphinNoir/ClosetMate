@@ -72,6 +72,7 @@
 		CAD05E4D2CA744B7004AABE8 /* AddClothingItemButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD05E4C2CA744B7004AABE8 /* AddClothingItemButton.swift */; };
 		CAD05E4F2CA74552004AABE8 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD05E4E2CA74552004AABE8 /* ColorExtension.swift */; };
 		CAD05E522CA767F7004AABE8 /* WardrobeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD05E512CA767F7004AABE8 /* WardrobeImage.swift */; };
+		CAD05E542CA8B3A5004AABE8 /* UpdateItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD05E532CA8B3A5004AABE8 /* UpdateItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +128,7 @@
 		CAD05E4C2CA744B7004AABE8 /* AddClothingItemButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddClothingItemButton.swift; sourceTree = "<group>"; };
 		CAD05E4E2CA74552004AABE8 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		CAD05E512CA767F7004AABE8 /* WardrobeImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WardrobeImage.swift; sourceTree = "<group>"; };
+		CAD05E532CA8B3A5004AABE8 /* UpdateItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -335,6 +337,7 @@
 			isa = PBXGroup;
 			children = (
 				CAD05E512CA767F7004AABE8 /* WardrobeImage.swift */,
+				CAD05E532CA8B3A5004AABE8 /* UpdateItem.swift */,
 			);
 			path = Wardrobe;
 			sourceTree = "<group>";
@@ -522,6 +525,7 @@
 				CA3369502C913E00003752F1 /* SplashScreenView.swift in Sources */,
 				CAD05E4F2CA74552004AABE8 /* ColorExtension.swift in Sources */,
 				CAD05E522CA767F7004AABE8 /* WardrobeImage.swift in Sources */,
+				CAD05E542CA8B3A5004AABE8 /* UpdateItem.swift in Sources */,
 				CAD05E452CA74442004AABE8 /* ItemNameField.swift in Sources */,
 				CA49B0652CA4C2F10079378A /* ImageCarousel.swift in Sources */,
 				CA3369582C92C4FB003752F1 /* ProfileView.swift in Sources */,

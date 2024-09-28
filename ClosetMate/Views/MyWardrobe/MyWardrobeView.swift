@@ -12,6 +12,8 @@ struct MyWardrobeView: View {
     @StateObject var viewModel = MyWardrobeViewModel()
     @State private var SheetIsPresented : Bool = false
     @Query var clothingItems: [ClothingItem]
+    @State private var ItemToEdit : ClothingItem?
+    
     var body: some View {
         VStack {
             HStack{
@@ -42,6 +44,7 @@ struct MyWardrobeView: View {
             .sheet(isPresented: $SheetIsPresented, content: {
                 SheetViewCell().environmentObject(viewModel)
             })
+          
             
         }.padding(.horizontal, 20)
     }
@@ -50,9 +53,8 @@ struct MyWardrobeView: View {
 struct ClothingList: View {
     @EnvironmentObject var viewModel: MyWardrobeViewModel
     @Query var clothingItems: [ClothingItem]
-
+    @State private var ItemToEdit : ClothingItem?
     var body: some View {
-        NavigationStack {
             ScrollView(showsIndicators: false) {
                 LazyVStack(alignment: .leading, spacing: 20) {
                     // Step 1: Group items by their category and iterate over each category
@@ -70,7 +72,10 @@ struct ClothingList: View {
                                     // Display only the images of each clothing item
                                     ForEach(items, id: \.id) { item in
                                         if let frontImage = item.frontImage {
-                                            WardrobeImage(image: frontImage)
+                                            WardrobeImage(image: frontImage)  
+                                                .onTapGesture {
+                                                ItemToEdit = item
+                                            }
                                         }
                                     }
                                 }
@@ -81,8 +86,10 @@ struct ClothingList: View {
                 }
                 .padding(.vertical, 15)
             }
+            .sheet(item: $ItemToEdit ){item in
+                UpdateItem(Item: item)
+            }
 //            .navigationTitle("Clothing Inventory")
-        }
     }
 
     // Grouping items by category
