@@ -33,7 +33,6 @@ struct AddClothingItemButton: View {
                 .background(isFormValid ? Color.brandPrimary : Color.gray)
                 .foregroundColor(.white)
                 .cornerRadius(10)
-                .padding(.horizontal)
         }
         .disabled(!isFormValid)
     }

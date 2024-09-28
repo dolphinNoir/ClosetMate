@@ -40,7 +40,10 @@ struct ItemDetailsView : View {
                         .fixedSize(horizontal: false, vertical: true)
                 }.padding(.bottom, 15)
                 
-                ImageCarousel().environmentObject(viewModel)
+                if viewModel.FrontImage != nil && viewModel.BackImage != nil {
+                    ImageCarousel(FrontImage: viewModel.FrontImage!, BackImage: viewModel.BackImage!).environmentObject(viewModel)
+                }
+               
                 Spacer()
                 
                 VStack(alignment: .leading){

@@ -4,30 +4,29 @@ struct ImageCarousel: View {
     @EnvironmentObject var viewModel: MyWardrobeViewModel
     @State private var currentIndex = 0
     let timer = Timer.publish(every: 30, on: .main, in: .common).autoconnect()
-
+    var FrontImage : UIImage
+    var BackImage: UIImage
     var body: some View {
         VStack(spacing: 20) {
             TabView(selection: $currentIndex) {
                 // Front Image
-                if let frontImage = viewModel.FrontImage {
-                    Image(uiImage: frontImage)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: screenWidth - 45, height: 350) // Adjust the size to make it a square
-                        .padding()
-                        .tag(0)
-                }
-
+                Image(uiImage: FrontImage)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: screenWidth - 45, height: 350) // Adjust the size to make it a square
+                    .padding()
+                    .tag(0)
+                
+                
                 // Back Image
-                if let backImage = viewModel.BackImage {
-                    Image(uiImage: backImage)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: screenWidth - 45, height: 350) // Adjust the size to make it a square
-                    // Add shadow
-                        .padding()
-                        .tag(1)
-                }
+                
+                Image(uiImage: BackImage)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: screenWidth - 45, height: 350) // Adjust the size to make it a square
+                // Add shadow
+                    .padding()
+                    .tag(1)
             }
             .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always)) // Show dots below
             .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
@@ -44,6 +43,4 @@ struct ImageCarousel: View {
     }
 }
 
-#Preview {
-    ImageCarousel().environmentObject(MyWardrobeViewModel())
-}
+

@@ -17,7 +17,6 @@ struct ItemCategoryPickerField: View {
             .background(Color(.systemGray6))
             .foregroundStyle(.brandPrimary)
             .cornerRadius(10)
-            .padding(.horizontal)
         }
     }
 }

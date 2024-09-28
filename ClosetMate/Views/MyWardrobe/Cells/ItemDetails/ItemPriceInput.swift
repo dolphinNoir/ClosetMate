@@ -26,6 +26,5 @@ struct ItemPriceInput: View {
                 .background(Color(.brandPrimary))
                 .clipShape(Circle())
         }
-        .padding(.horizontal)
     }
 }

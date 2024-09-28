@@ -114,7 +114,8 @@ class ClothingItem {
             return UIImage(data: data)
         }
         set {
-            frontImageData = newValue?.jpegData(compressionQuality: 0.8)
+            // Use pngData() to preserve transparency instead of jpegData()
+            frontImageData = newValue?.pngData()
         }
     }
 
@@ -124,7 +125,8 @@ class ClothingItem {
             return UIImage(data: data)
         }
         set {
-            backImageData = newValue?.jpegData(compressionQuality: 0.8)
+            // Use pngData() to preserve transparency instead of jpegData()
+            backImageData = newValue?.pngData()
         }
     }
 

@@ -71,6 +71,7 @@
 		CAD05E4B2CA744A3004AABE8 /* ItemPriceInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD05E4A2CA744A3004AABE8 /* ItemPriceInput.swift */; };
 		CAD05E4D2CA744B7004AABE8 /* AddClothingItemButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD05E4C2CA744B7004AABE8 /* AddClothingItemButton.swift */; };
 		CAD05E4F2CA74552004AABE8 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD05E4E2CA74552004AABE8 /* ColorExtension.swift */; };
+		CAD05E522CA767F7004AABE8 /* WardrobeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD05E512CA767F7004AABE8 /* WardrobeImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +126,7 @@
 		CAD05E4A2CA744A3004AABE8 /* ItemPriceInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemPriceInput.swift; sourceTree = "<group>"; };
 		CAD05E4C2CA744B7004AABE8 /* AddClothingItemButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddClothingItemButton.swift; sourceTree = "<group>"; };
 		CAD05E4E2CA74552004AABE8 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		CAD05E512CA767F7004AABE8 /* WardrobeImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WardrobeImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -261,6 +263,7 @@
 		CA3369942C9C7B31003752F1 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				CAD05E502CA767E3004AABE8 /* Wardrobe */,
 				CAD05E3F2CA7435B004AABE8 /* ItemDetails */,
 				CAD05E3E2CA7434B004AABE8 /* SheetView */,
 				CA49B06D2CA5CFF30079378A /* AccessCameraView.swift */,
@@ -326,6 +329,14 @@
 				CA49B0642CA4C2F10079378A /* ImageCarousel.swift */,
 			);
 			path = ItemDetails;
+			sourceTree = "<group>";
+		};
+		CAD05E502CA767E3004AABE8 /* Wardrobe */ = {
+			isa = PBXGroup;
+			children = (
+				CAD05E512CA767F7004AABE8 /* WardrobeImage.swift */,
+			);
+			path = Wardrobe;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -510,6 +521,7 @@
 				CA49B06A2CA5CC7E0079378A /* UIImageOrientationExtension.swift in Sources */,
 				CA3369502C913E00003752F1 /* SplashScreenView.swift in Sources */,
 				CAD05E4F2CA74552004AABE8 /* ColorExtension.swift in Sources */,
+				CAD05E522CA767F7004AABE8 /* WardrobeImage.swift in Sources */,
 				CAD05E452CA74442004AABE8 /* ItemNameField.swift in Sources */,
 				CA49B0652CA4C2F10079378A /* ImageCarousel.swift in Sources */,
 				CA3369582C92C4FB003752F1 /* ProfileView.swift in Sources */,
@@ -702,7 +714,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.basgallop.ClosetMate;
+				PRODUCT_BUNDLE_IDENTIFIER = com.basgallop.ClosetMatev2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -741,7 +753,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.basgallop.ClosetMate;
+				PRODUCT_BUNDLE_IDENTIFIER = com.basgallop.ClosetMatev2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";

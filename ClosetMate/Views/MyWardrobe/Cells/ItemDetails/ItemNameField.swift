@@ -15,7 +15,6 @@ struct ItemNameField: View {
             .padding()
             .background(Color(.systemGray6))
             .cornerRadius(10)
-            .padding(.horizontal)
     }
 }
 
