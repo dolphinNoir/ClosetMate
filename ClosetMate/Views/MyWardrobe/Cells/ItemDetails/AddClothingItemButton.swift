@@ -20,20 +20,20 @@ struct AddClothingItemButton: View {
     var onSubmit: () -> Void
 
     var body: some View {
-        Button(action: {
-            if isFormValid {
-                onSubmit()
-            } else {
-                showAlert = true
+            Button(action: {
+                if isFormValid {
+                    onSubmit()
+                } else {
+                    showAlert = true
+                }
+            }) {
+                Text("Add Item")
+                    .frame(maxWidth: .infinity)
+                    .padding()
+                    .background(isFormValid ? Color.brandPrimary : Color.gray)
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
             }
-        }) {
-            Text("Add Item")
-                .frame(maxWidth: .infinity)
-                .padding()
-                .background(isFormValid ? Color.brandPrimary : Color.gray)
-                .foregroundColor(.white)
-                .cornerRadius(10)
-        }
-        .disabled(!isFormValid)
+            .disabled(!isFormValid)
     }
 }

@@ -23,10 +23,17 @@ class MyWardrobeViewModel: ObservableObject {
     @Published var ItemColor: ItemColor?
     @Published var ItemBoughtFor: Int?
     @Published var ItemCurrentValue: Int?
+    @Published var ImagesAreConverted : Bool = false
+    @Published var AddItemIsPresented: Bool = false
     
     private var processingQueue = DispatchQueue(label: "ProcessingQueue")
     let context = CIContext()
 
+    
+    func closeOutSheet(){
+        self.AddItemIsPresented = false
+    }
+    
     func setFrontImage(Image: UIImage) {
         self.FrontImage = Image
     }
@@ -89,7 +96,6 @@ class MyWardrobeViewModel: ObservableObject {
     }
 
     func deleteItem(item: ClothingItem, modelContext: ModelContext) {
-        // Use modelContext to delete the specified item
         modelContext.delete(item)
     }
 

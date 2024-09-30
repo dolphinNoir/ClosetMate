@@ -17,6 +17,7 @@ extension MyWardrobeViewModel {
     func checkLoadingStatus() {
         if self.FrontImage != nil && self.BackImage != nil {
             self.isLoading = false
+            self.ImagesAreConverted = true
         }
     }
 

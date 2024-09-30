@@ -7,7 +7,8 @@ struct DetailsInput: View {
     @State private var itemBoughtFor: String = ""
     @State private var itemCurrentValue: String = ""
     @Environment(\.modelContext) private var modelContext
-    @Environment(\.dismiss) var dismiss
+    @Environment(\.presentationMode) var presentationMode
+    @Environment(\.dismiss) var dismiss// Track the presentation mode for dismissing
     @EnvironmentObject var viewModel: MyWardrobeViewModel
 
     // State to show an alert if inputs are invalid
@@ -32,40 +33,47 @@ struct DetailsInput: View {
 
             Spacer()
 
-            AddClothingItemButton(
-                isFormValid: isFormValid,
-                itemName: itemName,
-                selectedCategory: selectedCategory,
-                selectedColor: selectedColor,
-                itemBoughtFor: itemBoughtFor,
-                itemCurrentValue: itemCurrentValue,
-                showAlert: $showAlert,
-                context: modelContext
-            ) {
-                viewModel.addClothingItem(
-                    itemName: itemName,
-                    itemCategory: selectedCategory!,
-                    itemColor: selectedColor!,
-                    itemBoughtFor: Int(itemBoughtFor) ?? 0,
-                    itemCurrentValue: Int(itemCurrentValue) ?? 0,
-                    context: modelContext
-                )
-                dismiss()
+            Button(action: {
+                if isFormValid {
+                    // Add the clothing item to the view model
+                    viewModel.addClothingItem(
+                        itemName: itemName,
+                        itemCategory: selectedCategory!,
+                        itemColor: selectedColor!,
+                        itemBoughtFor: Int(itemBoughtFor) ?? 0,
+                        itemCurrentValue: Int(itemCurrentValue) ?? 0,
+                        context: modelContext
+                    )
+                    
+                    // Dismiss both the current and parent sheets
+                    viewModel.closeOutSheet()
+                    dismiss()
+                    
+                } else {
+                    showAlert = true
+                }
+            }) {
+                Text("Add Item")
+                    .frame(maxWidth: .infinity)
+                    .padding()
+                    .background(isFormValid ? Color.brandPrimary : Color.gray) // Change button color based on form validity
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
+                    .padding(.horizontal)
             }
-        }
-        .alert(isPresented: $showAlert) {
-            Alert(
-                title: Text("Missing Information"),
-                message: Text("Please fill in all the required fields."),
-                dismissButton: .default(Text("OK"))
-            )
+            .disabled(!isFormValid)  // Disable button if the form is not valid
+            .alert(isPresented: $showAlert) {
+                Alert(
+                    title: Text("Missing Information"),
+                    message: Text("Please fill in all the required fields."),
+                    dismissButton: .default(Text("OK"))
+                )
+            }
         }
         .padding()
     }
+    
 }
-
-
-
 
 // Preview
 struct ClothingItemForm_Previews: PreviewProvider {

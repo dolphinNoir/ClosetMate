@@ -1,104 +1,114 @@
-//
-//  MyWardrobeView.swift
-//  ClosetMate
-//
-//  Created by johnny basgallop on 11/09/2024.
-//
-
 import SwiftUI
 import SwiftData
 
 struct MyWardrobeView: View {
     @StateObject var viewModel = MyWardrobeViewModel()
-    @State private var SheetIsPresented : Bool = false
+    @State private var SheetIsPresented: Bool = false
     @Query var clothingItems: [ClothingItem]
-    @State private var ItemToEdit : ClothingItem?
-    
+    @State private var ItemToEdit: ClothingItem?
+    @State private var searchText = ""  // Search text state variable
+
     var body: some View {
-        VStack {
-            HStack{
-                Text("Your Wardrobe").font(.system(size: 36, weight: .bold))
-                Spacer()
-                Image(systemName: "magnifyingglass").font(.system(size: 24))
-            }.padding(.top, 43)
-            
-            Spacer()
-            
-            
-            if clothingItems.isEmpty{
-                Text("It Appears You Dont Have Any Items To Show, Click the Add Button to begin your collection.").font(.system(size: 15)).multilineTextAlignment(.center).frame(width: screenWidth / 1.5)
-            }
-            
-            else{
+        
+        NavigationStack{
+            VStack {
+                HStack {
+                    Text("Your Wardrobe")
+                        .font(.system(size: 36, weight: .bold))
+                    Spacer()
+                }
+                .padding(.top, 10)
                 
-                ClothingList().environmentObject(viewModel)
-                
-            }
-            
-            Spacer()
-            
-            HStack{
                 Spacer()
-                AddItemButton(SheetIsPresented: $SheetIsPresented)
+                
+                // If there are no clothing items, display a message
+                if clothingItems.isEmpty {
+                    Text("It Appears You Dont Have Any Items To Show, Click the Add Button to begin your collection.")
+                        .font(.system(size: 15))
+                        .multilineTextAlignment(.center)
+                        .frame(width: screenWidth / 1.5)
+                } else {
+                    // Pass the filtered items to the ClothingList component
+                    ClothingList(clothingItems: filteredClothingItems)
+                        .environmentObject(viewModel)
+                }
+                
+                Spacer()
+                
+                // Add Item Button
+                HStack {
+                    Spacer()
+                    AddItemButton(SheetIsPresented: $viewModel.AddItemIsPresented)
+                }
+                .sheet(isPresented: $viewModel.AddItemIsPresented, content: {
+                    SheetViewCell()
+                        .environmentObject(viewModel)
+                })
             }
-            .sheet(isPresented: $SheetIsPresented, content: {
-                SheetViewCell().environmentObject(viewModel)
-            })
-          
-            
-        }.padding(.horizontal, 20)
+            .padding(.horizontal, 20)
+            .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always))
+        }
+    }
+
+    // Filtered clothing items based on the search text
+    private var filteredClothingItems: [ClothingItem] {
+        if searchText.isEmpty {
+            return clothingItems
+        } else {
+            return clothingItems.filter { $0.itemName.localizedCaseInsensitiveContains(searchText) }
+        }
     }
 }
 
 struct ClothingList: View {
     @EnvironmentObject var viewModel: MyWardrobeViewModel
-    @Query var clothingItems: [ClothingItem]
-    @State private var ItemToEdit : ClothingItem?
-    var body: some View {
-            ScrollView(showsIndicators: false) {
-                LazyVStack(alignment: .leading, spacing: 20) {
-                    // Step 1: Group items by their category and iterate over each category
-                    ForEach(groupedItems, id: \.key) { category, items in
-                        // Each Category as a Section
-                        VStack(alignment: .leading) {
-                            // Section Header
-                            Text(category.rawValue)
-                                .font(.headline)
-                                .padding(.leading, 15)
+    var clothingItems: [ClothingItem]  // Use filtered clothing items passed from parent
+    @State private var ItemToEdit: ClothingItem?
 
-                            // Step 2: Horizontal ScrollView for Items in this Category
-                            ScrollView(.horizontal, showsIndicators: false) {
-                                LazyHStack(spacing: 15) {
-                                    // Display only the images of each clothing item
-                                    ForEach(items, id: \.id) { item in
-                                        if let frontImage = item.frontImage {
-                                            WardrobeImage(image: frontImage)  
-                                                .onTapGesture {
+    var body: some View {
+        ScrollView(showsIndicators: false) {
+            LazyVStack(alignment: .leading, spacing: 20) {
+                // Group items by their category and iterate over each category
+                ForEach(groupedItems, id: \.key) { category, items in
+                    VStack(alignment: .leading) {
+                        // Section Header
+                        Text(category.rawValue)
+                            .font(.headline)
+                            .padding(.leading, 15)
+
+                        // Horizontal ScrollView for Items in this Category
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            LazyHStack(spacing: 15) {
+                                // Display only the images of each clothing item
+                                ForEach(items, id: \.id) { item in
+                                    if let frontImage = item.frontImage {
+                                        WardrobeImage(image: frontImage, name: item.itemName)
+                                            .onTapGesture {
                                                 ItemToEdit = item
                                             }
-                                        }
                                     }
                                 }
-                                .padding(.horizontal, 15)
                             }
+                            .padding(.horizontal, 15)
                         }
                     }
                 }
-                .padding(.vertical, 15)
             }
-            .sheet(item: $ItemToEdit ){item in
-                UpdateItem(Item: item)
-            }
-//            .navigationTitle("Clothing Inventory")
+            .padding(.vertical, 15)
+        }
+        .sheet(item: $ItemToEdit) { item in
+            UpdateItem(Item: item).environmentObject(viewModel)
+        }
     }
 
-    // Grouping items by category
+    // Group items by category
     private var groupedItems: [(key: ItemCategory, value: [ClothingItem])] {
         Dictionary(grouping: clothingItems, by: { $0.itemCategory })
-            .sorted { $0.key.rawValue < $1.key.rawValue } // Sort the categories alphabetically
+            .sorted { $0.key.rawValue < $1.key.rawValue } // Sort categories alphabetically
     }
 }
+
+// Preview for testing
 #Preview {
     MyWardrobeView()
 }
-

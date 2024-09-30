@@ -1,28 +1,20 @@
-//
-//  AddItemBottomButtons.swift
-//  ClosetMate
-//
-//  Created by johnny basgallop on 25/09/2024.
-//
-
 import SwiftUI
 
-struct AddItemBottomButtons : View {
+struct AddItemBottomButtons: View {
     @Environment(\.dismiss) var dismiss
-    @EnvironmentObject var viewModel : MyWardrobeViewModel
-    var isReadyForNext : Bool
-    var leftTitle : String
-    var rightTitle : String
+    @EnvironmentObject var viewModel: MyWardrobeViewModel
+    var isReadyForNext: Bool
+    var leftTitle: String
+    var rightTitle: String
 
-    
     var body: some View {
-        HStack(spacing: 10){
+        HStack(spacing: 10) {
             Button(action: {
                 dismiss()
             }, label: {
-                ZStack{
+                ZStack {
                     Rectangle()
-                        .frame(width: (screenWidth - 75) * 0.35 , height: 50)
+                        .frame(width: (screenWidth - 75) * 0.35, height: 50)
                         .foregroundStyle(.brandLightGray)
                         .clipShape(RoundedRectangle(cornerRadius: 5))
                     
@@ -34,9 +26,9 @@ struct AddItemBottomButtons : View {
             })
             
             Button(action: {
-                // Run the image conversion asynchronously and then navigate
+                viewModel.isLoading = true // Run the image conversion asynchronously and then navigate
                 viewModel.ConvertImages()
-                viewModel.isLoading = true // Optional: Set loading state if needed
+                
             }, label: {
                 ZStack {
                     Rectangle()
@@ -51,16 +43,10 @@ struct AddItemBottomButtons : View {
                 }
             })
             .disabled(viewModel.FrontImage == nil || viewModel.BackImage == nil)
-            .background(
-                // Use the background to handle navigation after the button is pressed
-                NavigationLink(destination: ItemDetails().environmentObject(viewModel),
-                               isActive: $viewModel.isLoading) {
-                    EmptyView()
-                }
-            )
-            
-            
-            
+        }
+        // Use the new .navigationDestination modifier
+        .navigationDestination(isPresented: $viewModel.ImagesAreConverted) {
+            ItemDetails().environmentObject(viewModel)
         }
     }
 }

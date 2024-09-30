@@ -19,7 +19,6 @@ struct YourApp: App {
 
   var body: some Scene {
     WindowGroup {
-      NavigationView {
           SplashScreenView()
               .task {
                   try? Tips.resetDatastore()
@@ -27,8 +26,7 @@ struct YourApp: App {
                     .displayFrequency(.immediate),
                     .datastoreLocation(.applicationDefault)
                   ])
-              }
-      }.preferredColorScheme(.light)
+              }.preferredColorScheme(.light)
     }.modelContainer(for: [ClothingItem.self])
   }
 }
