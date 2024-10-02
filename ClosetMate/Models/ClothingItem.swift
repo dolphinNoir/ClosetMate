@@ -99,8 +99,8 @@ enum ItemColor : String, Codable, Hashable, CaseIterable{
 @Model
 class ClothingItem {
     @Attribute(.unique) var id: UUID
-    var frontImageData: Data?
-    var backImageData: Data?
+    @Attribute(.externalStorage) var frontImageData: Data?
+    @Attribute(.externalStorage) var backImageData: Data?
     var itemName: String
     var itemCategory: ItemCategory
     var itemColor: ItemColor

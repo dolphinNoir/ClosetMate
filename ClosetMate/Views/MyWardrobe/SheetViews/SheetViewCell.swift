@@ -18,18 +18,18 @@ struct SheetViewCell: View {
         NavigationStack(path: $navigationPath){
             Spacer()
             
-            VStack(alignment: .leading, spacing: 30){
+            VStack(alignment: .center, spacing: 30){
                 VStack(alignment: .leading){
                     Text("Scan Item")
                         .font(.title)
                         .fontWeight(.semibold)
                         .padding(.bottom, 5)
                     
-                        Text("First we need to scan your item so we can display it.")
+                        Text("First we need to scan the front and back of your item so we can display it.")
                             .foregroundStyle(.brandAccent)
                             .font(.callout)
                             .fixedSize(horizontal: false, vertical: true)
-                }
+                }.frame(width: screenWidth - 45)
                 
                 
                 VStack(spacing:25){

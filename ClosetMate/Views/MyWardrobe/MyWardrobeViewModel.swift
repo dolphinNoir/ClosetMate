@@ -14,7 +14,6 @@ import SwiftData
 
 class MyWardrobeViewModel: ObservableObject {
     @Query var clothingItems: [ClothingItem]
-    
     @Published var isLoading: Bool = false
     @Published var FrontImage: UIImage?
     @Published var BackImage: UIImage?

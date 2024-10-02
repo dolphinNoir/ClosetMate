@@ -42,9 +42,9 @@ struct ItemDetailsView : View {
                         .fixedSize(horizontal: false, vertical: true)
                 }.padding(.bottom, 15)
                 
-                if viewModel.FrontImage != nil && viewModel.BackImage != nil {
-                    ImageCarousel(FrontImage: viewModel.FrontImage!, BackImage: viewModel.BackImage!).environmentObject(viewModel)
-                }
+//                if viewModel.FrontImage != nil && viewModel.BackImage != nil {
+                    ImageCarousel(FrontImage: viewModel.FrontImage, BackImage: viewModel.BackImage).environmentObject(viewModel)
+//                }
                
                 Spacer()
                 
@@ -59,4 +59,8 @@ struct ItemDetailsView : View {
             }
         }
     }
+}
+
+#Preview{
+    ItemDetails(navigationPath: .constant(NavigationPath())).environmentObject(MyWardrobeViewModel())
 }

@@ -20,7 +20,7 @@ struct ProfileView: View {
         
         return colorCounts
             .sorted { $0.value > $1.value }
-            .prefix(5)
+            .prefix(4)
             .map { ($0.key, $0.value) }
     }
     

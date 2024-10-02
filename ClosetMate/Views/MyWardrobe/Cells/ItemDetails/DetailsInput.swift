@@ -1,4 +1,5 @@
 import SwiftUI
+import SwiftData
 
 struct DetailsInput: View {
     @Binding var navigationPath : NavigationPath
@@ -31,8 +32,8 @@ struct DetailsInput: View {
             ItemPriceInput(label: "Item Bought For", price: $itemBoughtFor) // Bought Price Input
 
             ItemPriceInput(label: "Item Current Value", price: $itemCurrentValue) // Current Price Input
-
-            Spacer()
+            
+            Spacer().frame(height: 20)
 
             Button(action: {
                 if isFormValid {
@@ -58,10 +59,9 @@ struct DetailsInput: View {
                 Text("Add Item")
                     .frame(maxWidth: .infinity)
                     .padding()
-                    .background(isFormValid ? Color.brandPrimary : Color.gray) // Change button color based on form validity
+                    .background(isFormValid ? Color.brandPrimary : Color.gray)
                     .foregroundColor(.white)
-                    .cornerRadius(10)
-                    .padding(.horizontal)
+                    .cornerRadius(5)
             }
             .disabled(!isFormValid)  // Disable button if the form is not valid
             .alert(isPresented: $showAlert) {
@@ -77,3 +77,6 @@ struct DetailsInput: View {
     
 }
 
+#Preview {
+    DetailsInput(navigationPath: .constant(NavigationPath()))
+}
