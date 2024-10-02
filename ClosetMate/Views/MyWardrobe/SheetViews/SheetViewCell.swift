@@ -16,24 +16,23 @@ struct SheetViewCell: View {
     
     var body: some View {
         NavigationStack(path: $navigationPath){
-            VStack (spacing: 25){
-                Spacer()
-                
+            Spacer()
+            
+            VStack(alignment: .leading, spacing: 30){
                 VStack(alignment: .leading){
                     Text("Scan Item")
                         .font(.title)
                         .fontWeight(.semibold)
-                        .padding(.bottom, 6)
+                        .padding(.bottom, 5)
                     
-                    Text("First we need to scan your item so we can display it.")
-                        .foregroundStyle(.brandAccent)
-                        .font(.callout)
-//                        .fixedSize(horizontal: false, vertical: true)
+                        Text("First we need to scan your item so we can display it.")
+                            .foregroundStyle(.brandAccent)
+                            .font(.callout)
+                            .fixedSize(horizontal: false, vertical: true)
                 }
                 
-                Spacer()
                 
-                VStack(spacing:20){
+                VStack(spacing:25){
                     ScanBox(title: "Front", onClick: {
                         print("clicked front")
                     } ).environmentObject(viewModel)
@@ -44,16 +43,14 @@ struct SheetViewCell: View {
                     } ).environmentObject(viewModel)
                 }
                 
-                
                 Spacer()
                 
+                    AddItemBottomButtons(isReadyForNext: false, leftTitle: "Cancel", rightTitle: "Next Step", navigationPath: $navigationPath)
+                    .environmentObject(viewModel)
 
                 
-                AddItemBottomButtons(isReadyForNext: false, leftTitle: "Cancel", rightTitle: "Next Step", navigationPath: $navigationPath).environmentObject(viewModel)
-                
-                
             }
-            .padding(.horizontal, 10)
+            .padding(20)
         }
     }
 }

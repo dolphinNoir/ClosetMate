@@ -60,7 +60,7 @@ struct ScanBox: View {
                             }
                         }
                     }
-                }.frame(width: (screenWidth - 65), height: 185)
+                }.frame(width: (screenWidth - 65), height: screenHeight * 0.2)
             })
         }
         .actionSheet(isPresented: $showImagePicker) {

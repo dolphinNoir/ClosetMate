@@ -1,9 +1,3 @@
-//
-//  DiscoverView.swift
-//  ClosetMate
-//
-//  Created by johnny basgallop on 11/09/2024.
-//
 
 import SwiftUI
 import PhotosUI
