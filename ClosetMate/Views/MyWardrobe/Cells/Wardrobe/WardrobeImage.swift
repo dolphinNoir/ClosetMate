@@ -48,6 +48,8 @@ struct WardrobeImage: View {
                     .foregroundStyle(.brandAccent)
                     .fontWeight(.medium)
                     .padding(.top, 5)
+                    .frame(width: width - 10)
+                    .lineLimit(1)
             }
             
         }

@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct DetailsInput: View {
+    @Binding var navigationPath : NavigationPath
     @State private var itemName: String = ""
     @State private var selectedCategory: ItemCategory? = nil
     @State private var selectedColor: ItemColor? = nil
@@ -40,14 +41,15 @@ struct DetailsInput: View {
                         itemName: itemName,
                         itemCategory: selectedCategory!,
                         itemColor: selectedColor!,
-                        itemBoughtFor: Int(itemBoughtFor) ?? 0,
-                        itemCurrentValue: Int(itemCurrentValue) ?? 0,
+                        itemBoughtFor: Int(itemBoughtFor)!,
+                        itemCurrentValue: Int(itemCurrentValue)!,
                         context: modelContext
                     )
                     
                     // Dismiss both the current and parent sheets
+                    navigationPath.removeLast(navigationPath.count)  // Reset the navigation state
                     viewModel.closeOutSheet()
-                    dismiss()
+                   
                     
                 } else {
                     showAlert = true
@@ -65,7 +67,7 @@ struct DetailsInput: View {
             .alert(isPresented: $showAlert) {
                 Alert(
                     title: Text("Missing Information"),
-                    message: Text("Please fill in all the required fields."),
+                    message: Text("Please fill in all the fields."),
                     dismissButton: .default(Text("OK"))
                 )
             }
@@ -75,11 +77,3 @@ struct DetailsInput: View {
     
 }
 
-// Preview
-struct ClothingItemForm_Previews: PreviewProvider {
-    static var previews: some View {
-        NavigationView {
-            DetailsInput().environmentObject(MyWardrobeViewModel())
-        }
-    }
-}

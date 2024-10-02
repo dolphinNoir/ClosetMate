@@ -7,18 +7,11 @@ struct MyWardrobeView: View {
     @Query var clothingItems: [ClothingItem]
     @State private var ItemToEdit: ClothingItem?
     @State private var searchText = ""  // Search text state variable
-
+    @State private var navigationPath = NavigationPath()
     var body: some View {
         
         NavigationStack{
-            VStack {
-                HStack {
-                    Text("Your Wardrobe")
-                        .font(.system(size: 36, weight: .bold))
-                    Spacer()
-                }
-                .padding(.top, 10)
-                
+            VStack{
                 Spacer()
                 
                 // If there are no clothing items, display a message
@@ -38,18 +31,21 @@ struct MyWardrobeView: View {
                 // Add Item Button
                 HStack {
                     Spacer()
-                    AddItemButton(SheetIsPresented: $viewModel.AddItemIsPresented)
+                    AddItemButton(SheetIsPresented: $viewModel.AddItemIsPresented, navigationPath: $navigationPath)
                 }
-                .sheet(isPresented: $viewModel.AddItemIsPresented, content: {
-                    SheetViewCell()
+                .sheet(isPresented: $viewModel.AddItemIsPresented,onDismiss:{
+                    navigationPath = NavigationPath()
+                }, content: {
+                    SheetViewCell( navigationPath: $navigationPath)
                         .environmentObject(viewModel)
                 })
             }
             .padding(.horizontal, 20)
+            .navigationTitle(Text("Wardrobe"))
             .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always))
         }
     }
-
+    
     // Filtered clothing items based on the search text
     private var filteredClothingItems: [ClothingItem] {
         if searchText.isEmpty {
@@ -64,7 +60,7 @@ struct ClothingList: View {
     @EnvironmentObject var viewModel: MyWardrobeViewModel
     var clothingItems: [ClothingItem]  // Use filtered clothing items passed from parent
     @State private var ItemToEdit: ClothingItem?
-
+    
     var body: some View {
         ScrollView(showsIndicators: false) {
             LazyVStack(alignment: .leading, spacing: 20) {
@@ -75,7 +71,7 @@ struct ClothingList: View {
                         Text(category.rawValue)
                             .font(.headline)
                             .padding(.leading, 15)
-
+                        
                         // Horizontal ScrollView for Items in this Category
                         ScrollView(.horizontal, showsIndicators: false) {
                             LazyHStack(spacing: 15) {
@@ -100,7 +96,7 @@ struct ClothingList: View {
             UpdateItem(Item: item).environmentObject(viewModel)
         }
     }
-
+    
     // Group items by category
     private var groupedItems: [(key: ItemCategory, value: [ClothingItem])] {
         Dictionary(grouping: clothingItems, by: { $0.itemCategory })

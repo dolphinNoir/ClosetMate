@@ -6,10 +6,12 @@ struct AddItemBottomButtons: View {
     var isReadyForNext: Bool
     var leftTitle: String
     var rightTitle: String
+    @Binding var navigationPath : NavigationPath
 
     var body: some View {
         HStack(spacing: 10) {
             Button(action: {
+                navigationPath = NavigationPath()
                 dismiss()
             }, label: {
                 ZStack {
@@ -46,11 +48,7 @@ struct AddItemBottomButtons: View {
         }
         // Use the new .navigationDestination modifier
         .navigationDestination(isPresented: $viewModel.ImagesAreConverted) {
-            ItemDetails().environmentObject(viewModel)
+            ItemDetails(navigationPath: $navigationPath).environmentObject(viewModel)
         }
     }
-}
-
-#Preview {
-    AddItemBottomButtons(isReadyForNext: false, leftTitle: "Cancel", rightTitle: "NextStep")
 }

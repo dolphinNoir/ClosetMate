@@ -9,9 +9,11 @@ import SwiftUI
 
 struct AddItemButton: View {
     @Binding var SheetIsPresented : Bool
-    
+    @Binding var navigationPath : NavigationPath
     var body: some View {
             Button(action: {
+                navigationPath.removeLast(navigationPath.count)
+                navigationPath = NavigationPath()
                 SheetIsPresented.toggle()
             }, label: {
                 Image(systemName: "plus")
@@ -27,5 +29,5 @@ struct AddItemButton: View {
 }
 
 #Preview {
-    AddItemButton(SheetIsPresented: .constant(false))
+    AddItemButton(SheetIsPresented: .constant(false), navigationPath: .constant(NavigationPath()))
 }

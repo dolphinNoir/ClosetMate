@@ -10,11 +10,12 @@ import TipKit
 
 struct SheetViewCell: View {
     @EnvironmentObject var viewModel : MyWardrobeViewModel
+    @Binding var navigationPath : NavigationPath
     let ScanTip = ScanningAdviceTip()
     
     
     var body: some View {
-        NavigationStack{
+        NavigationStack(path: $navigationPath){
             VStack (spacing: 25){
                 Spacer()
                 
@@ -48,18 +49,18 @@ struct SheetViewCell: View {
                 
 
                 
-                AddItemBottomButtons(isReadyForNext: false, leftTitle: "Cancel", rightTitle: "Next Step").environmentObject(viewModel)
+                AddItemBottomButtons(isReadyForNext: false, leftTitle: "Cancel", rightTitle: "Next Step", navigationPath: $navigationPath).environmentObject(viewModel)
                 
                 
-            }.padding(.horizontal, 10)
-                
+            }
+            .padding(.horizontal, 10)
         }
     }
 }
 
 
 #Preview {
-    SheetViewCell().environmentObject(MyWardrobeViewModel())
+    SheetViewCell(navigationPath: .constant(NavigationPath())).environmentObject(MyWardrobeViewModel())
         .task {
             try? Tips.resetDatastore()
             try? Tips.configure([

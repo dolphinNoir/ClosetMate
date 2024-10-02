@@ -31,6 +31,14 @@ class MyWardrobeViewModel: ObservableObject {
 
     
     func closeOutSheet(){
+        self.ImagesAreConverted = false
+        self.FrontImage = nil
+        self.BackImage = nil
+        self.ItemName = nil
+        self.ItemCategory = nil
+        self.ItemColor = nil
+        self.ItemBoughtFor = nil
+        self.ItemCurrentValue = nil
         self.AddItemIsPresented = false
     }
     

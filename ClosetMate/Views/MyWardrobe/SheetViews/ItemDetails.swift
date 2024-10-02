@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ItemDetails: View {
     @EnvironmentObject var viewModel : MyWardrobeViewModel
+    @Binding var navigationPath : NavigationPath
     var body: some View {
         VStack{
             if viewModel.isLoading{
@@ -17,7 +18,7 @@ struct ItemDetails: View {
             }
             
             else{
-                ItemDetailsView().environmentObject(viewModel).padding(.horizontal, 10)
+                ItemDetailsView(navigationPath: $navigationPath).environmentObject(viewModel).padding(.horizontal, 10)
             }
         }
     }
@@ -25,6 +26,7 @@ struct ItemDetails: View {
 
 struct ItemDetailsView : View {
     @EnvironmentObject var viewModel : MyWardrobeViewModel
+    @Binding var navigationPath : NavigationPath
     var body: some View {
         ScrollView(.vertical, showsIndicators: false){
             VStack(spacing: 10){
@@ -48,7 +50,7 @@ struct ItemDetailsView : View {
                 
                 VStack(alignment: .leading){
                     Section() {
-                        DetailsInput().environmentObject(viewModel)
+                        DetailsInput(navigationPath: $navigationPath).environmentObject(viewModel)
                     }.headerProminence(.increased)
                 }
            
@@ -57,8 +59,4 @@ struct ItemDetailsView : View {
             }
         }
     }
-}
-
-#Preview {
-    ItemDetails().environmentObject(MyWardrobeViewModel())
 }

@@ -10,25 +10,29 @@ import SwiftUI
 let screenWidth = UIScreen.main.bounds.width
 let screenHeight = UIScreen.main.bounds.height
 
-struct ContentView: View {
+enum Tab: Hashable {
+    case first, second, third
+}
 
+struct ContentView: View {
+    @State private var selectedTab : Tab = .first
     
     var body: some View{
-        TabView{
+        TabView(selection: $selectedTab){
             PlannerView()
                 .tabItem {
                     Label("Planner", systemImage: "square.stack.3d.up")
-                }
+                }.tag(Tab.first)
             
             MyWardrobeView()
                 .tabItem {
                     Label("Wardrobe", systemImage: "tshirt")
-                }
+                }.tag(Tab.second)
             
-            ProfileView()
+            ProfileView(selectedTab: $selectedTab)
                 .tabItem {
                     Label("Profile", systemImage: "person")
-                }
+                }.tag(Tab.third)
         }
         .tint(.brandPrimary)
             
