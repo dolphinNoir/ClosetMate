@@ -48,5 +48,5 @@ struct TopColorsCard: View {
 }
 
 #Preview {
-    TopColorsCard(topColors: [(ItemColor.red, 3), (ItemColor.blue, 6), (ItemColor.green, 2), (ItemColor.black, 4), (ItemColor.orange, 1)])
+    TopColorsCard(topColors: [(ItemColor.red, 3), (ItemColor.blue, 6), (ItemColor.green, 2), (ItemColor.black, 4)])
 }

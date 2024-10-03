@@ -45,7 +45,7 @@ struct ProfileView: View {
                             value: "£\(totalCurrentValue)"
                         )
                         TopColorsCard(topColors: topColors)
-                        TopCategoriesGrid(topCategories: topCategories)
+                        TopCategoriesGrid(topCategories: topCategories, clothingItems: clothingItems)
                         
                         Spacer()
                     }

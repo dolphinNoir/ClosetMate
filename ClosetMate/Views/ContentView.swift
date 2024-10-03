@@ -8,7 +8,7 @@ enum Tab: Hashable {
 }
 
 struct ContentView: View {
-    @State private var selectedTab : Tab = .first
+    @State private var selectedTab : Tab = .second
     
     var body: some View{
         TabView(selection: $selectedTab){

@@ -14,7 +14,6 @@ struct MyWardrobeView: View {
             VStack{
                 Spacer()
                 
-                // If there are no clothing items, display a message
                 if clothingItems.isEmpty {
                     Text("It Appears You Dont Have Any Items To Show, Click the Add Button to begin your collection.")
                         .font(.system(size: 15))
@@ -28,7 +27,6 @@ struct MyWardrobeView: View {
                 
                 Spacer()
                 
-                // Add Item Button
                 HStack {
                     Spacer()
                     AddItemButton(SheetIsPresented: $viewModel.AddItemIsPresented, navigationPath: $navigationPath)
@@ -90,7 +88,7 @@ struct ClothingList: View {
                     }
                 }
             }
-            .padding(.vertical, 15)
+            .padding(.top, 15)
         }
         .sheet(item: $ItemToEdit) { item in
             UpdateItem(Item: item).environmentObject(viewModel)
