@@ -1,7 +1,7 @@
 import SwiftUI
 import SwiftData
 
-struct ProfileView: View {
+struct PortfolioView: View {
     @Query var clothingItems: [ClothingItem]
     @Binding var selectedTab: Tab
     
@@ -39,7 +39,7 @@ struct ProfileView: View {
         NavigationStack {
             if !clothingItems.isEmpty {
                 ScrollView(.vertical, showsIndicators: false){
-                    VStack(spacing: 5) {
+                    VStack(spacing: 0) {
                         PortfolioValue(
                             title: "Wardrobe Value",
                             value: "£\(totalCurrentValue)"
@@ -64,6 +64,6 @@ struct ProfileView: View {
 
 
 #Preview {
-    ProfileView(selectedTab: .constant(.third))
+    PortfolioView(selectedTab: .constant(.third))
 }
 

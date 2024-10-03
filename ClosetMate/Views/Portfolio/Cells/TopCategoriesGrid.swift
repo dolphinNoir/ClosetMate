@@ -6,20 +6,20 @@ struct TopCategoriesGrid: View {
 
     // Define a two-column grid layout
     let columns = [
-        GridItem(.flexible(), spacing: 15),
-        GridItem(.flexible(), spacing: 15)
+        GridItem(.flexible(), spacing: 5),
+        GridItem(.flexible(), spacing: 5)
     ]
 
     var body: some View {
-        VStack(spacing: 20) {
+        VStack(spacing: 10) {
             HStack {
                 Text("Top Categories")
                     .font(.headline)
                     .foregroundColor(.gray)
                 Spacer()
-            }
+            }.padding(.horizontal)
 
-            LazyVGrid(columns: columns, spacing: 15) {
+            LazyVGrid(columns: columns, spacing: 5) {
                 ForEach(topCategories, id: \.category) { category, count in
                     // Find one item from the current category
                     if let item = clothingItems.first(where: { $0.itemCategory == category }) {
@@ -28,7 +28,6 @@ struct TopCategoriesGrid: View {
                 }
             }
         }
-        .padding()
         .cornerRadius(15)
         .padding(.vertical, 10)
     }
@@ -44,7 +43,7 @@ struct CategoryCard: View {
         ZStack {
             RoundedRectangle(cornerRadius: 10)
                 .fill(.brandLightGray)
-                .frame(width: (screenWidth - 75) / 2, height: 150)
+                .frame(width: (screenWidth - 50) / 2, height: 160)
 
             VStack(spacing: 0) {
                 // Show the front image if available, otherwise show a placeholder

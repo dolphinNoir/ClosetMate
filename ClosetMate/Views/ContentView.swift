@@ -22,9 +22,9 @@ struct ContentView: View {
                     Label("Wardrobe", systemImage: "tshirt")
                 }.tag(Tab.second)
             
-            ProfileView(selectedTab: $selectedTab)
+            PortfolioView(selectedTab: $selectedTab)
                 .tabItem {
-                    Label("Profile", systemImage: "person")
+                    Label("Portfolio", systemImage: "person")
                 }.tag(Tab.third)
         }
         .tint(.brandPrimary)
