@@ -30,7 +30,7 @@ struct ScanningAdviceTip : Tip {
     }
     
     var message: Text? {
-        Text("We reccomend using clear photos with good lighting and no creases")
+        Text("Try to make sure the clothing item takes up most of the frame")
     }
     
     var image: Image? {

@@ -26,8 +26,9 @@ class MyWardrobeViewModel: ObservableObject {
     @Published var AddItemIsPresented: Bool = false
     
     private var processingQueue = DispatchQueue(label: "ProcessingQueue")
+    let standardStickerSize = CGSize(width: 500, height: 500)
     let context = CIContext()
-
+    
     
     func closeOutSheet(){
         self.ImagesAreConverted = false
@@ -44,7 +45,7 @@ class MyWardrobeViewModel: ObservableObject {
     func setFrontImage(Image: UIImage) {
         self.FrontImage = Image
     }
-
+    
     func setBackImage(Image: UIImage) {
         self.BackImage = Image
     }
@@ -63,7 +64,7 @@ class MyWardrobeViewModel: ObservableObject {
         guard let frontImage = self.FrontImage, let backImage = self.BackImage else { return }
         
         self.isLoading = true
-
+        
         // Convert both images asynchronously to stickers, using the functionality in the RemoveBackgroundExtension
         processingQueue.async {
             self.createSticker(from: frontImage) { [weak self] sticker in
@@ -86,7 +87,7 @@ class MyWardrobeViewModel: ObservableObject {
         // Convert the images to Data using pngData() to preserve transparency
         let frontImageData = self.FrontImage?.pngData()
         let backImageData = self.BackImage?.pngData()
-
+        
         // Create a new ClothingItem instance with the provided data
         let newItem = ClothingItem(
             frontImageData: frontImageData,
@@ -97,15 +98,15 @@ class MyWardrobeViewModel: ObservableObject {
             itemBoughtFor: itemBoughtFor,
             itemCurrentValue: itemCurrentValue
         )
-
+        
         // Insert the new item into the ModelContext for SwiftData to manage
         context.insert(newItem)
     }
-
+    
     func deleteItem(item: ClothingItem, modelContext: ModelContext) {
         modelContext.delete(item)
     }
-
-   
+    
+    
 }
 

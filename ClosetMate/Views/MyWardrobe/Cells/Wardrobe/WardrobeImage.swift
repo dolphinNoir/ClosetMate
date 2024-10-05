@@ -24,9 +24,10 @@ struct WardrobeImage: View {
                 if let image = image {
                     Image(uiImage: image)
                         .resizable()
-                        .scaledToFit()
-                        .frame(width: width - 10, height: height - 10)
+                        .scaledToFill()
+                        .frame(width: width - 30, height: height - 30)
                         .clipShape(RoundedRectangle(cornerRadius: 10))
+                        .padding(35)
                 } else {
                     // Placeholder image for missing items
                     Image(systemName: "photo")
