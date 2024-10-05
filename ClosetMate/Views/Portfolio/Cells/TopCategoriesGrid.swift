@@ -4,6 +4,9 @@ struct TopCategoriesGrid: View {
     var topCategories: [(category: ItemCategory, count: Int)]
     var clothingItems: [ClothingItem]  // The full list of clothing items
 
+    private func NumberOfItems(for category: ItemCategory) -> Int {
+        clothingItems.filter {$0.itemCategory == category}.count
+    }// New property for the image
     // Define a two-column grid layout
     let columns = [
         GridItem(.flexible(), spacing: 5),
@@ -23,7 +26,7 @@ struct TopCategoriesGrid: View {
                 ForEach(topCategories, id: \.category) { category, count in
                     // Find one item from the current category
                     if let item = clothingItems.first(where: { $0.itemCategory == category }) {
-                        CategoryCard(category: category, count: count, frontImage: item.frontImage)
+                        CategoryCard(category: category, count: count, frontImage: item.frontImage, numberOfItems: NumberOfItems(for: category))
                     }
                 }
             }
@@ -37,7 +40,9 @@ struct TopCategoriesGrid: View {
 struct CategoryCard: View {
     var category: ItemCategory
     var count: Int
-    var frontImage: UIImage?  // New property for the image
+    var frontImage: UIImage?  
+    var numberOfItems: Int
+
 
     var body: some View {
         ZStack {
@@ -61,7 +66,7 @@ struct CategoryCard: View {
                         .foregroundColor(.gray)
                 }
 
-                Text(category.rawValue.last == "s" ? category.rawValue : "\(category.rawValue)s")
+                Text(category.rawValue.last == "s" ? "\(category.rawValue) (\(numberOfItems))" : "\(category.rawValue)s (\(numberOfItems))")
                     .foregroundStyle(.brandAccent)
                     .font(.system(size: 16, weight: .semibold))
                     .multilineTextAlignment(.center)
