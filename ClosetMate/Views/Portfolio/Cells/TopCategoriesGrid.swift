@@ -58,6 +58,7 @@ struct CategoryCard: View {
                         .scaledToFit()
                         .frame(width: 110, height: 110)
                         .clipShape(RoundedRectangle(cornerRadius: 8))
+                    
                 } else {
                     Image(systemName: "photo")
                         .resizable()
