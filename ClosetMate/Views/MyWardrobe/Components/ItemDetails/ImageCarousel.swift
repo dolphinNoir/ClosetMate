@@ -15,7 +15,7 @@ struct ImageCarousel: View {
                     Image(uiImage: front)
                         .resizable()
                         .scaledToFill()
-//                        .frame(width: 325, height: 325) // Use a consistent display size
+                        .frame(width: 260, height: 260) // Use a consistent display size
 //                        .frame(minWidth: screenWidth - 60)
                         .padding()
                         .tag(0)
@@ -33,7 +33,7 @@ struct ImageCarousel: View {
                     Image(uiImage: back)
                         .resizable()
                         .scaledToFill()
-//                        .frame(width: 325, height: 325) // Use a consistent display size
+                        .frame(width: 260, height: 260) // Use a consistent display size
                         .padding()
                         .tag(1)
                 } else {

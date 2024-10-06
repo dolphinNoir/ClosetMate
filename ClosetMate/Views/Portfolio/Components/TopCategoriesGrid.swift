@@ -55,10 +55,10 @@ struct CategoryCard: View {
                 if let image = frontImage {
                     Image(uiImage: image)
                         .resizable()
-                        .scaledToFit()
-                        .frame(width: 110, height: 110)
+                        .scaledToFill()
+                        .frame(width: 80, height: 80)
                         .clipShape(RoundedRectangle(cornerRadius: 8))
-                    
+                        .padding(15)
                 } else {
                     Image(systemName: "photo")
                         .resizable()

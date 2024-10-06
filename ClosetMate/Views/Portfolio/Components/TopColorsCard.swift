@@ -11,7 +11,7 @@ struct TopColorsCard: View {
     var topColors: [(color: ItemColor, count: Int)]
     
     var body: some View {
-        VStack(spacing: 20) {
+        VStack(alignment:.leading, spacing: 20) {
             HStack {
                 Text("Favourite Colors")
                     .font(.headline)

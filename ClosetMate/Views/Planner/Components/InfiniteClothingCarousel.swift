@@ -36,7 +36,7 @@ struct InfiniteClothingCarousel: View {
                             .onTapGesture {
                                 selectedItem = items[index % items.count]
                             }
-                            .offset(y: viewModel.isTopCategory(clothingItems: items ,category: item.itemCategory) ? 0 : -30)
+//                            .offset(y: viewModel.isTopCategory(clothingItems: items ,category: item.itemCategory) ? 0 : -30)
                     } else {
                         Text("No image available")
                             .foregroundColor(.gray)

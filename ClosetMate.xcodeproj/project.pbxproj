@@ -220,9 +220,9 @@
 				CA3369512C92C2DE003752F1 /* Views */,
 				CAD05E392CA6D304004AABE8 /* Models */,
 				CA97A87B2CB218A300A36B70 /* Utilities */,
-				CA33691F2C913AFE003752F1 /* ClosetMateApp.swift */,
-				CA33694F2C913E00003752F1 /* SplashScreenView.swift */,
 				CA3369262C913AFE003752F1 /* ContentView.swift */,
+				CA33694F2C913E00003752F1 /* SplashScreenView.swift */,
+				CA33691F2C913AFE003752F1 /* ClosetMateApp.swift */,
 				CA3369282C913AFF003752F1 /* Assets.xcassets */,
 				CA33692A2C913AFF003752F1 /* ClosetMate.entitlements */,
 				CA49B0592CA0ACF20079378A /* Preview Content */,
@@ -236,16 +236,16 @@
 				CA33695C2C99DB7D003752F1 /* Portfolio */,
 				CA33695B2C99DB6F003752F1 /* Planner */,
 				CA33695A2C99DB50003752F1 /* MyWardrobe */,
-				CA3369522C92C402003752F1 /* Cells */,
+				CA3369522C92C402003752F1 /* Components */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		CA3369522C92C402003752F1 /* Cells */ = {
+		CA3369522C92C402003752F1 /* Components */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Cells;
+			path = Components;
 			sourceTree = "<group>";
 		};
 		CA33695A2C99DB50003752F1 /* MyWardrobe */ = {
@@ -271,7 +271,7 @@
 		CA33695C2C99DB7D003752F1 /* Portfolio */ = {
 			isa = PBXGroup;
 			children = (
-				CAACAB922CAD9FCA00C258B4 /* Cells */,
+				CAACAB922CAD9FCA00C258B4 /* Components */,
 				CA3369572C92C4FB003752F1 /* PortfolioView.swift */,
 			);
 			path = Portfolio;
@@ -341,7 +341,7 @@
 			path = UIKitExtensions;
 			sourceTree = "<group>";
 		};
-		CAACAB922CAD9FCA00C258B4 /* Cells */ = {
+		CAACAB922CAD9FCA00C258B4 /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				CAACAB932CAD9FD500C258B4 /* BackupView.swift */,
@@ -349,7 +349,7 @@
 				CAACAB982CADA0F500C258B4 /* TopColorsCard.swift */,
 				CAACAB9A2CADA19D00C258B4 /* TopCategoriesGrid.swift */,
 			);
-			path = Cells;
+			path = Components;
 			sourceTree = "<group>";
 		};
 		CAD05E392CA6D304004AABE8 /* Models */ = {

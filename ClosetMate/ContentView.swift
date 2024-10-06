@@ -10,7 +10,6 @@ enum Tab: Hashable {
 struct ContentView: View {
     @State private var selectedTab : Tab = .second
     @StateObject var plannerViewModel = PlannerViewModel()
-    @StateObject var wardrobeViewModel = MyWardrobeViewModel()
     var body: some View{
         TabView(selection: $selectedTab){
             PlannerView()
@@ -24,7 +23,6 @@ struct ContentView: View {
                 .tabItem {
                     Label("Wardrobe", systemImage: "tshirt")
                 }
-                .environmentObject(wardrobeViewModel)
                 .tag(Tab.second)
             
             PortfolioView(selectedTab: $selectedTab)
