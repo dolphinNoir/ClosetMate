@@ -2,7 +2,7 @@ import SwiftUI
 import SwiftData
 
 struct MyWardrobeView: View {
-    @StateObject var viewModel = MyWardrobeViewModel()
+    @EnvironmentObject var viewModel : MyWardrobeViewModel
     @State private var SheetIsPresented: Bool = false
     @Query var clothingItems: [ClothingItem]
     @State private var ItemToEdit: ClothingItem?

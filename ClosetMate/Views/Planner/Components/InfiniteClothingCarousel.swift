@@ -11,19 +11,10 @@ struct InfiniteClothingCarousel: View {
     var items: [ClothingItem]
     @Binding var selectedItem: ClothingItem?
     @State private var currentIndex = 0
-    
+    @EnvironmentObject var viewModel : PlannerViewModel
     // Extend the items array to create an infinite loop
     var extendedItems: [ClothingItem] {
         return items + items + items
-    }
-    
-    // MARK: - Helper Functions for Item Type
-    private func isShoeCategory(_ category: ItemCategory) -> Bool {
-        return [.shoes, .sneakers, .boots, .heels].contains(category)
-    }
-    
-    private func isTopCategory(_ category: ItemCategory) -> Bool {
-        return [.shirt, .hoodie, .jacket, .sweater, .tShirt].contains(category)
     }
     
     var body: some View {
@@ -37,15 +28,15 @@ struct InfiniteClothingCarousel: View {
                             .resizable()
                             .scaledToFill()
                             .frame(
-                                width: isShoeCategory(item.itemCategory) ? 120 : 175,
-                                height: isShoeCategory(item.itemCategory) ? 120 : 175
+                                width: viewModel.isShoeCategory(clothingItems: items ,category: item.itemCategory) ? 120 : 175,
+                                height: viewModel.isShoeCategory(clothingItems: items ,category: item.itemCategory) ? 120 : 175
                             )
                             .padding()
                             .clipShape(RoundedRectangle(cornerRadius: 8))
                             .onTapGesture {
                                 selectedItem = items[index % items.count]
                             }
-                            .offset(y: isTopCategory(item.itemCategory) ? 0 : -30)
+                            .offset(y: viewModel.isTopCategory(clothingItems: items ,category: item.itemCategory) ? 0 : -30)
                     } else {
                         Text("No image available")
                             .foregroundColor(.gray)
