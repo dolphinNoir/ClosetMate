@@ -34,7 +34,7 @@
             parallelizable = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CA3369312C913AFF003752F1"
+               BlueprintIdentifier = "CA0C05D12CBD53320016CBEF"
                BuildableName = "ClosetMateTests.xctest"
                BlueprintName = "ClosetMateTests"
                ReferencedContainer = "container:ClosetMate.xcodeproj">
@@ -48,6 +48,17 @@
                BlueprintIdentifier = "CA33693B2C913AFF003752F1"
                BuildableName = "ClosetMateUITests.xctest"
                BlueprintName = "ClosetMateUITests"
+               ReferencedContainer = "container:ClosetMate.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "CA1763EF2CBD5AA800320ED9"
+               BuildableName = "ClosetMateTesting.xctest"
+               BlueprintName = "ClosetMateTesting"
                ReferencedContainer = "container:ClosetMate.xcodeproj">
             </BuildableReference>
          </TestableReference>

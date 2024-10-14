@@ -14,49 +14,14 @@
 		CA3369542C92C471003752F1 /* MyWardrobeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3369532C92C471003752F1 /* MyWardrobeView.swift */; };
 		CA3369562C92C4C8003752F1 /* PlannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3369552C92C4C8003752F1 /* PlannerView.swift */; };
 		CA3369582C92C4FB003752F1 /* PortfolioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3369572C92C4FB003752F1 /* PortfolioView.swift */; };
-		CA3369632C9B10EB003752F1 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = CA3369622C9B10EB003752F1 /* FirebaseAnalytics */; };
-		CA3369652C9B10EB003752F1 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = CA3369642C9B10EB003752F1 /* FirebaseAnalyticsOnDeviceConversion */; };
-		CA3369672C9B10EB003752F1 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = CA3369662C9B10EB003752F1 /* FirebaseAnalyticsWithoutAdIdSupport */; };
-		CA3369692C9B10EB003752F1 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = CA3369682C9B10EB003752F1 /* FirebaseAppCheck */; };
-		CA33696B2C9B10EB003752F1 /* FirebaseAppDistribution-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = CA33696A2C9B10EB003752F1 /* FirebaseAppDistribution-Beta */; };
-		CA33696D2C9B10EB003752F1 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = CA33696C2C9B10EB003752F1 /* FirebaseAuth */; };
-		CA33696F2C9B10EB003752F1 /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = CA33696E2C9B10EB003752F1 /* FirebaseAuthCombine-Community */; };
-		CA3369712C9B10EB003752F1 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = CA3369702C9B10EB003752F1 /* FirebaseCrashlytics */; };
-		CA3369732C9B10EB003752F1 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = CA3369722C9B10EB003752F1 /* FirebaseDatabase */; };
-		CA3369752C9B10EB003752F1 /* FirebaseDynamicLinks in Frameworks */ = {isa = PBXBuildFile; productRef = CA3369742C9B10EB003752F1 /* FirebaseDynamicLinks */; };
-		CA3369772C9B10EB003752F1 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = CA3369762C9B10EB003752F1 /* FirebaseFirestore */; };
-		CA3369792C9B10EB003752F1 /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = CA3369782C9B10EB003752F1 /* FirebaseFirestoreCombine-Community */; };
-		CA33697B2C9B10EB003752F1 /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = CA33697A2C9B10EB003752F1 /* FirebaseFunctions */; };
-		CA33697D2C9B10EB003752F1 /* FirebaseFunctionsCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = CA33697C2C9B10EB003752F1 /* FirebaseFunctionsCombine-Community */; };
-		CA33697F2C9B10EB003752F1 /* FirebaseInAppMessaging-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = CA33697E2C9B10EB003752F1 /* FirebaseInAppMessaging-Beta */; };
-		CA3369812C9B10EB003752F1 /* FirebaseInstallations in Frameworks */ = {isa = PBXBuildFile; productRef = CA3369802C9B10EB003752F1 /* FirebaseInstallations */; };
-		CA3369832C9B10EB003752F1 /* FirebaseMLModelDownloader in Frameworks */ = {isa = PBXBuildFile; productRef = CA3369822C9B10EB003752F1 /* FirebaseMLModelDownloader */; };
-		CA3369852C9B10EB003752F1 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = CA3369842C9B10EB003752F1 /* FirebaseMessaging */; };
-		CA3369872C9B10EB003752F1 /* FirebasePerformance in Frameworks */ = {isa = PBXBuildFile; productRef = CA3369862C9B10EB003752F1 /* FirebasePerformance */; };
-		CA3369892C9B10EB003752F1 /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = CA3369882C9B10EB003752F1 /* FirebaseRemoteConfig */; };
-		CA33698B2C9B10EB003752F1 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = CA33698A2C9B10EB003752F1 /* FirebaseStorage */; };
-		CA33698D2C9B10EB003752F1 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = CA33698C2C9B10EB003752F1 /* FirebaseStorageCombine-Community */; };
-		CA33698F2C9B10EB003752F1 /* FirebaseVertexAI-Preview in Frameworks */ = {isa = PBXBuildFile; productRef = CA33698E2C9B10EB003752F1 /* FirebaseVertexAI-Preview */; };
 		CA3369912C9B16DD003752F1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA3369902C9B16DD003752F1 /* GoogleService-Info.plist */; };
-		CA3369922C9B16DD003752F1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA3369902C9B16DD003752F1 /* GoogleService-Info.plist */; };
-		CA3369932C9B16DD003752F1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA3369902C9B16DD003752F1 /* GoogleService-Info.plist */; };
 		CA3369962C9C7B3E003752F1 /* SheetViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3369952C9C7B3E003752F1 /* SheetViewCell.swift */; };
-		CA3369972C9C7B3F003752F1 /* SheetViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3369952C9C7B3E003752F1 /* SheetViewCell.swift */; };
-		CA3369982C9C7B3F003752F1 /* SheetViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3369952C9C7B3E003752F1 /* SheetViewCell.swift */; };
 		CA33699A2C9C7BCC003752F1 /* AddItemButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3369992C9C7BCC003752F1 /* AddItemButton.swift */; };
-		CA33699B2C9C7BCC003752F1 /* AddItemButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3369992C9C7BCC003752F1 /* AddItemButton.swift */; };
-		CA33699C2C9C7BCC003752F1 /* AddItemButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3369992C9C7BCC003752F1 /* AddItemButton.swift */; };
 		CA3369A22CA0A152003752F1 /* ScanBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3369A12CA0A152003752F1 /* ScanBox.swift */; };
-		CA3369A32CA0A152003752F1 /* ScanBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3369A12CA0A152003752F1 /* ScanBox.swift */; };
-		CA3369A42CA0A152003752F1 /* ScanBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3369A12CA0A152003752F1 /* ScanBox.swift */; };
 		CA3369A62CA0A66A003752F1 /* MyWardrobeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3369A52CA0A66A003752F1 /* MyWardrobeViewModel.swift */; };
-		CA3369A72CA0A66A003752F1 /* MyWardrobeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3369A52CA0A66A003752F1 /* MyWardrobeViewModel.swift */; };
-		CA3369A82CA0A66A003752F1 /* MyWardrobeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3369A52CA0A66A003752F1 /* MyWardrobeViewModel.swift */; };
 		CA49B05B2CA17FC40079378A /* ItemDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA49B05A2CA17FC40079378A /* ItemDetails.swift */; };
-		CA49B05E2CA187920079378A /* BackgroundRemoval in Frameworks */ = {isa = PBXBuildFile; productRef = CA49B05D2CA187920079378A /* BackgroundRemoval */; };
 		CA49B0632CA423BA0079378A /* AddItemBottomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA49B0622CA423BA0079378A /* AddItemBottomButtons.swift */; };
 		CA49B0652CA4C2F10079378A /* ImageCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA49B0642CA4C2F10079378A /* ImageCarousel.swift */; };
-		CA49B0672CA5C2230079378A /* DeepLabV3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = CA49B0662CA5C2230079378A /* DeepLabV3.mlmodel */; };
 		CA49B06A2CA5CC7E0079378A /* UIImageOrientationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA49B0692CA5CC7E0079378A /* UIImageOrientationExtension.swift */; };
 		CA49B06C2CA5CCD80079378A /* RemoveBackgroundExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA49B06B2CA5CCD80079378A /* RemoveBackgroundExtension.swift */; };
 		CA49B06E2CA5CFF30079378A /* AccessCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA49B06D2CA5CFF30079378A /* AccessCameraView.swift */; };
@@ -64,6 +29,7 @@
 		CA97A8782CB215CA00A36B70 /* InfiniteClothingCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA97A8772CB215CA00A36B70 /* InfiniteClothingCarousel.swift */; };
 		CA97A87A2CB2161400A36B70 /* CategorySelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA97A8792CB2161400A36B70 /* CategorySelectionView.swift */; };
 		CA97A87E2CB21AE800A36B70 /* PlannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA97A87D2CB21AE800A36B70 /* PlannerViewModel.swift */; };
+		CAA7DCDC2CBD5BD800A17EAB /* ImageTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA7DCDB2CBD5BD800A17EAB /* ImageTesting.swift */; };
 		CAACAB942CAD9FD500C258B4 /* BackupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAACAB932CAD9FD500C258B4 /* BackupView.swift */; };
 		CAACAB962CADA09E00C258B4 /* PortfolioValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAACAB952CADA09E00C258B4 /* PortfolioValue.swift */; };
 		CAACAB992CADA0F500C258B4 /* TopColorsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAACAB982CADA0F500C258B4 /* TopColorsCard.swift */; };
@@ -83,14 +49,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		CA3369332C913AFF003752F1 /* PBXContainerItemProxy */ = {
+		CA0C05D62CBD53320016CBEF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CA3369142C913AFE003752F1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = CA33691B2C913AFE003752F1;
 			remoteInfo = ClosetMate;
 		};
-		CA33693D2C913AFF003752F1 /* PBXContainerItemProxy */ = {
+		CA1763F42CBD5AA800320ED9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CA3369142C913AFE003752F1 /* Project object */;
 			proxyType = 1;
@@ -100,13 +66,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CA0C05D22CBD53320016CBEF /* ClosetMateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClosetMateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA1763F02CBD5AA800320ED9 /* ClosetMateTesting.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClosetMateTesting.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA33691C2C913AFE003752F1 /* ClosetMate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClosetMate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA33691F2C913AFE003752F1 /* ClosetMateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosetMateApp.swift; sourceTree = "<group>"; };
 		CA3369262C913AFE003752F1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CA3369282C913AFF003752F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA33692A2C913AFF003752F1 /* ClosetMate.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ClosetMate.entitlements; sourceTree = "<group>"; };
-		CA3369322C913AFF003752F1 /* ClosetMateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClosetMateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CA33693C2C913AFF003752F1 /* ClosetMateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClosetMateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA33694F2C913E00003752F1 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		CA3369532C92C471003752F1 /* MyWardrobeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWardrobeView.swift; sourceTree = "<group>"; };
 		CA3369552C92C4C8003752F1 /* PlannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannerView.swift; sourceTree = "<group>"; };
@@ -119,7 +85,6 @@
 		CA49B05A2CA17FC40079378A /* ItemDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetails.swift; sourceTree = "<group>"; };
 		CA49B0622CA423BA0079378A /* AddItemBottomButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemBottomButtons.swift; sourceTree = "<group>"; };
 		CA49B0642CA4C2F10079378A /* ImageCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCarousel.swift; sourceTree = "<group>"; };
-		CA49B0662CA5C2230079378A /* DeepLabV3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = DeepLabV3.mlmodel; path = ../../../DeepLabV3.mlmodel; sourceTree = "<group>"; };
 		CA49B0692CA5CC7E0079378A /* UIImageOrientationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageOrientationExtension.swift; sourceTree = "<group>"; };
 		CA49B06B2CA5CCD80079378A /* RemoveBackgroundExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveBackgroundExtension.swift; sourceTree = "<group>"; };
 		CA49B06D2CA5CFF30079378A /* AccessCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessCameraView.swift; sourceTree = "<group>"; };
@@ -127,6 +92,7 @@
 		CA97A8772CB215CA00A36B70 /* InfiniteClothingCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteClothingCarousel.swift; sourceTree = "<group>"; };
 		CA97A8792CB2161400A36B70 /* CategorySelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySelectionView.swift; sourceTree = "<group>"; };
 		CA97A87D2CB21AE800A36B70 /* PlannerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannerViewModel.swift; sourceTree = "<group>"; };
+		CAA7DCDB2CBD5BD800A17EAB /* ImageTesting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTesting.swift; sourceTree = "<group>"; };
 		CAACAB932CAD9FD500C258B4 /* BackupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupView.swift; sourceTree = "<group>"; };
 		CAACAB952CADA09E00C258B4 /* PortfolioValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioValue.swift; sourceTree = "<group>"; };
 		CAACAB982CADA0F500C258B4 /* TopColorsCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopColorsCard.swift; sourceTree = "<group>"; };
@@ -146,45 +112,21 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		CA0C05CF2CBD53320016CBEF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA1763ED2CBD5AA800320ED9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CA3369192C913AFE003752F1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CA33698D2C9B10EB003752F1 /* FirebaseStorageCombine-Community in Frameworks */,
-				CA3369852C9B10EB003752F1 /* FirebaseMessaging in Frameworks */,
-				CA3369832C9B10EB003752F1 /* FirebaseMLModelDownloader in Frameworks */,
-				CA3369692C9B10EB003752F1 /* FirebaseAppCheck in Frameworks */,
-				CA33696D2C9B10EB003752F1 /* FirebaseAuth in Frameworks */,
-				CA3369632C9B10EB003752F1 /* FirebaseAnalytics in Frameworks */,
-				CA33696B2C9B10EB003752F1 /* FirebaseAppDistribution-Beta in Frameworks */,
-				CA3369672C9B10EB003752F1 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
-				CA3369712C9B10EB003752F1 /* FirebaseCrashlytics in Frameworks */,
-				CA3369732C9B10EB003752F1 /* FirebaseDatabase in Frameworks */,
-				CA33697D2C9B10EB003752F1 /* FirebaseFunctionsCombine-Community in Frameworks */,
-				CA33696F2C9B10EB003752F1 /* FirebaseAuthCombine-Community in Frameworks */,
-				CA33698B2C9B10EB003752F1 /* FirebaseStorage in Frameworks */,
-				CA3369652C9B10EB003752F1 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
-				CA33697B2C9B10EB003752F1 /* FirebaseFunctions in Frameworks */,
-				CA3369812C9B10EB003752F1 /* FirebaseInstallations in Frameworks */,
-				CA3369872C9B10EB003752F1 /* FirebasePerformance in Frameworks */,
-				CA3369792C9B10EB003752F1 /* FirebaseFirestoreCombine-Community in Frameworks */,
-				CA3369772C9B10EB003752F1 /* FirebaseFirestore in Frameworks */,
-				CA3369752C9B10EB003752F1 /* FirebaseDynamicLinks in Frameworks */,
-				CA33697F2C9B10EB003752F1 /* FirebaseInAppMessaging-Beta in Frameworks */,
-				CA33698F2C9B10EB003752F1 /* FirebaseVertexAI-Preview in Frameworks */,
-				CA3369892C9B10EB003752F1 /* FirebaseRemoteConfig in Frameworks */,
-				CA49B05E2CA187920079378A /* BackgroundRemoval in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CA33692F2C913AFF003752F1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CA3369392C913AFF003752F1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -194,10 +136,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CA1763F12CBD5AA800320ED9 /* ClosetMateTesting */ = {
+			isa = PBXGroup;
+			children = (
+				CAA7DCDA2CBD5B6C00A17EAB /* MyWardrobeViewModelTests */,
+			);
+			path = ClosetMateTesting;
+			sourceTree = "<group>";
+		};
 		CA3369132C913AFE003752F1 = {
 			isa = PBXGroup;
 			children = (
 				CA33691E2C913AFE003752F1 /* ClosetMate */,
+				CA1763F12CBD5AA800320ED9 /* ClosetMateTesting */,
 				CA33691D2C913AFE003752F1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -206,8 +157,8 @@
 			isa = PBXGroup;
 			children = (
 				CA33691C2C913AFE003752F1 /* ClosetMate.app */,
-				CA3369322C913AFF003752F1 /* ClosetMateTests.xctest */,
-				CA33693C2C913AFF003752F1 /* ClosetMateUITests.xctest */,
+				CA0C05D22CBD53320016CBEF /* ClosetMateTests.xctest */,
+				CA1763F02CBD5AA800320ED9 /* ClosetMateTesting.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -215,13 +166,11 @@
 		CA33691E2C913AFE003752F1 /* ClosetMate */ = {
 			isa = PBXGroup;
 			children = (
-				CA49B0662CA5C2230079378A /* DeepLabV3.mlmodel */,
 				CA3369902C9B16DD003752F1 /* GoogleService-Info.plist */,
 				CA3369512C92C2DE003752F1 /* Views */,
 				CAD05E392CA6D304004AABE8 /* Models */,
 				CA97A87B2CB218A300A36B70 /* Utilities */,
 				CA3369262C913AFE003752F1 /* ContentView.swift */,
-				CA33694F2C913E00003752F1 /* SplashScreenView.swift */,
 				CA33691F2C913AFE003752F1 /* ClosetMateApp.swift */,
 				CA3369282C913AFF003752F1 /* Assets.xcassets */,
 				CA33692A2C913AFF003752F1 /* ClosetMate.entitlements */,
@@ -233,19 +182,12 @@
 		CA3369512C92C2DE003752F1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CA33694F2C913E00003752F1 /* SplashScreenView.swift */,
 				CA33695C2C99DB7D003752F1 /* Portfolio */,
 				CA33695B2C99DB6F003752F1 /* Planner */,
 				CA33695A2C99DB50003752F1 /* MyWardrobe */,
-				CA3369522C92C402003752F1 /* Components */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		CA3369522C92C402003752F1 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Components;
 			sourceTree = "<group>";
 		};
 		CA33695A2C99DB50003752F1 /* MyWardrobe */ = {
@@ -341,6 +283,14 @@
 			path = UIKitExtensions;
 			sourceTree = "<group>";
 		};
+		CAA7DCDA2CBD5B6C00A17EAB /* MyWardrobeViewModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				CAA7DCDB2CBD5BD800A17EAB /* ImageTesting.swift */,
+			);
+			path = MyWardrobeViewModelTests;
+			sourceTree = "<group>";
+		};
 		CAACAB922CAD9FCA00C258B4 /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -398,6 +348,42 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		CA0C05D12CBD53320016CBEF /* ClosetMateTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA0C05D82CBD53320016CBEF /* Build configuration list for PBXNativeTarget "ClosetMateTests" */;
+			buildPhases = (
+				CA0C05CE2CBD53320016CBEF /* Sources */,
+				CA0C05CF2CBD53320016CBEF /* Frameworks */,
+				CA0C05D02CBD53320016CBEF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CA0C05D72CBD53320016CBEF /* PBXTargetDependency */,
+			);
+			name = ClosetMateTests;
+			productName = ClosetMateTests;
+			productReference = CA0C05D22CBD53320016CBEF /* ClosetMateTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CA1763EF2CBD5AA800320ED9 /* ClosetMateTesting */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA1763F82CBD5AA800320ED9 /* Build configuration list for PBXNativeTarget "ClosetMateTesting" */;
+			buildPhases = (
+				CA1763EC2CBD5AA800320ED9 /* Sources */,
+				CA1763ED2CBD5AA800320ED9 /* Frameworks */,
+				CA1763EE2CBD5AA800320ED9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CA1763F52CBD5AA800320ED9 /* PBXTargetDependency */,
+			);
+			name = ClosetMateTesting;
+			productName = ClosetMateTesting;
+			productReference = CA1763F02CBD5AA800320ED9 /* ClosetMateTesting.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		CA33691B2C913AFE003752F1 /* ClosetMate */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CA3369462C913AFF003752F1 /* Build configuration list for PBXNativeTarget "ClosetMate" */;
@@ -412,70 +398,10 @@
 			);
 			name = ClosetMate;
 			packageProductDependencies = (
-				CA3369622C9B10EB003752F1 /* FirebaseAnalytics */,
-				CA3369642C9B10EB003752F1 /* FirebaseAnalyticsOnDeviceConversion */,
-				CA3369662C9B10EB003752F1 /* FirebaseAnalyticsWithoutAdIdSupport */,
-				CA3369682C9B10EB003752F1 /* FirebaseAppCheck */,
-				CA33696A2C9B10EB003752F1 /* FirebaseAppDistribution-Beta */,
-				CA33696C2C9B10EB003752F1 /* FirebaseAuth */,
-				CA33696E2C9B10EB003752F1 /* FirebaseAuthCombine-Community */,
-				CA3369702C9B10EB003752F1 /* FirebaseCrashlytics */,
-				CA3369722C9B10EB003752F1 /* FirebaseDatabase */,
-				CA3369742C9B10EB003752F1 /* FirebaseDynamicLinks */,
-				CA3369762C9B10EB003752F1 /* FirebaseFirestore */,
-				CA3369782C9B10EB003752F1 /* FirebaseFirestoreCombine-Community */,
-				CA33697A2C9B10EB003752F1 /* FirebaseFunctions */,
-				CA33697C2C9B10EB003752F1 /* FirebaseFunctionsCombine-Community */,
-				CA33697E2C9B10EB003752F1 /* FirebaseInAppMessaging-Beta */,
-				CA3369802C9B10EB003752F1 /* FirebaseInstallations */,
-				CA3369822C9B10EB003752F1 /* FirebaseMLModelDownloader */,
-				CA3369842C9B10EB003752F1 /* FirebaseMessaging */,
-				CA3369862C9B10EB003752F1 /* FirebasePerformance */,
-				CA3369882C9B10EB003752F1 /* FirebaseRemoteConfig */,
-				CA33698A2C9B10EB003752F1 /* FirebaseStorage */,
-				CA33698C2C9B10EB003752F1 /* FirebaseStorageCombine-Community */,
-				CA33698E2C9B10EB003752F1 /* FirebaseVertexAI-Preview */,
-				CA49B05D2CA187920079378A /* BackgroundRemoval */,
 			);
 			productName = ClosetMate;
 			productReference = CA33691C2C913AFE003752F1 /* ClosetMate.app */;
 			productType = "com.apple.product-type.application";
-		};
-		CA3369312C913AFF003752F1 /* ClosetMateTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CA3369492C913AFF003752F1 /* Build configuration list for PBXNativeTarget "ClosetMateTests" */;
-			buildPhases = (
-				CA33692E2C913AFF003752F1 /* Sources */,
-				CA33692F2C913AFF003752F1 /* Frameworks */,
-				CA3369302C913AFF003752F1 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				CA3369342C913AFF003752F1 /* PBXTargetDependency */,
-			);
-			name = ClosetMateTests;
-			productName = ClosetMateTests;
-			productReference = CA3369322C913AFF003752F1 /* ClosetMateTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		CA33693B2C913AFF003752F1 /* ClosetMateUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CA33694C2C913AFF003752F1 /* Build configuration list for PBXNativeTarget "ClosetMateUITests" */;
-			buildPhases = (
-				CA3369382C913AFF003752F1 /* Sources */,
-				CA3369392C913AFF003752F1 /* Frameworks */,
-				CA33693A2C913AFF003752F1 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				CA33693E2C913AFF003752F1 /* PBXTargetDependency */,
-			);
-			name = ClosetMateUITests;
-			productName = ClosetMateUITests;
-			productReference = CA33693C2C913AFF003752F1 /* ClosetMateUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -487,16 +413,16 @@
 				LastSwiftUpdateCheck = 1520;
 				LastUpgradeCheck = 1520;
 				TargetAttributes = {
+					CA0C05D12CBD53320016CBEF = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = CA33691B2C913AFE003752F1;
+					};
+					CA1763EF2CBD5AA800320ED9 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = CA33691B2C913AFE003752F1;
+					};
 					CA33691B2C913AFE003752F1 = {
 						CreatedOnToolsVersion = 15.2;
-					};
-					CA3369312C913AFF003752F1 = {
-						CreatedOnToolsVersion = 15.2;
-						TestTargetID = CA33691B2C913AFE003752F1;
-					};
-					CA33693B2C913AFF003752F1 = {
-						CreatedOnToolsVersion = 15.2;
-						TestTargetID = CA33691B2C913AFE003752F1;
 					};
 				};
 			};
@@ -518,13 +444,27 @@
 			projectRoot = "";
 			targets = (
 				CA33691B2C913AFE003752F1 /* ClosetMate */,
-				CA3369312C913AFF003752F1 /* ClosetMateTests */,
-				CA33693B2C913AFF003752F1 /* ClosetMateUITests */,
+				CA0C05D12CBD53320016CBEF /* ClosetMateTests */,
+				CA1763EF2CBD5AA800320ED9 /* ClosetMateTesting */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		CA0C05D02CBD53320016CBEF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA1763EE2CBD5AA800320ED9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CA33691A2C913AFE003752F1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -534,25 +474,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CA3369302C913AFF003752F1 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CA3369922C9B16DD003752F1 /* GoogleService-Info.plist in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CA33693A2C913AFF003752F1 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CA3369932C9B16DD003752F1 /* GoogleService-Info.plist in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		CA0C05CE2CBD53320016CBEF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA1763EC2CBD5AA800320ED9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAA7DCDC2CBD5BD800A17EAB /* ImageTesting.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CA3369182C913AFE003752F1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -593,48 +532,107 @@
 				CAD05E4D2CA744B7004AABE8 /* AddClothingItemButton.swift in Sources */,
 				CA3369562C92C4C8003752F1 /* PlannerView.swift in Sources */,
 				CAD05E432CA743EB004AABE8 /* ItemColorPicker.swift in Sources */,
-				CA49B0672CA5C2230079378A /* DeepLabV3.mlmodel in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CA33692E2C913AFF003752F1 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CA3369A72CA0A66A003752F1 /* MyWardrobeViewModel.swift in Sources */,
-				CA3369972C9C7B3F003752F1 /* SheetViewCell.swift in Sources */,
-				CA3369A32CA0A152003752F1 /* ScanBox.swift in Sources */,
-				CA33699B2C9C7BCC003752F1 /* AddItemButton.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CA3369382C913AFF003752F1 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CA3369A42CA0A152003752F1 /* ScanBox.swift in Sources */,
-				CA3369A82CA0A66A003752F1 /* MyWardrobeViewModel.swift in Sources */,
-				CA33699C2C9C7BCC003752F1 /* AddItemButton.swift in Sources */,
-				CA3369982C9C7B3F003752F1 /* SheetViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		CA3369342C913AFF003752F1 /* PBXTargetDependency */ = {
+		CA0C05D72CBD53320016CBEF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = CA33691B2C913AFE003752F1 /* ClosetMate */;
-			targetProxy = CA3369332C913AFF003752F1 /* PBXContainerItemProxy */;
+			targetProxy = CA0C05D62CBD53320016CBEF /* PBXContainerItemProxy */;
 		};
-		CA33693E2C913AFF003752F1 /* PBXTargetDependency */ = {
+		CA1763F52CBD5AA800320ED9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = CA33691B2C913AFE003752F1 /* ClosetMate */;
-			targetProxy = CA33693D2C913AFF003752F1 /* PBXContainerItemProxy */;
+			targetProxy = CA1763F42CBD5AA800320ED9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		CA0C05D92CBD53320016CBEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DB62R67D27;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.basgallop.ClosetMateTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ClosetMate.-DDapp/ClosetMate-DD";
+			};
+			name = Debug;
+		};
+		CA0C05DA2CBD53320016CBEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DB62R67D27;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.basgallop.ClosetMateTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ClosetMate-DD.app/ClosetMate-DD";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CA1763F62CBD5AA800320ED9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DB62R67D27;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.basgallop.ClosetMateTesting;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ClosetMate.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ClosetMate";
+			};
+			name = Debug;
+		};
+		CA1763F72CBD5AA800320ED9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DB62R67D27;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.basgallop.ClosetMateTesting;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ClosetMate.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ClosetMate";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		CA3369442C913AFF003752F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -758,10 +756,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ClosetMate/Preview Content\"";
-				DEVELOPMENT_TEAM = 3HRQXW5DML;
+				DEVELOPMENT_TEAM = DB62R67D27;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_NSCameraUsageDescription = "This App needs access to capture images of your clothes you want to upload";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -771,20 +770,21 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.basgallop.ClosetMatev2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.basgallop.ClosetMateApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -797,10 +797,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ClosetMate/Preview Content\"";
-				DEVELOPMENT_TEAM = 3HRQXW5DML;
+				DEVELOPMENT_TEAM = DB62R67D27;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_NSCameraUsageDescription = "This App needs access to capture images of your clothes you want to upload";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -810,116 +811,45 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.basgallop.ClosetMatev2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.basgallop.ClosetMateApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		CA33694A2C913AFF003752F1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3HRQXW5DML;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
-				MACOSX_DEPLOYMENT_TARGET = 14.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.basgallop.ClosetMateTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ClosetMate.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ClosetMate";
-			};
-			name = Debug;
-		};
-		CA33694B2C913AFF003752F1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3HRQXW5DML;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
-				MACOSX_DEPLOYMENT_TARGET = 14.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.basgallop.ClosetMateTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ClosetMate.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ClosetMate";
-			};
-			name = Release;
-		};
-		CA33694D2C913AFF003752F1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3HRQXW5DML;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
-				MACOSX_DEPLOYMENT_TARGET = 14.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.basgallop.ClosetMateUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = ClosetMate;
-			};
-			name = Debug;
-		};
-		CA33694E2C913AFF003752F1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3HRQXW5DML;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
-				MACOSX_DEPLOYMENT_TARGET = 14.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.basgallop.ClosetMateUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = ClosetMate;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		CA0C05D82CBD53320016CBEF /* Build configuration list for PBXNativeTarget "ClosetMateTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA0C05D92CBD53320016CBEF /* Debug */,
+				CA0C05DA2CBD53320016CBEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA1763F82CBD5AA800320ED9 /* Build configuration list for PBXNativeTarget "ClosetMateTesting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA1763F62CBD5AA800320ED9 /* Debug */,
+				CA1763F72CBD5AA800320ED9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		CA3369172C913AFE003752F1 /* Build configuration list for PBXProject "ClosetMate" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -934,24 +864,6 @@
 			buildConfigurations = (
 				CA3369472C913AFF003752F1 /* Debug */,
 				CA3369482C913AFF003752F1 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CA3369492C913AFF003752F1 /* Build configuration list for PBXNativeTarget "ClosetMateTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CA33694A2C913AFF003752F1 /* Debug */,
-				CA33694B2C913AFF003752F1 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CA33694C2C913AFF003752F1 /* Build configuration list for PBXNativeTarget "ClosetMateUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CA33694D2C913AFF003752F1 /* Debug */,
-				CA33694E2C913AFF003752F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -976,129 +888,6 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		CA3369622C9B10EB003752F1 /* FirebaseAnalytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CA3369612C9B10EB003752F1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalytics;
-		};
-		CA3369642C9B10EB003752F1 /* FirebaseAnalyticsOnDeviceConversion */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CA3369612C9B10EB003752F1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalyticsOnDeviceConversion;
-		};
-		CA3369662C9B10EB003752F1 /* FirebaseAnalyticsWithoutAdIdSupport */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CA3369612C9B10EB003752F1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalyticsWithoutAdIdSupport;
-		};
-		CA3369682C9B10EB003752F1 /* FirebaseAppCheck */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CA3369612C9B10EB003752F1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAppCheck;
-		};
-		CA33696A2C9B10EB003752F1 /* FirebaseAppDistribution-Beta */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CA3369612C9B10EB003752F1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = "FirebaseAppDistribution-Beta";
-		};
-		CA33696C2C9B10EB003752F1 /* FirebaseAuth */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CA3369612C9B10EB003752F1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAuth;
-		};
-		CA33696E2C9B10EB003752F1 /* FirebaseAuthCombine-Community */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CA3369612C9B10EB003752F1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = "FirebaseAuthCombine-Community";
-		};
-		CA3369702C9B10EB003752F1 /* FirebaseCrashlytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CA3369612C9B10EB003752F1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseCrashlytics;
-		};
-		CA3369722C9B10EB003752F1 /* FirebaseDatabase */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CA3369612C9B10EB003752F1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseDatabase;
-		};
-		CA3369742C9B10EB003752F1 /* FirebaseDynamicLinks */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CA3369612C9B10EB003752F1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseDynamicLinks;
-		};
-		CA3369762C9B10EB003752F1 /* FirebaseFirestore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CA3369612C9B10EB003752F1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseFirestore;
-		};
-		CA3369782C9B10EB003752F1 /* FirebaseFirestoreCombine-Community */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CA3369612C9B10EB003752F1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = "FirebaseFirestoreCombine-Community";
-		};
-		CA33697A2C9B10EB003752F1 /* FirebaseFunctions */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CA3369612C9B10EB003752F1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseFunctions;
-		};
-		CA33697C2C9B10EB003752F1 /* FirebaseFunctionsCombine-Community */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CA3369612C9B10EB003752F1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = "FirebaseFunctionsCombine-Community";
-		};
-		CA33697E2C9B10EB003752F1 /* FirebaseInAppMessaging-Beta */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CA3369612C9B10EB003752F1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = "FirebaseInAppMessaging-Beta";
-		};
-		CA3369802C9B10EB003752F1 /* FirebaseInstallations */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CA3369612C9B10EB003752F1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseInstallations;
-		};
-		CA3369822C9B10EB003752F1 /* FirebaseMLModelDownloader */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CA3369612C9B10EB003752F1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseMLModelDownloader;
-		};
-		CA3369842C9B10EB003752F1 /* FirebaseMessaging */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CA3369612C9B10EB003752F1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseMessaging;
-		};
-		CA3369862C9B10EB003752F1 /* FirebasePerformance */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CA3369612C9B10EB003752F1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebasePerformance;
-		};
-		CA3369882C9B10EB003752F1 /* FirebaseRemoteConfig */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CA3369612C9B10EB003752F1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseRemoteConfig;
-		};
-		CA33698A2C9B10EB003752F1 /* FirebaseStorage */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CA3369612C9B10EB003752F1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseStorage;
-		};
-		CA33698C2C9B10EB003752F1 /* FirebaseStorageCombine-Community */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CA3369612C9B10EB003752F1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = "FirebaseStorageCombine-Community";
-		};
-		CA33698E2C9B10EB003752F1 /* FirebaseVertexAI-Preview */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CA3369612C9B10EB003752F1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = "FirebaseVertexAI-Preview";
-		};
-		CA49B05D2CA187920079378A /* BackgroundRemoval */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CA49B05C2CA187910079378A /* XCRemoteSwiftPackageReference "BackgroundRemoval" */;
-			productName = BackgroundRemoval;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CA3369142C913AFE003752F1 /* Project object */;
 }

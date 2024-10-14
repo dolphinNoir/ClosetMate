@@ -39,6 +39,7 @@ extension MyWardrobeViewModel {
         // Combine the scaled images into a single sticker
         let outputImage = apply(maskImage: normalizedMask, to: normalizedInputImage)
         let finalImage = render(ciImage: outputImage, originalOrientation: image.imageOrientation)
+        
         completion(finalImage)
     }
     
