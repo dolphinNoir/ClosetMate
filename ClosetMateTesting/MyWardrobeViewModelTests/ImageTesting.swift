@@ -12,14 +12,12 @@ import XCTest
 final class ImageTesting: XCTestCase {
     var viewModel : MyWardrobeViewModel!
     
-    override func setUp() {
-        super.setUp()
+    override func setUpWithError() throws {
         viewModel = MyWardrobeViewModel()
     }
     
-    override func tearDown() {
+    override func tearDownWithError() throws {
         viewModel = nil
-        super.tearDown()
     }
     
 //    Setting Image Assertions

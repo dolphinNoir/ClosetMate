@@ -30,6 +30,8 @@
 		CA97A87A2CB2161400A36B70 /* CategorySelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA97A8792CB2161400A36B70 /* CategorySelectionView.swift */; };
 		CA97A87E2CB21AE800A36B70 /* PlannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA97A87D2CB21AE800A36B70 /* PlannerViewModel.swift */; };
 		CAA7DCDC2CBD5BD800A17EAB /* ImageTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA7DCDB2CBD5BD800A17EAB /* ImageTesting.swift */; };
+		CAA7DCDE2CBD698100A17EAB /* GeneralTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA7DCDD2CBD698100A17EAB /* GeneralTests.swift */; };
+		CAA7DCE22CBD6E3900A17EAB /* ClothingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA7DCE12CBD6E3900A17EAB /* ClothingTests.swift */; };
 		CAACAB942CAD9FD500C258B4 /* BackupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAACAB932CAD9FD500C258B4 /* BackupView.swift */; };
 		CAACAB962CADA09E00C258B4 /* PortfolioValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAACAB952CADA09E00C258B4 /* PortfolioValue.swift */; };
 		CAACAB992CADA0F500C258B4 /* TopColorsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAACAB982CADA0F500C258B4 /* TopColorsCard.swift */; };
@@ -93,6 +95,8 @@
 		CA97A8792CB2161400A36B70 /* CategorySelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySelectionView.swift; sourceTree = "<group>"; };
 		CA97A87D2CB21AE800A36B70 /* PlannerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannerViewModel.swift; sourceTree = "<group>"; };
 		CAA7DCDB2CBD5BD800A17EAB /* ImageTesting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTesting.swift; sourceTree = "<group>"; };
+		CAA7DCDD2CBD698100A17EAB /* GeneralTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralTests.swift; sourceTree = "<group>"; };
+		CAA7DCE12CBD6E3900A17EAB /* ClothingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothingTests.swift; sourceTree = "<group>"; };
 		CAACAB932CAD9FD500C258B4 /* BackupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupView.swift; sourceTree = "<group>"; };
 		CAACAB952CADA09E00C258B4 /* PortfolioValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioValue.swift; sourceTree = "<group>"; };
 		CAACAB982CADA0F500C258B4 /* TopColorsCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopColorsCard.swift; sourceTree = "<group>"; };
@@ -287,6 +291,8 @@
 			isa = PBXGroup;
 			children = (
 				CAA7DCDB2CBD5BD800A17EAB /* ImageTesting.swift */,
+				CAA7DCDD2CBD698100A17EAB /* GeneralTests.swift */,
+				CAA7DCE12CBD6E3900A17EAB /* ClothingTests.swift */,
 			);
 			path = MyWardrobeViewModelTests;
 			sourceTree = "<group>";
@@ -488,6 +494,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAA7DCDE2CBD698100A17EAB /* GeneralTests.swift in Sources */,
+				CAA7DCE22CBD6E3900A17EAB /* ClothingTests.swift in Sources */,
 				CAA7DCDC2CBD5BD800A17EAB /* ImageTesting.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

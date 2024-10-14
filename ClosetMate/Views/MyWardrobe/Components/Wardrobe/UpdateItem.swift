@@ -5,7 +5,7 @@ struct UpdateItem: View {
     @Bindable var Item: ClothingItem
     @EnvironmentObject var viewModel : MyWardrobeViewModel
     @State private var showAlert = false 
-    @Environment(\.modelContext) private var modelContext// State to control the alert presentation
+    @Environment(\.modelContext) private var modelContext
 
     var body: some View {
         NavigationStack {
