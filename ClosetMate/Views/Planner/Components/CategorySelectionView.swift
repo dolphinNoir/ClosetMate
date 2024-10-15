@@ -32,12 +32,9 @@ struct CategorySelectionView: View {
             
             Spacer()
             
-                Text("(\(numberOfItems))").font(.caption2).foregroundStyle(.brandAccent)
+            Text("(\(numberOfItems))").font(.caption2).foregroundStyle(.brandAccent)
         }
         .padding(.horizontal)
     }
 }
 
-//#Preview {
-//    CategorySelctionView()
-//}

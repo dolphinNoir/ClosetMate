@@ -20,7 +20,7 @@ final class ImageTesting: XCTestCase {
         viewModel = nil
     }
     
-//    Setting Image Assertions
+    //    Setting Image Assertions
     func testSetFrontImage(){
         //given
         let image = UIImage(systemName: "photo")
