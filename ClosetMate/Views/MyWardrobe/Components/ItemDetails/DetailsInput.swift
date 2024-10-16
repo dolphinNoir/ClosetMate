@@ -2,42 +2,39 @@ import SwiftUI
 import SwiftData
 
 struct DetailsInput: View {
+    @Environment(\.modelContext) private var modelContext
+    @Environment(\.presentationMode) var presentationMode
+    @Environment(\.dismiss) var dismiss
+    @EnvironmentObject var viewModel: MyWardrobeViewModel
+    
     @Binding var navigationPath : NavigationPath
     @State private var itemName: String = ""
     @State private var selectedCategory: ItemCategory? = nil
     @State private var selectedColor: ItemColor? = nil
     @State private var itemBoughtFor: String = ""
     @State private var itemCurrentValue: String = ""
-    @Environment(\.modelContext) private var modelContext
-    @Environment(\.presentationMode) var presentationMode
-    @Environment(\.dismiss) var dismiss// Track the presentation mode for dismissing
-    @EnvironmentObject var viewModel: MyWardrobeViewModel
-
-    // State to show an alert if inputs are invalid
     @State private var showAlert = false
-
-    // Computed property to check if the inputs are valid
+    
     private var isFormValid: Bool {
         return !itemName.isEmpty && selectedCategory != nil && selectedColor != nil
     }
-
+    
     var body: some View {
         VStack(spacing: 20) {
-            ItemNameField(itemName: $itemName) // Item Name Input Field
-
-            ItemCategoryPickerField(selectedCategory: $selectedCategory) // Item Category Picker
-
-            ItemColorPickerField(selectedColor: $selectedColor) // Item Color Picker
-
-            ItemPriceInput(label: "Item Bought For", price: $itemBoughtFor) // Bought Price Input
-
-            ItemPriceInput(label: "Item Current Value", price: $itemCurrentValue) // Current Price Input
+            ItemNameField(itemName: $itemName)
+            
+            ItemCategoryPickerField(selectedCategory: $selectedCategory)
+            
+            ItemColorPickerField(selectedColor: $selectedColor)
+            
+            ItemPriceInput(label: "Item Bought For", price: $itemBoughtFor)
+            
+            ItemPriceInput(label: "Item Current Value", price: $itemCurrentValue)
             
             Spacer().frame(height: 20)
-
+            
             Button(action: {
                 if isFormValid {
-                    // Add the clothing item to the view model
                     viewModel.addClothingItem(
                         itemName: itemName,
                         itemCategory: selectedCategory!,
@@ -47,10 +44,9 @@ struct DetailsInput: View {
                         context: modelContext
                     )
                     
-                    // Dismiss both the current and parent sheets
-                    navigationPath.removeLast(navigationPath.count)  // Reset the navigation state
+                    navigationPath.removeLast(navigationPath.count)
                     viewModel.closeOutSheet()
-                   
+                    
                     
                 } else {
                     showAlert = true
@@ -63,7 +59,7 @@ struct DetailsInput: View {
                     .foregroundColor(.white)
                     .cornerRadius(5)
             }
-            .disabled(!isFormValid)  // Disable button if the form is not valid
+            .disabled(!isFormValid)
             .alert(isPresented: $showAlert) {
                 Alert(
                     title: Text("Missing Information"),

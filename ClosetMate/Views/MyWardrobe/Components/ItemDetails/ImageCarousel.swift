@@ -15,46 +15,45 @@ struct ImageCarousel: View {
                     Image(uiImage: front)
                         .resizable()
                         .scaledToFill()
-                        .frame(width: 260, height: 260) // Use a consistent display size
-//                        .frame(minWidth: screenWidth - 60)
+                        .frame(width: 260, height: 260)
                         .padding()
                         .tag(0)
                 } else {
                     Image(systemName: "photo.fill")
                         .resizable()
-                        .scaledToFill() // Maintain aspect ratio
+                        .scaledToFill()
                         .frame(maxWidth: screenWidth - 45, maxHeight: 350)
                         .padding()
                         .tag(0)
                 }
-
+                
                 // Back Image
                 if let back = BackImage {
                     Image(uiImage: back)
                         .resizable()
                         .scaledToFill()
-                        .frame(width: 260, height: 260) // Use a consistent display size
+                        .frame(width: 260, height: 260)
                         .padding()
                         .tag(1)
                 } else {
                     Image(systemName: "photo.fill")
                         .resizable()
-                        .scaledToFit() // Maintain aspect ratio
+                        .scaledToFit()
                         .frame(maxWidth: screenWidth - 45, maxHeight: 350)
                         .padding()
                         .tag(1)
                 }
             }
-            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always)) // Show dots below
+            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
             .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
             .frame(width: screenWidth - 45, height: 350)
-            .background(Color.gray.opacity(0.1)) // Light gray background
+            .background(Color.gray.opacity(0.1))
             .cornerRadius(15)
-            .shadow(color: Color.black.opacity(0.1), radius: 7, x: 0, y: 4) // Add shadow to the carousel container
+            .shadow(color: Color.black.opacity(0.1), radius: 7, x: 0, y: 4)
         }
         .onReceive(timer) { _ in
             withAnimation {
-                currentIndex = (currentIndex + 1) % 2 // Cycle between 0 and 1
+                currentIndex = (currentIndex + 1) % 2
             }
         }
     }

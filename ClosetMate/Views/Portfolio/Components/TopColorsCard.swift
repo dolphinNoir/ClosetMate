@@ -32,9 +32,6 @@ struct TopColorsCard: View {
                                 RoundedRectangle(cornerRadius: 10)
                                     .stroke(Color.black.opacity(0.1), lineWidth: 1)
                             )
-//                        Text(color.rawValue)
-//                            .font(.caption2)
-//                            .foregroundColor(.brandAccent)
                     }
                 }
             }

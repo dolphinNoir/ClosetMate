@@ -6,7 +6,7 @@ struct MyWardrobeView: View {
     @State private var SheetIsPresented: Bool = false
     @Query var clothingItems: [ClothingItem]
     @State private var ItemToEdit: ClothingItem?
-    @State private var searchText = ""  // Search text state variable
+    @State private var searchText = ""
     @State private var navigationPath = NavigationPath()
     var body: some View {
         
@@ -20,7 +20,6 @@ struct MyWardrobeView: View {
                         .multilineTextAlignment(.center)
                         .frame(width: screenWidth / 1.5)
                 } else {
-                    // Pass the filtered items to the ClothingList component
                     ClothingList(clothingItems: filteredClothingItems)
                         .environmentObject(viewModel)
                 }
@@ -44,7 +43,6 @@ struct MyWardrobeView: View {
         }
     }
     
-    // Filtered clothing items based on the search text
     private var filteredClothingItems: [ClothingItem] {
         if searchText.isEmpty {
             return clothingItems
@@ -56,24 +54,20 @@ struct MyWardrobeView: View {
 
 struct ClothingList: View {
     @EnvironmentObject var viewModel: MyWardrobeViewModel
-    var clothingItems: [ClothingItem]  // Use filtered clothing items passed from parent
+    var clothingItems: [ClothingItem]
     @State private var ItemToEdit: ClothingItem?
     
     var body: some View {
         ScrollView(showsIndicators: false) {
             LazyVStack(alignment: .leading, spacing: 20) {
-                // Group items by their category and iterate over each category
                 ForEach(groupedItems, id: \.key) { category, items in
                     VStack(alignment: .leading) {
-                        // Section Header
                         Text(category.rawValue)
                             .font(.headline)
                             .padding(.leading, 15)
                         
-                        // Horizontal ScrollView for Items in this Category
                         ScrollView(.horizontal, showsIndicators: false) {
                             LazyHStack(spacing: 15) {
-                                // Display only the images of each clothing item
                                 ForEach(items, id: \.id) { item in
                                     if let frontImage = item.frontImage {
                                         WardrobeImage(image: frontImage, name: item.itemName)
@@ -95,14 +89,12 @@ struct ClothingList: View {
         }
     }
     
-    // Group items by category
     private var groupedItems: [(key: ItemCategory, value: [ClothingItem])] {
         Dictionary(grouping: clothingItems, by: { $0.itemCategory })
-            .sorted { $0.key.rawValue < $1.key.rawValue } // Sort categories alphabetically
+            .sorted { $0.key.rawValue < $1.key.rawValue }
     }
 }
 
-// Preview for testing
 #Preview {
     MyWardrobeView()
 }

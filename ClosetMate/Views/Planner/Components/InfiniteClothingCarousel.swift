@@ -1,10 +1,3 @@
-//
-//  InfinitClothingCarousel.swift
-//  ClosetMate
-//
-//  Created by johnny basgallop on 06/10/2024.
-//
-
 import SwiftUI
 
 struct InfiniteClothingCarousel: View {
@@ -20,7 +13,7 @@ struct InfiniteClothingCarousel: View {
     var body: some View {
         TabView(selection: $currentIndex) {
             ForEach(extendedItems.indices, id: \.self) { index in
-                let item = extendedItems[index % items.count] // Use modulo to cycle through original items
+                let item = extendedItems[index % items.count]
                 
                 VStack {
                     if let front = item.frontImage{

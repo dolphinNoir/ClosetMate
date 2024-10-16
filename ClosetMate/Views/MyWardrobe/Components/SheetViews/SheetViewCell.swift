@@ -1,10 +1,3 @@
-//
-//  SheetViewCell.swift
-//  ClosetMate
-//
-//  Created by johnny basgallop on 19/09/2024.
-//
-
 import SwiftUI
 import TipKit
 
@@ -25,10 +18,10 @@ struct SheetViewCell: View {
                         .fontWeight(.semibold)
                         .padding(.bottom, 5)
                     
-                        Text("First we need to scan the front and back of your item so we can display it.")
-                            .foregroundStyle(.brandAccent)
-                            .font(.callout)
-                            .fixedSize(horizontal: false, vertical: true)
+                    Text("First we need to scan the front and back of your item so we can display it.")
+                        .foregroundStyle(.brandAccent)
+                        .font(.callout)
+                        .fixedSize(horizontal: false, vertical: true)
                 }.frame(width: screenWidth - 45)
                 
                 
@@ -45,9 +38,9 @@ struct SheetViewCell: View {
                 
                 Spacer()
                 
-                    AddItemBottomButtons(isReadyForNext: false, leftTitle: "Cancel", rightTitle: "Next Step", navigationPath: $navigationPath)
+                AddItemBottomButtons(isReadyForNext: false, leftTitle: "Cancel", rightTitle: "Next Step", navigationPath: $navigationPath)
                     .environmentObject(viewModel)
-
+                
                 
             }
             .padding(20)

@@ -1,10 +1,3 @@
-//
-//  AddItemButton.swift
-//  ClosetMate
-//
-//  Created by johnny basgallop on 27/09/2024.
-//
-
 import SwiftUI
 import SwiftData
 
@@ -18,22 +11,22 @@ struct AddClothingItemButton: View {
     @Binding var showAlert: Bool
     var context: ModelContext
     var onSubmit: () -> Void
-
+    
     var body: some View {
-            Button(action: {
-                if isFormValid {
-                    onSubmit()
-                } else {
-                    showAlert = true
-                }
-            }) {
-                Text("Add Item")
-                    .frame(maxWidth: .infinity)
-                    .padding()
-                    .background(isFormValid ? Color.brandPrimary : Color.gray)
-                    .foregroundColor(.white)
-                    .cornerRadius(10)
+        Button(action: {
+            if isFormValid {
+                onSubmit()
+            } else {
+                showAlert = true
             }
-            .disabled(!isFormValid)
+        }) {
+            Text("Add Item")
+                .frame(maxWidth: .infinity)
+                .padding()
+                .background(isFormValid ? Color.brandPrimary : Color.gray)
+                .foregroundColor(.white)
+                .cornerRadius(10)
+        }
+        .disabled(!isFormValid)
     }
 }

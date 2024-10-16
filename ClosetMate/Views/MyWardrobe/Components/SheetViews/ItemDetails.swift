@@ -1,10 +1,3 @@
-//
-//  SwiftUIView.swift
-//  ClosetMate
-//
-//  Created by johnny basgallop on 23/09/2024.
-//
-
 import SwiftUI
 
 struct ItemDetails: View {
@@ -42,10 +35,8 @@ struct ItemDetailsView : View {
                         .fixedSize(horizontal: false, vertical: true)
                 }.padding(.bottom, 15)
                 
-//                if viewModel.FrontImage != nil && viewModel.BackImage != nil {
-                    ImageCarousel(FrontImage: viewModel.FrontImage, BackImage: viewModel.BackImage).environmentObject(viewModel)
-//                }
-               
+                ImageCarousel(FrontImage: viewModel.FrontImage, BackImage: viewModel.BackImage).environmentObject(viewModel)
+                
                 Spacer()
                 
                 VStack(alignment: .leading){
@@ -53,9 +44,9 @@ struct ItemDetailsView : View {
                         DetailsInput(navigationPath: $navigationPath).environmentObject(viewModel)
                     }.headerProminence(.increased)
                 }
-           
-
-            
+                
+                
+                
             }
         }
     }

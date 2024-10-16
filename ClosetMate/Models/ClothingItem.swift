@@ -1,6 +1,54 @@
 import SwiftData
 import Foundation
 import UIKit
+
+@Model
+class ClothingItem {
+    @Attribute(.unique) var id: UUID
+    @Attribute(.externalStorage) var frontImageData: Data?
+    @Attribute(.externalStorage) var backImageData: Data?
+    var itemName: String
+    var itemCategory: ItemCategory
+    var itemColor: ItemColor
+    var itemBoughtFor: Int?
+    var itemCurrentValue: Int?
+
+    // Computed properties to access UIImage from stored Data
+    var frontImage: UIImage? {
+        get {
+            guard let data = frontImageData else { return nil }
+            return UIImage(data: data)
+        }
+        set {
+            // Use pngData() to preserve transparency instead of jpegData()
+            frontImageData = newValue?.pngData()
+        }
+    }
+
+    var backImage: UIImage? {
+        get {
+            guard let data = backImageData else { return nil }
+            return UIImage(data: data)
+        }
+        set {
+            // Use pngData() to preserve transparency instead of jpegData()
+            backImageData = newValue?.pngData()
+        }
+    }
+
+    // Initializer
+    init(frontImageData: Data?, backImageData: Data?, itemName: String, itemCategory: ItemCategory, itemColor: ItemColor, itemBoughtFor: Int? = nil, itemCurrentValue: Int? = nil) {
+        self.id = UUID()
+        self.frontImageData = frontImageData
+        self.backImageData = backImageData
+        self.itemName = itemName
+        self.itemCategory = itemCategory
+        self.itemColor = itemColor
+        self.itemBoughtFor = itemBoughtFor
+        self.itemCurrentValue = itemCurrentValue
+    }
+}
+
 enum ItemCategory: String, Codable,Hashable, CaseIterable{
     case blazer = "Blazer"
     case boots = "Boots"
@@ -94,53 +142,6 @@ enum ItemColor : String, Codable, Hashable, CaseIterable{
        case black = "#000000"
        case jetBlack = "#0A0A0A"
        case pitchBlack = "#050505"
-}
-
-@Model
-class ClothingItem {
-    @Attribute(.unique) var id: UUID
-    @Attribute(.externalStorage) var frontImageData: Data?
-    @Attribute(.externalStorage) var backImageData: Data?
-    var itemName: String
-    var itemCategory: ItemCategory
-    var itemColor: ItemColor
-    var itemBoughtFor: Int?
-    var itemCurrentValue: Int?
-
-    // Computed properties to access UIImage from stored Data
-    var frontImage: UIImage? {
-        get {
-            guard let data = frontImageData else { return nil }
-            return UIImage(data: data)
-        }
-        set {
-            // Use pngData() to preserve transparency instead of jpegData()
-            frontImageData = newValue?.pngData()
-        }
-    }
-
-    var backImage: UIImage? {
-        get {
-            guard let data = backImageData else { return nil }
-            return UIImage(data: data)
-        }
-        set {
-            // Use pngData() to preserve transparency instead of jpegData()
-            backImageData = newValue?.pngData()
-        }
-    }
-
-    // Initializer
-    init(frontImageData: Data?, backImageData: Data?, itemName: String, itemCategory: ItemCategory, itemColor: ItemColor, itemBoughtFor: Int? = nil, itemCurrentValue: Int? = nil) {
-        self.id = UUID()
-        self.frontImageData = frontImageData
-        self.backImageData = backImageData
-        self.itemName = itemName
-        self.itemCategory = itemCategory
-        self.itemColor = itemColor
-        self.itemBoughtFor = itemBoughtFor
-        self.itemCurrentValue = itemCurrentValue
-    }
 }
 
 

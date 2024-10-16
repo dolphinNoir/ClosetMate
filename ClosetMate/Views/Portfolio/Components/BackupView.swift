@@ -1,10 +1,3 @@
-//
-//  BackupView.swift
-//  ClosetMate
-//
-//  Created by johnny basgallop on 02/10/2024.
-//
-
 import SwiftUI
 
 struct BackupView: View {

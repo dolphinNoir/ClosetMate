@@ -7,7 +7,7 @@ struct AddItemBottomButtons: View {
     var leftTitle: String
     var rightTitle: String
     @Binding var navigationPath : NavigationPath
-
+    
     var body: some View {
         HStack(spacing: 10) {
             Button(action: {
@@ -28,7 +28,7 @@ struct AddItemBottomButtons: View {
             })
             
             Button(action: {
-                viewModel.isLoading = true // Run the image conversion asynchronously and then navigate
+                viewModel.isLoading = true
                 viewModel.ConvertImages()
                 
             }, label: {

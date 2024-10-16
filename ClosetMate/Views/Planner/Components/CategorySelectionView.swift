@@ -1,10 +1,3 @@
-//
-//  CategorySelctionView.swift
-//  ClosetMate
-//
-//  Created by johnny basgallop on 06/10/2024.
-//
-
 import SwiftUI
 
 struct CategorySelectionView: View {

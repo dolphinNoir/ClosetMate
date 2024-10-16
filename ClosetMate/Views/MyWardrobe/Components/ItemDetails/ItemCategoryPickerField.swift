@@ -2,7 +2,7 @@ import SwiftUI
 
 struct ItemCategoryPickerField: View {
     @Binding var selectedCategory: ItemCategory?
-
+    
     var body: some View {
         NavigationLink(destination: ItemCategoryPicker(selectedCategory: $selectedCategory)) {
             HStack {

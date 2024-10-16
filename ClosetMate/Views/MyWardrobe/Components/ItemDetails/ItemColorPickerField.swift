@@ -1,15 +1,8 @@
-//
-//  ItemColorPickerField.swift
-//  ClosetMate
-//
-//  Created by johnny basgallop on 27/09/2024.
-//
-
 import SwiftUI
 
 struct ItemColorPickerField: View {
     @Binding var selectedColor: ItemColor?
-
+    
     var body: some View {
         NavigationLink(destination: ItemColorPicker(selectedColor: $selectedColor)) {
             HStack {

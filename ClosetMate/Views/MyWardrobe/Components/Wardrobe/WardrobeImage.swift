@@ -1,10 +1,3 @@
-//
-//  WardrobeImageCarousel.swift
-//  ClosetMate
-//
-//  Created by johnny basgallop on 27/09/2024.
-//
-
 import SwiftUI
 
 struct WardrobeImage: View {
@@ -12,13 +5,12 @@ struct WardrobeImage: View {
     var width: CGFloat = 150
     var height: CGFloat = 150
     var name : String?
-
+    
     var body: some View {
         VStack{
             ZStack {
-                // Background for testing transparency
                 RoundedRectangle(cornerRadius: 15)
-                    .fill(.brandLightGray)  // Use a light gray background for better contrast
+                    .fill(.brandLightGray)
                     .frame(width: width, height: height)
                 
                 if let image = image {
@@ -29,7 +21,6 @@ struct WardrobeImage: View {
                         .clipShape(RoundedRectangle(cornerRadius: 10))
                         .padding(35)
                 } else {
-                    // Placeholder image for missing items
                     Image(systemName: "photo")
                         .resizable()
                         .scaledToFit()

@@ -1,10 +1,3 @@
-//
-//  PlannerViewModel.swift
-//  ClosetMate
-//
-//  Created by johnny basgallop on 06/10/2024.
-//
-
 import Foundation
 
 class PlannerViewModel: ObservableObject {

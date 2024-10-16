@@ -1,10 +1,3 @@
-//
-//  MyWardrobeViewModel.swift
-//  ClosetMate
-//
-//  Created by johnny basgallop on 22/09/2024.
-//
-
 import Foundation
 import SwiftUI
 import Vision
@@ -59,13 +52,11 @@ class MyWardrobeViewModel: ObservableObject {
         return self.BackImage != nil && self.FrontImage != nil
     }
     
-    // Function to convert both images to stickers
     func ConvertImages() {
         guard let frontImage = self.FrontImage, let backImage = self.BackImage else { return }
         
         self.isLoading = true
         
-        // Convert both images asynchronously to stickers, using the functionality in the RemoveBackgroundExtension
         processingQueue.async {
             self.createSticker(from: frontImage) { [weak self] sticker in
                 DispatchQueue.main.async {
@@ -84,11 +75,9 @@ class MyWardrobeViewModel: ObservableObject {
     }
     
     func addClothingItem(itemName: String, itemCategory: ItemCategory, itemColor: ItemColor, itemBoughtFor: Int, itemCurrentValue: Int, context: ModelContext) {
-        // Convert the images to Data using pngData() to preserve transparency
         let frontImageData = self.FrontImage?.pngData()
         let backImageData = self.BackImage?.pngData()
         
-        // Create a new ClothingItem instance with the provided data
         let newItem = ClothingItem(
             frontImageData: frontImageData,
             backImageData: backImageData,
@@ -99,7 +88,6 @@ class MyWardrobeViewModel: ObservableObject {
             itemCurrentValue: itemCurrentValue
         )
         
-        // Insert the new item into the ModelContext for SwiftData to manage
         context.insert(newItem)
     }
     

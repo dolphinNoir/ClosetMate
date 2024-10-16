@@ -1,15 +1,8 @@
-//
-//  ItemCategoryPicker.swift
-//  ClosetMate
-//
-//  Created by johnny basgallop on 27/09/2024.
-//
-
 import SwiftUI
 
 struct ItemCategoryPicker: View {
     @Binding var selectedCategory: ItemCategory?
-
+    
     var body: some View {
         List(ItemCategory.allCases, id: \.self) { category in
             HStack {
