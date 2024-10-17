@@ -53,13 +53,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		CA0C05D62CBD53320016CBEF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CA3369142C913AFE003752F1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CA33691B2C913AFE003752F1;
-			remoteInfo = ClosetMate;
-		};
 		CA1763F42CBD5AA800320ED9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CA3369142C913AFE003752F1 /* Project object */;
@@ -70,7 +63,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CA0C05D22CBD53320016CBEF /* ClosetMateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClosetMateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA1763F02CBD5AA800320ED9 /* ClosetMateTesting.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClosetMateTesting.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA33691C2C913AFE003752F1 /* ClosetMate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClosetMate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA33691F2C913AFE003752F1 /* ClosetMateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosetMateApp.swift; sourceTree = "<group>"; };
@@ -120,13 +112,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		CA0C05CF2CBD53320016CBEF /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		CA1763ED2CBD5AA800320ED9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -167,7 +152,6 @@
 			isa = PBXGroup;
 			children = (
 				CA33691C2C913AFE003752F1 /* ClosetMate.app */,
-				CA0C05D22CBD53320016CBEF /* ClosetMateTests.xctest */,
 				CA1763F02CBD5AA800320ED9 /* ClosetMateTesting.xctest */,
 			);
 			name = Products;
@@ -376,24 +360,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CA0C05D12CBD53320016CBEF /* ClosetMateTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CA0C05D82CBD53320016CBEF /* Build configuration list for PBXNativeTarget "ClosetMateTests" */;
-			buildPhases = (
-				CA0C05CE2CBD53320016CBEF /* Sources */,
-				CA0C05CF2CBD53320016CBEF /* Frameworks */,
-				CA0C05D02CBD53320016CBEF /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				CA0C05D72CBD53320016CBEF /* PBXTargetDependency */,
-			);
-			name = ClosetMateTests;
-			productName = ClosetMateTests;
-			productReference = CA0C05D22CBD53320016CBEF /* ClosetMateTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		CA1763EF2CBD5AA800320ED9 /* ClosetMateTesting */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CA1763F82CBD5AA800320ED9 /* Build configuration list for PBXNativeTarget "ClosetMateTesting" */;
@@ -441,10 +407,6 @@
 				LastSwiftUpdateCheck = 1520;
 				LastUpgradeCheck = 1520;
 				TargetAttributes = {
-					CA0C05D12CBD53320016CBEF = {
-						CreatedOnToolsVersion = 15.2;
-						TestTargetID = CA33691B2C913AFE003752F1;
-					};
 					CA1763EF2CBD5AA800320ED9 = {
 						CreatedOnToolsVersion = 15.2;
 						TestTargetID = CA33691B2C913AFE003752F1;
@@ -464,28 +426,18 @@
 			);
 			mainGroup = CA3369132C913AFE003752F1;
 			packageReferences = (
-				CA3369612C9B10EB003752F1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-				CA49B05C2CA187910079378A /* XCRemoteSwiftPackageReference "BackgroundRemoval" */,
 			);
 			productRefGroup = CA33691D2C913AFE003752F1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				CA33691B2C913AFE003752F1 /* ClosetMate */,
-				CA0C05D12CBD53320016CBEF /* ClosetMateTests */,
 				CA1763EF2CBD5AA800320ED9 /* ClosetMateTesting */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		CA0C05D02CBD53320016CBEF /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		CA1763EE2CBD5AA800320ED9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -504,13 +456,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		CA0C05CE2CBD53320016CBEF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		CA1763EC2CBD5AA800320ED9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -570,11 +515,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		CA0C05D72CBD53320016CBEF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = CA33691B2C913AFE003752F1 /* ClosetMate */;
-			targetProxy = CA0C05D62CBD53320016CBEF /* PBXContainerItemProxy */;
-		};
 		CA1763F52CBD5AA800320ED9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = CA33691B2C913AFE003752F1 /* ClosetMate */;
@@ -583,47 +523,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		CA0C05D92CBD53320016CBEF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = DB62R67D27;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.basgallop.ClosetMateTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ClosetMate.-DDapp/ClosetMate-DD";
-			};
-			name = Debug;
-		};
-		CA0C05DA2CBD53320016CBEF /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = DB62R67D27;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.basgallop.ClosetMateTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ClosetMate-DD.app/ClosetMate-DD";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 		CA1763F62CBD5AA800320ED9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -864,15 +763,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CA0C05D82CBD53320016CBEF /* Build configuration list for PBXNativeTarget "ClosetMateTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CA0C05D92CBD53320016CBEF /* Debug */,
-				CA0C05DA2CBD53320016CBEF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		CA1763F82CBD5AA800320ED9 /* Build configuration list for PBXNativeTarget "ClosetMateTesting" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -901,25 +791,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		CA3369612C9B10EB003752F1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 11.2.0;
-			};
-		};
-		CA49B05C2CA187910079378A /* XCRemoteSwiftPackageReference "BackgroundRemoval" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Ezaldeen99/BackgroundRemoval.git";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = CA3369142C913AFE003752F1 /* Project object */;
 }
