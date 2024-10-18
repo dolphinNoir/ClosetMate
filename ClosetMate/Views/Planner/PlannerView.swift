@@ -11,7 +11,7 @@ struct PlannerView: View {
                 VStack(spacing: 0) {
                     CategorySelectionView(
                         selectedCategory: $viewModel.selectedTopCategory,
-                        categories: ItemCategory.allCases,
+//                        categories: ItemCategory.allCases,
                         numberOfItems: viewModel.numberOfItems(clothingItems: clothingItems, for: viewModel.selectedTopCategory)
                     )
                     
@@ -22,7 +22,7 @@ struct PlannerView: View {
                     
                     CategorySelectionView(
                         selectedCategory: $viewModel.selectedBottomCategory,
-                        categories: ItemCategory.allCases,
+//                        categories: ItemCategory.allCases,
                         numberOfItems: viewModel.numberOfItems(clothingItems: clothingItems, for: viewModel.selectedBottomCategory)
                     )
                     
@@ -33,7 +33,7 @@ struct PlannerView: View {
                     
                     CategorySelectionView(
                         selectedCategory: $viewModel.selectedShoeCategory,
-                        categories: ItemCategory.allCases,
+//                        categories: ItemCategory.allCases,
                         numberOfItems: viewModel.numberOfItems(clothingItems: clothingItems, for: viewModel.selectedShoeCategory)
                     )
                     

@@ -30,7 +30,7 @@ struct ScanningAdviceTip : Tip {
     }
     
     var message: Text? {
-        Text("Try to make sure the clothing item takes up most of the frame")
+        Text("Try to make sure the clothing item is in the centre of the frame")
     }
     
     var image: Image? {

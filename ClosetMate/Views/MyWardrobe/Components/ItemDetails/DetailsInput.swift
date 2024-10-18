@@ -39,8 +39,8 @@ struct DetailsInput: View {
                         itemName: itemName,
                         itemCategory: selectedCategory!,
                         itemColor: selectedColor!,
-                        itemBoughtFor: Int(itemBoughtFor)!,
-                        itemCurrentValue: Int(itemCurrentValue)!,
+                        itemBoughtFor: (Int(itemBoughtFor) == nil ? 0 : Int(itemBoughtFor))!,
+                        itemCurrentValue: (Int(itemCurrentValue) == nil ? 0 : Int(itemCurrentValue))!,
                         context: modelContext
                     )
                     

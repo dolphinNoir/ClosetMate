@@ -2,17 +2,20 @@ import SwiftUI
 
 struct CategorySelectionView: View {
     @Binding var selectedCategory: ItemCategory
-    var categories: [ItemCategory]
     var numberOfItems: Int
     
     var body: some View {
-        HStack{
+        HStack {
             Menu {
-                ForEach(categories, id: \.self) { category in
-                    Button(action: {
-                        selectedCategory = category
-                    }) {
-                        Text(category.rawValue)
+                ForEach(ItemCategory.groupedCategories.keys.sorted(), id: \.self) { group in
+                    Section(header: Text(group)) {
+                        ForEach(ItemCategory.groupedCategories[group] ?? [], id: \.self) { category in
+                            Button(action: {
+                                selectedCategory = category
+                            }) {
+                                Text(category.rawValue)
+                            }
+                        }
                     }
                 }
             } label: {
@@ -25,9 +28,10 @@ struct CategorySelectionView: View {
             
             Spacer()
             
-            Text("(\(numberOfItems))").font(.caption2).foregroundStyle(.brandAccent)
+            Text("(\(numberOfItems))")
+                .font(.caption2)
+                .foregroundStyle(.brandAccent)
         }
         .padding(.horizontal)
     }
 }
-

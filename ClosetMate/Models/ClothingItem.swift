@@ -49,26 +49,77 @@ class ClothingItem {
     }
 }
 
-enum ItemCategory: String, Codable,Hashable, CaseIterable{
+enum ItemCategory: String, Codable, Hashable, CaseIterable {
+    case aLineSkirt = "A-Line Skirt"
+    case ankleBoots = "Ankle Boots"
+    case balletFlats = "Ballet Flats"
     case blazer = "Blazer"
+    case blouse = "Blouse"
+    case bodysuit = "Bodysuit"
+    case bomberJacket = "Bomber Jacket"
     case boots = "Boots"
+    case bralette = "Bralette"
+    case cardigan = "Cardigan"
+    case cargoPants = "Cargo Pants"
+    case camisole = "Camisole"
+    case chinos = "Chinos"
+    case clogs = "Clogs"
     case coat = "Coat"
+    case corset = "Corset"
+    case cropTop = "Crop Top"
     case dress = "Dress"
+    case dungarees = "Dungarees"
+    case eveningDress = "Evening Dress"
+    case espadrilles = "Espadrilles"
+    case flipFlops = "Flip Flops"
     case heels = "Heels"
     case hoodie = "Hoodie"
     case jacket = "Jacket"
     case jeans = "Jeans"
     case joggers = "Joggers"
+    case jumpsuit = "Jumpsuit"
+    case kneeHighBoots = "Knee High Boots"
+    case leatherJacket = "Leather Jacket"
     case leggings = "Leggings"
+    case loafers = "Loafers"
+    case maxiDress = "Maxi Dress"
+    case midiDress = "Midi Dress"
+    case miniDress = "Mini Dress"
+    case mules = "Mules"
+    case parka = "Parka"
+    case pencilSkirt = "Pencil Skirt"
+    case pleatedSkirt = "Pleated Skirt"
+    case pufferJacket = "Puffer Jacket"
+    case romper = "Romper"
     case sandals = "Sandals"
     case shirt = "Shirt"
     case shoes = "Shoes"
     case shorts = "Shorts"
     case skirt = "Skirt"
+    case slipDress = "Slip Dress"
     case sneakers = "Sneakers"
+    case sportsBra = "Sports Bra"
     case sweater = "Sweater"
     case tShirt = "T-Shirt"
+    case tankTop = "Tank Top"
+    case tracksuit = "Tracksuit"
+    case trenchCoat = "Trench Coat"
     case trousers = "Trousers"
+    case wedges = "Wedges"
+    case wrapDress = "Wrap Dress"
+
+    // Grouped Categories by Type
+    static var groupedCategories: [String: [ItemCategory]] {
+        return [
+            "Tops": [.blazer, .blouse, .bodysuit, .bralette, .cardigan, .camisole, .corset, .cropTop, .hoodie, .jacket, .leatherJacket, .shirt, .sweater, .tShirt, .tankTop],
+            "Bottoms": [.cargoPants, .chinos, .jeans, .joggers, .leggings, .shorts, .trousers],
+            "Skirts": [.aLineSkirt, .pencilSkirt, .pleatedSkirt, .skirt],
+            "Dresses & Jumpsuits": [.dress, .eveningDress, .maxiDress, .midiDress, .miniDress, .romper, .slipDress, .wrapDress, .jumpsuit, .dungarees],
+            "Shoes": [.ankleBoots, .balletFlats, .boots, .clogs, .espadrilles, .flipFlops, .heels, .kneeHighBoots, .loafers, .mules, .sandals, .shoes, .sneakers, .wedges],
+            "Outerwear": [.bomberJacket, .coat, .parka, .pufferJacket, .tracksuit, .trenchCoat],
+            "Activewear": [.sportsBra]
+        ]
+    }
 }
 
 enum ItemColor : String, Codable, Hashable, CaseIterable{
